@@ -1,4 +1,4 @@
-# DanielScience v3
+# DanielScience
 
 This version emphasizes recruiter keywords, developer-facing credibility signals, custom diagrams, and executive dashboard elements.
 
