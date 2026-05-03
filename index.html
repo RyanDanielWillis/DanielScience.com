@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DanielScience | IT Engineering, VoIP, Networking, Automation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   DanielScience | IT Engineering, VoIP, Networking, Automation
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
   <style>
-:root,
+   :root,
 [data-theme="light"] {
   --text-xs: clamp(0.75rem, 0.72rem + 0.2vw, 0.875rem);
   --text-sm: clamp(0.9rem, 0.84rem + 0.2vw, 1rem);
@@ -93,7 +95,14 @@ p,li{color:var(--muted)}
 .btn.primary{background:var(--primary);color:var(--inverse);box-shadow:var(--shadow)}
 .btn.secondary{border:1px solid var(--border);background:rgba(23,28,35,.7)}
 .hero-panel,.card,.metric,.chart-card,.project{background:linear-gradient(180deg, rgba(29,36,48,.92), rgba(23,28,35,.92));border:1px solid var(--border);border-radius:var(--radius-xl);box-shadow:var(--shadow)}
-.hero-panel,.card,.metric,.chart-card,.project{padding:1.35rem}
+.hero-panel,.card,.metric,.chart-card,.project{padding:1.35rem;position:relative;overflow:hidden}
+.hero-panel::after,.card::after,.metric::after,.chart-card::after,.project::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--accent),transparent 75%);opacity:.85}
+.tag{box-shadow:0 0 0 1px rgba(87,242,135,.12),0 0 18px rgba(87,242,135,.08)}
+.btn.secondary{border:1px solid rgba(87,242,135,.35);color:var(--text)}
+.navlinks a[aria-current="page"]{text-shadow:0 0 12px rgba(87,242,135,.18)}
+.kpi b{color:var(--accent)}
+.list li::before{box-shadow:0 0 10px rgba(87,242,135,.35)}
+
 .hero-panel img,.media-card img{border-radius:calc(var(--radius-xl) - .35rem);margin-bottom:1rem;object-fit:cover;width:100%;height:220px}
 .section{padding:4rem 0}
 .section-head{display:grid;grid-template-columns:.9fr 1fr;gap:2rem;align-items:end;margin-bottom:1.5rem}
@@ -112,68 +121,265 @@ p,li{color:var(--muted)}
 @media (max-width: 960px){.hero-grid,.section-head,.grid-2,.footer-row{grid-template-columns:1fr}.grid-3,.grid-4,.kpi-strip{grid-template-columns:1fr 1fr}}
 @media (max-width: 700px){.navlinks{display:none}.grid-3,.grid-4,.kpi-strip{grid-template-columns:1fr}.hero{padding-top:4.5rem}.container{width:min(var(--content), calc(100% - 1rem))}h1{max-width:100%}}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-</style>
-</head>
-<body style="--hero-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')">
-  <a class="skip" href="#content">Skip to content</a>
-  
-    <header class="header">
-      <div class="container nav">
-        <a class="brand" href="./index.html">
-          <svg viewBox="0 0 64 64" fill="none" aria-label="DanielScience logo"><rect x="10" y="8" width="20" height="48" rx="10" stroke="currentColor" stroke-width="4"/><path d="M34 16h12c6.627 0 12 5.373 12 12v8c0 11.046-8.954 20-20 20H20" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
-          <span>DanielScience<small>Atlanta-based IT engineering</small></span>
-        </a>
-        <nav class="navlinks" aria-label="Primary">
-          <a href="./index.html" aria-current="page">Home</a>
-          <a href="./services.html" >Services</a>
-          <a href="./project-case-studies.html" >Projects</a>
-          <a href="./pricing.html" >Approach & Rates</a>
-          <a href="./resume.html" >Experience</a>
-          <a href="./contact.html" >Contact</a>
-        </nav>
-        <button class="toggle" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
-      </div>
-    </header>
+  </style>
+ </head>
+ <body style="--hero-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1600&amp;q=80')">
+  <a class="skip" href="#content">
+   Skip to content
+  </a>
+  <header class="header">
+   <div class="container nav">
+    <a class="brand" href="./index.html">
+     <svg aria-label="DanielScience logo" fill="none" viewbox="0 0 64 64">
+      <rect height="48" rx="10" stroke="currentColor" stroke-width="4" width="20" x="10" y="8">
+      </rect>
+      <path d="M34 16h12c6.627 0 12 5.373 12 12v8c0 11.046-8.954 20-20 20H20" stroke="currentColor" stroke-linecap="round" stroke-width="4">
+      </path>
+     </svg>
+     <span>
+      DanielScience
+      <small>
+       Atlanta-based IT engineering
+      </small>
+     </span>
+    </a>
+    <nav aria-label="Primary" class="navlinks">
+     <a aria-current="page" href="./index.html">
+      Home
+     </a>
+     <a href="./services.html">
+      Services
+     </a>
+     <a href="./project-case-studies.html">
+      Projects
+     </a>
+     <a href="./pricing.html">
+      Approach &amp; Rates
+     </a>
+     <a href="./resume.html">
+      Experience
+     </a>
+     <a href="./contact.html">
+      Contact
+     </a>
+    </nav>
+    <button aria-label="Toggle theme" class="toggle" data-theme-toggle="" type="button">
+     ◐
+    </button>
+   </div>
+  </header>
   <main id="content">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Professional IT portfolio</span>
-          <h1>Voice systems, networks, automation, and software delivery for organizations that need reliable engineering support.</h1>
-          <p class="lede">DanielScience presents Ryan Daniel Willis as an Atlanta-based IT professional focused on VoIP, networking, systems administration, troubleshooting, and practical software delivery. The site is designed to help secure contract work, support internal advancement, remain safe to share with current employers, and grow into a broader full-service IT platform over time.</p>
-          <div class="cta">
-            <a class="btn primary" href="./contact.html">Start a conversation</a>
-            <a class="btn secondary" href="./project-case-studies.html">Review projects</a>
+   <section class="hero">
+    <div class="container hero-grid">
+     <div>
+      <span class="eyebrow">
+       Professional IT portfolio
+      </span>
+      <h1>
+       VoIP, infrastructure, automation, and technical delivery for businesses that need stable systems and practical execution.
+      </h1>
+      <p class="lede">
+       DanielScience highlights work across voice systems, networking, systems support, and custom software with a focus on business environments that need dependable implementation instead of generic consulting language. The site is meant to make it easy for employers, recruiters, and prospective clients to understand where Ryan Daniel Willis adds value: communications troubleshooting, infrastructure support, workflow automation, and delivery that is documented clearly enough for real teams to use.
+      </p>
+      <div class="cta">
+       <a class="btn primary" href="./contact.html">
+        Start a conversation
+       </a>
+       <a class="btn secondary" href="./project-case-studies.html">
+        Review projects
+       </a>
+      </div>
+     </div>
+     <aside class="hero-panel media-card">
+      <img alt="Modern IT infrastructure and server environment" height="800" loading="lazy" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" width="1200"/>
+      <span class="tag">
+       Why this works
+      </span>
+      <h3 style="margin-top:1rem;">
+       Built to look credible, practical, and contract-ready.
+      </h3>
+      <ul class="list">
+       <li>
+        Employer-safe professional presentation.
+       </li>
+       <li>
+        Direct links to LinkedIn, GitHub, and Angry VoIP Scanner.
+       </li>
+       <li>
+        Charts, visuals, and proof-driven sections instead of filler.
+       </li>
+      </ul>
+     </aside>
+    </div>
+   </section>
+   <section class="section">
+    <div class="container">
+     <div class="section-head">
+      <div>
+       <span class="eyebrow">
+        What this site is built to communicate
+       </span>
+       <h2>
+        Technical depth presented in a business-friendly way
+       </h2>
+      </div>
+      <p>
+       The homepage is meant to answer a practical question fast: what kinds of technical problems can this person solve, and why would I trust him to work in a production environment?
+      </p>
+     </div>
+     <div class="kpi-strip">
+      <div class="kpi">
+       <b>
+        VoIP
+       </b>
+       <span>
+        Specialized communications experience.
+       </span>
+      </div>
+      <div class="kpi">
+       <b>
+        Networks
+       </b>
+       <span>
+        Routing, switching, support, and operational stability.
+       </span>
+      </div>
+      <div class="kpi">
+       <b>
+        Systems
+       </b>
+       <span>
+        Hands-on infrastructure and troubleshooting work.
+       </span>
+      </div>
+      <div class="kpi">
+       <b>
+        Automation
+       </b>
+       <span>
+        Modern delivery through tools, scripts, and internal software.
+       </span>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section">
+    <div class="container">
+     <div class="section-head">
+      <div>
+       <span class="eyebrow">
+        Current focus areas
+       </span>
+       <h2>
+        Areas of practical technical value
+       </h2>
+      </div>
+      <p>
+       The strongest positioning right now is a blend of voice systems, infrastructure support, and technical automation, because that combination fits both contract opportunities and internal advancement conversations.
+      </p>
+     </div>
+     <div class="grid-3">
+      <article class="chart-card">
+       <h3>
+        Capability mix
+       </h3>
+       <div class="chart-wrap">
+        <div class="bars">
+         <div class="bar-col">
+          <div class="bar" style="height:78%">
           </div>
+          <span>
+           VoIP
+          </span>
+         </div>
+         <div class="bar-col">
+          <div class="bar" style="height:72%">
+          </div>
+          <span>
+           Networks
+          </span>
+         </div>
+         <div class="bar-col">
+          <div class="bar" style="height:61%">
+          </div>
+          <span>
+           Systems
+          </span>
+         </div>
+         <div class="bar-col">
+          <div class="bar" style="height:54%">
+          </div>
+          <span>
+           Automation
+          </span>
+         </div>
         </div>
-        <aside class="hero-panel media-card"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Modern IT infrastructure and server environment" width="1200" height="800" loading="lazy" /><span class="tag">Why this works</span><h3 style="margin-top:1rem;">Built to look credible, practical, and contract-ready.</h3><ul class="list"><li>Employer-safe professional presentation.</li><li>Direct links to LinkedIn, GitHub, and Angry VoIP Scanner.</li><li>Charts, visuals, and proof-driven sections instead of filler.</li></ul></aside>
-      </div>
-    </section>
-    <section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">What this site is built to communicate</span><h2>Technical depth with business-safe positioning</h2></div><p>The goal is to make employers, clients, and recruiters comfortable moving forward by combining real technical range with clear presentation and visible proof-of-work.</p></div><div class="kpi-strip"><div class="kpi"><b>VoIP</b><span>Specialized communications experience.</span></div><div class="kpi"><b>Networks</b><span>Routing, switching, support, and operational stability.</span></div><div class="kpi"><b>Systems</b><span>Hands-on infrastructure and troubleshooting work.</span></div><div class="kpi"><b>Automation</b><span>Modern delivery through tools, scripts, and internal software.</span></div></div></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Service emphasis</span><h2>Where DanielScience creates value</h2></div><p>The site should show enough specificity to feel credible without locking the brand into a narrow specialty too early.</p></div><div class="grid-3"><article class="chart-card"><h3>Capability mix</h3><div class="chart-wrap"><div class="bars"><div class="bar-col"><div class="bar" style="height:78%"></div><span>VoIP</span></div><div class="bar-col"><div class="bar" style="height:72%"></div><span>Networks</span></div><div class="bar-col"><div class="bar" style="height:61%"></div><span>Systems</span></div><div class="bar-col"><div class="bar" style="height:54%"></div><span>Automation</span></div></div></div></article><article class="card media-card"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Abstract global technology network" width="1200" height="800" loading="lazy" /><h3>Proof-of-work matters</h3><p>Projects, diagrams, and screenshots make the portfolio stronger than generic claims alone.</p></article><article class="card"><h3>Best long-term direction</h3><p>Keep the tone polished enough for Sangoma-friendly visibility while still signaling that contract work and future growth are welcome.</p></article></div></div></section>
+       </div>
+      </article>
+      <article class="card media-card">
+       <img alt="Abstract global technology network" height="800" loading="lazy" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" width="1200"/>
+       <h3>
+        Proof-of-work matters
+       </h3>
+       <p>
+        Projects, diagrams, and screenshots make the portfolio stronger than generic claims alone.
+       </p>
+      </article>
+      <article class="card">
+       <h3>
+        Why this positioning works
+       </h3>
+       <p>
+        It keeps the site safe to show inside a current employment context while still making it obvious that outside projects, consulting conversations, and future growth are all part of the larger direction.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
   </main>
-  
-    <footer class="footer">
-      <div class="container footer-row">
-        <div>
-          <strong>DanielScience</strong>
-          <p class="muted" style="margin-top:.6rem;max-width:56ch;">Professional positioning for contract work, recruiter review, employer-safe sharing, and long-term growth into a broader IT services platform.</p>
-        </div>
-        <div class="footer-links">
-          <a href="./index.html">Home</a>
-          <a href="./services.html">Services</a>
-          <a href="./project-case-studies.html">Projects</a>
-          <a href="./pricing.html">Approach &amp; Rates</a>
-          <a href="./resume.html">Experience</a>
-          <a href="./contact.html">Contact</a>
-          <a href="https://www.linkedin.com/in/ryanmovesdata/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/RyanDanielWillis/DanielScience.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://github.com/RyanDanielWillis/angry-voip-scanner" target="_blank" rel="noopener noreferrer">Angry VoIP Scanner</a>
-        </div>
-      </div>
-    </footer>
-  
-    <script>
-      (() => {
+  <footer class="footer">
+   <div class="container footer-row">
+    <div>
+     <strong>
+      DanielScience
+     </strong>
+     <p class="muted" style="margin-top:.6rem;max-width:56ch;">
+      Professional positioning for contract work, recruiter review, employer-safe sharing, and long-term growth into a broader IT services platform.
+     </p>
+    </div>
+    <div class="footer-links">
+     <a href="./index.html">
+      Home
+     </a>
+     <a href="./services.html">
+      Services
+     </a>
+     <a href="./project-case-studies.html">
+      Projects
+     </a>
+     <a href="./pricing.html">
+      Approach &amp; Rates
+     </a>
+     <a href="./resume.html">
+      Experience
+     </a>
+     <a href="./contact.html">
+      Contact
+     </a>
+     <a href="https://www.linkedin.com/in/ryanmovesdata/" rel="noopener noreferrer" target="_blank">
+      LinkedIn
+     </a>
+     <a href="https://github.com/RyanDanielWillis/DanielScience.com" rel="noopener noreferrer" target="_blank">
+      GitHub
+     </a>
+     <a href="https://github.com/RyanDanielWillis/angry-voip-scanner" rel="noopener noreferrer" target="_blank">
+      Angry VoIP Scanner
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   (() => {
         const root = document.documentElement;
         const toggle = document.querySelector('[data-theme-toggle]');
         let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -183,6 +389,6 @@ p,li{color:var(--muted)}
           root.setAttribute('data-theme', theme);
         });
       })();
-    </script>
-</body>
+  </script>
+ </body>
 </html>

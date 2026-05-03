@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DanielScience Projects</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   DanielScience Projects
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
   <style>
-:root,
+   :root,
 [data-theme="light"] {
   --text-xs: clamp(0.75rem, 0.72rem + 0.2vw, 0.875rem);
   --text-sm: clamp(0.9rem, 0.84rem + 0.2vw, 1rem);
@@ -93,7 +95,14 @@ p,li{color:var(--muted)}
 .btn.primary{background:var(--primary);color:var(--inverse);box-shadow:var(--shadow)}
 .btn.secondary{border:1px solid var(--border);background:rgba(23,28,35,.7)}
 .hero-panel,.card,.metric,.chart-card,.project{background:linear-gradient(180deg, rgba(29,36,48,.92), rgba(23,28,35,.92));border:1px solid var(--border);border-radius:var(--radius-xl);box-shadow:var(--shadow)}
-.hero-panel,.card,.metric,.chart-card,.project{padding:1.35rem}
+.hero-panel,.card,.metric,.chart-card,.project{padding:1.35rem;position:relative;overflow:hidden}
+.hero-panel::after,.card::after,.metric::after,.chart-card::after,.project::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--accent),transparent 75%);opacity:.85}
+.tag{box-shadow:0 0 0 1px rgba(87,242,135,.12),0 0 18px rgba(87,242,135,.08)}
+.btn.secondary{border:1px solid rgba(87,242,135,.35);color:var(--text)}
+.navlinks a[aria-current="page"]{text-shadow:0 0 12px rgba(87,242,135,.18)}
+.kpi b{color:var(--accent)}
+.list li::before{box-shadow:0 0 10px rgba(87,242,135,.35)}
+
 .hero-panel img,.media-card img{border-radius:calc(var(--radius-xl) - .35rem);margin-bottom:1rem;object-fit:cover;width:100%;height:220px}
 .section{padding:4rem 0}
 .section-head{display:grid;grid-template-columns:.9fr 1fr;gap:2rem;align-items:end;margin-bottom:1.5rem}
@@ -112,68 +121,220 @@ p,li{color:var(--muted)}
 @media (max-width: 960px){.hero-grid,.section-head,.grid-2,.footer-row{grid-template-columns:1fr}.grid-3,.grid-4,.kpi-strip{grid-template-columns:1fr 1fr}}
 @media (max-width: 700px){.navlinks{display:none}.grid-3,.grid-4,.kpi-strip{grid-template-columns:1fr}.hero{padding-top:4.5rem}.container{width:min(var(--content), calc(100% - 1rem))}h1{max-width:100%}}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-</style>
-</head>
-<body style="--hero-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80')">
-  <a class="skip" href="#content">Skip to content</a>
-  
-    <header class="header">
-      <div class="container nav">
-        <a class="brand" href="./index.html">
-          <svg viewBox="0 0 64 64" fill="none" aria-label="DanielScience logo"><rect x="10" y="8" width="20" height="48" rx="10" stroke="currentColor" stroke-width="4"/><path d="M34 16h12c6.627 0 12 5.373 12 12v8c0 11.046-8.954 20-20 20H20" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
-          <span>DanielScience<small>Atlanta-based IT engineering</small></span>
-        </a>
-        <nav class="navlinks" aria-label="Primary">
-          <a href="./index.html" >Home</a>
-          <a href="./services.html" >Services</a>
-          <a href="./project-case-studies.html" aria-current="page">Projects</a>
-          <a href="./pricing.html" >Approach & Rates</a>
-          <a href="./resume.html" >Experience</a>
-          <a href="./contact.html" >Contact</a>
-        </nav>
-        <button class="toggle" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
-      </div>
-    </header>
+  </style>
+ </head>
+ <body style="--hero-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1600&amp;q=80')">
+  <a class="skip" href="#content">
+   Skip to content
+  </a>
+  <header class="header">
+   <div class="container nav">
+    <a class="brand" href="./index.html">
+     <svg aria-label="DanielScience logo" fill="none" viewbox="0 0 64 64">
+      <rect height="48" rx="10" stroke="currentColor" stroke-width="4" width="20" x="10" y="8">
+      </rect>
+      <path d="M34 16h12c6.627 0 12 5.373 12 12v8c0 11.046-8.954 20-20 20H20" stroke="currentColor" stroke-linecap="round" stroke-width="4">
+      </path>
+     </svg>
+     <span>
+      DanielScience
+      <small>
+       Atlanta-based IT engineering
+      </small>
+     </span>
+    </a>
+    <nav aria-label="Primary" class="navlinks">
+     <a href="./index.html">
+      Home
+     </a>
+     <a href="./services.html">
+      Services
+     </a>
+     <a aria-current="page" href="./project-case-studies.html">
+      Projects
+     </a>
+     <a href="./pricing.html">
+      Approach &amp; Rates
+     </a>
+     <a href="./resume.html">
+      Experience
+     </a>
+     <a href="./contact.html">
+      Contact
+     </a>
+    </nav>
+    <button aria-label="Toggle theme" class="toggle" data-theme-toggle="" type="button">
+     ◐
+    </button>
+   </div>
+  </header>
   <main id="content">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Projects</span>
-          <h1>Projects that act as proof-of-work instead of just portfolio decoration.</h1>
-          <p class="lede">This page should make it easier for someone to trust your technical judgment by showing practical outputs, visible engineering effort, and clear relevance to real-world infrastructure and communications work.</p>
-          <div class="cta">
-            <a class="btn primary" href="./contact.html">Start a conversation</a>
-            <a class="btn secondary" href="./project-case-studies.html">Review projects</a>
-          </div>
-        </div>
-        <aside class="hero-panel media-card"><img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80" alt="Software dashboard and technical project environment" width="1200" height="800" loading="lazy" /><span class="tag">Presentation rule</span><h3 style="margin-top:1rem;">Every project should lower uncertainty.</h3></aside>
+   <section class="hero">
+    <div class="container hero-grid">
+     <div>
+      <span class="eyebrow">
+       Projects
+      </span>
+      <h1>
+       Projects that show actual technical value, not just design polish.
+      </h1>
+      <p class="lede">
+       The strongest projects for this site are the ones that demonstrate useful problem solving: tools that inspect environments, dashboards that organize results, automations that reduce manual work, and writeups that explain what changed technically and why it mattered.
+      </p>
+      <div class="cta">
+       <a class="btn primary" href="./contact.html">
+        Start a conversation
+       </a>
+       <a class="btn secondary" href="./project-case-studies.html">
+        Review projects
+       </a>
       </div>
-    </section>
-    <section class="section"><div class="container"><div class="grid-3"><article class="project"><span class="tag">Featured</span><h3 style="margin-top:1rem;">Angry VoIP Scanner</h3><p>A VoIP network auditing tool that demonstrates practical voice-system awareness, engineering range, project packaging, and product-style thinking.</p><div class="cta"><a class="btn secondary" href="https://github.com/RyanDanielWillis/angry-voip-scanner" target="_blank" rel="noopener noreferrer">View GitHub project</a></div></article><article class="project media-card"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" alt="Cybersecurity and network analysis display" width="1200" height="800" loading="lazy" /><h3>Infrastructure examples</h3><p>Use this space for troubleshooting, deployment, network validation, and environment-hardening examples.</p></article><article class="project"><h3>Automation examples</h3><p>Use this space for scripts, dashboards, and internal tools that show you can turn technical ideas into usable working outputs.</p></article></div></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Evidence structure</span><h2>What each project should include over time</h2></div><p>Projects become more persuasive when they show the problem, technical path, visual output, and outcome in a quick-skimming format.</p></div><div class="grid-4"><div class="metric"><strong>Problem</strong><p>What needed to be solved.</p></div><div class="metric"><strong>Approach</strong><p>How you analyzed or designed it.</p></div><div class="metric"><strong>Output</strong><p>What was built or fixed.</p></div><div class="metric"><strong>Result</strong><p>Why it mattered operationally.</p></div></div></div></section>
+     </div>
+     <aside class="hero-panel media-card">
+      <img alt="Software dashboard and technical project environment" height="800" loading="lazy" src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" width="1200"/>
+      <span class="tag">
+       Presentation rule
+      </span>
+      <h3 style="margin-top:1rem;">
+       Each project should answer a hiring or buyer question.
+      </h3>
+     </aside>
+    </div>
+   </section>
+   <section class="section">
+    <div class="container">
+     <div class="grid-3">
+      <article class="project">
+       <span class="tag">
+        Featured
+       </span>
+       <h3 style="margin-top:1rem;">
+        Angry VoIP Scanner
+       </h3>
+       <p>
+        A VoIP-focused auditing tool built to inspect networks for configuration and exposure issues, then present the findings in a way that is easier to review than raw scan output. It works well as a portfolio project because it combines communications knowledge, scripting, dashboard thinking, and a clear business use case.
+       </p>
+       <div class="cta">
+        <a class="btn secondary" href="https://github.com/RyanDanielWillis/angry-voip-scanner" rel="noopener noreferrer" target="_blank">
+         View GitHub project
+        </a>
+       </div>
+      </article>
+      <article class="project media-card">
+       <img alt="Cybersecurity and network analysis display" height="800" loading="lazy" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" width="1200"/>
+       <h3>
+        Infrastructure examples
+       </h3>
+       <p>
+        This section can hold examples such as VLAN troubleshooting, deployment cleanup, network validation, phone migration support, or documentation-heavy remediation work that demonstrates operational judgment.
+       </p>
+      </article>
+      <article class="project">
+       <h3>
+        Automation examples
+       </h3>
+       <p>
+        Use this section for automation projects, reporting dashboards, and custom internal tools that show you can move from idea to implementation rather than stopping at analysis.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section">
+    <div class="container">
+     <div class="section-head">
+      <div>
+       <span class="eyebrow">
+        Evidence structure
+       </span>
+       <h2>
+        What makes a project page stronger
+       </h2>
+      </div>
+      <p>
+       As these pages develop, the strongest additions will be screenshots, short diagrams, a plain-language summary of the technical issue, and a concise explanation of what improved.
+      </p>
+     </div>
+     <div class="grid-4">
+      <div class="metric">
+       <strong>
+        Problem
+       </strong>
+       <p>
+        What needed to be solved.
+       </p>
+      </div>
+      <div class="metric">
+       <strong>
+        Approach
+       </strong>
+       <p>
+        How you analyzed or designed it.
+       </p>
+      </div>
+      <div class="metric">
+       <strong>
+        Output
+       </strong>
+       <p>
+        What was built or fixed.
+       </p>
+      </div>
+      <div class="metric">
+       <strong>
+        Result
+       </strong>
+       <p>
+        Why it mattered operationally.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
   </main>
-  
-    <footer class="footer">
-      <div class="container footer-row">
-        <div>
-          <strong>DanielScience</strong>
-          <p class="muted" style="margin-top:.6rem;max-width:56ch;">Professional positioning for contract work, recruiter review, employer-safe sharing, and long-term growth into a broader IT services platform.</p>
-        </div>
-        <div class="footer-links">
-          <a href="./index.html">Home</a>
-          <a href="./services.html">Services</a>
-          <a href="./project-case-studies.html">Projects</a>
-          <a href="./pricing.html">Approach &amp; Rates</a>
-          <a href="./resume.html">Experience</a>
-          <a href="./contact.html">Contact</a>
-          <a href="https://www.linkedin.com/in/ryanmovesdata/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/RyanDanielWillis/DanielScience.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://github.com/RyanDanielWillis/angry-voip-scanner" target="_blank" rel="noopener noreferrer">Angry VoIP Scanner</a>
-        </div>
-      </div>
-    </footer>
-  
-    <script>
-      (() => {
+  <footer class="footer">
+   <div class="container footer-row">
+    <div>
+     <strong>
+      DanielScience
+     </strong>
+     <p class="muted" style="margin-top:.6rem;max-width:56ch;">
+      Professional positioning for contract work, recruiter review, employer-safe sharing, and long-term growth into a broader IT services platform.
+     </p>
+    </div>
+    <div class="footer-links">
+     <a href="./index.html">
+      Home
+     </a>
+     <a href="./services.html">
+      Services
+     </a>
+     <a href="./project-case-studies.html">
+      Projects
+     </a>
+     <a href="./pricing.html">
+      Approach &amp; Rates
+     </a>
+     <a href="./resume.html">
+      Experience
+     </a>
+     <a href="./contact.html">
+      Contact
+     </a>
+     <a href="https://www.linkedin.com/in/ryanmovesdata/" rel="noopener noreferrer" target="_blank">
+      LinkedIn
+     </a>
+     <a href="https://github.com/RyanDanielWillis/DanielScience.com" rel="noopener noreferrer" target="_blank">
+      GitHub
+     </a>
+     <a href="https://github.com/RyanDanielWillis/angry-voip-scanner" rel="noopener noreferrer" target="_blank">
+      Angry VoIP Scanner
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   (() => {
         const root = document.documentElement;
         const toggle = document.querySelector('[data-theme-toggle]');
         let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -183,6 +344,6 @@ p,li{color:var(--muted)}
           root.setAttribute('data-theme', theme);
         });
       })();
-    </script>
-</body>
+  </script>
+ </body>
 </html>
