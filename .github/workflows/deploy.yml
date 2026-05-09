@@ -18,4 +18,9 @@ jobs:
         run: ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p ${{ secrets.DEPLOY_PATH }}"
       - name: Deploy site
         run: |
-          rsync -avz --delete             --exclude '.git*'             --exclude 'README.md'             --exclude 'nginx-*.conf'             ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.DEPLOY_PATH }}/
+          rsync -avz --delete \
+            --exclude '.git*' \
+            --exclude 'README.md' \
+            --exclude 'nginx-*.conf' \
+            --exclude 'grafana/' \
+            ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.DEPLOY_PATH }}/
