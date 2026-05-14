@@ -3,6 +3,8 @@ window.DS_SITE_CONFIG = {
     {
       title: "CallSentry",
       eyebrow: "Live technical product",
+      category: "DevOps / Infrastructure",
+      featured: true,
       description:
         "A VoIP and network diagnostics platform built around real troubleshooting workflows, plain-English reporting, and infrastructure-aware support decisions.",
       stack: ["Python", "FastAPI", "SQLite", "Diagnostics", "VoIP"],
@@ -13,6 +15,8 @@ window.DS_SITE_CONFIG = {
     {
       title: "Infrastructure Automation",
       eyebrow: "Operations tooling",
+      category: "Automation / MSP Ops",
+      featured: true,
       description:
         "Reusable scripts, dashboards, and process tooling for reducing repetitive support work, improving visibility, and giving teams clearer deployment and maintenance paths.",
       stack: ["Automation", "Dashboards", "APIs", "Monitoring", "Workflows"],
@@ -23,6 +27,8 @@ window.DS_SITE_CONFIG = {
     {
       title: "Modern Portfolio System",
       eyebrow: "Frontend foundation",
+      category: "Frontend / Design System",
+      featured: false,
       description:
         "A responsive, editable portfolio architecture with centralized content, reusable layout pieces, and a design system ready for richer components and case studies.",
       stack: ["HTML", "CSS", "JavaScript", "Responsive UI", "Design Systems"],
@@ -66,18 +72,21 @@ window.DS_SITE_CONFIG = {
   blogPosts: [
     {
       label: "Future article",
+      category: "Automation",
       title: "Building useful internal tools without turning them into science projects",
       description:
         "Notes on keeping automation practical, maintainable, and valuable for real IT and business workflows."
     },
     {
       label: "Future article",
+      category: "DevSecOps",
       title: "What DevSecOps looks like for small teams and MSP environments",
       description:
         "A plain-language look at secure workflows, deployment habits, visibility, and operational guardrails."
     },
     {
       label: "Future article",
+      category: "AI-Assisted Workflows",
       title: "AI-assisted engineering workflows that still require judgment",
       description:
         "How modern tools can accelerate delivery while the human engineer stays responsible for architecture, reliability, and quality."

@@ -1,368 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <link rel="icon" type="image/png" href="./logo.png"/>
-  <title>
-   DanielScience Case Studies
-  </title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
-  <style>
-   :root,
-[data-theme="light"] {
-  --text-xs: clamp(0.75rem, 0.72rem + 0.2vw, 0.875rem);
-  --text-sm: clamp(0.9rem, 0.84rem + 0.2vw, 1rem);
-  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.08rem);
-  --text-lg: clamp(1.15rem, 1.02rem + 0.5vw, 1.45rem);
-  --text-xl: clamp(1.65rem, 1.3rem + 1vw, 2.3rem);
-  --text-2xl: clamp(2.3rem, 1.4rem + 2vw, 3.8rem);
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --radius-sm: 0.5rem;
-  --radius-md: 0.9rem;
-  --radius-lg: 1.3rem;
-  --radius-xl: 1.8rem;
-  --content: 1180px;
-  --bg: #0f1318;
-  --surface: #171c23;
-  --surface-2: #1d2430;
-  --surface-3: #253041;
-  --border: rgba(255,255,255,0.10);
-  --text: #edf2f7;
-  --muted: #b6c0ca;
-  --faint: #7f8b98;
-  --primary: #8b5cf6;
-  --primary-2: #b197fc;
-  --accent: #57f287;
-  --accent-2: #ff8f3d;
-  --inverse: #ffffff;
-  --shadow: 0 24px 80px rgba(0,0,0,0.35);
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-display: 'Instrument Serif', Georgia, serif;
-}
-[data-theme="dark"] {
-  --bg: #0f1318;
-  --surface: #171c23;
-  --surface-2: #1d2430;
-  --surface-3: #253041;
-  --border: rgba(255,255,255,0.10);
-  --text: #edf2f7;
-  --muted: #b6c0ca;
-  --faint: #7f8b98;
-  --primary: #8b5cf6;
-  --primary-2: #b197fc;
-  --accent: #57f287;
-  --accent-2: #ff8f3d;
-  --inverse: #ffffff;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;background:radial-gradient(circle at top right, rgba(139,92,246,.18), transparent 22%), linear-gradient(180deg, #0d1117, #10151b 35%, #0f1318);color:var(--text)}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%;height:auto}
-button{font:inherit;background:none;border:0;color:inherit;cursor:pointer}
-.container{width:min(var(--content), calc(100% - 1.5rem));margin:0 auto}
-.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:var(--surface);padding:.8rem 1rem;border-radius:var(--radius-sm);z-index:1000}
-.header{position:sticky;top:0;z-index:100;background:rgba(15,19,24,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.brand{display:flex;align-items:center;gap:.9rem;font-weight:800}.brand small{display:block;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
-.brand svg{width:42px;height:42px;color:var(--primary)}
-.navlinks{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}.navlinks a{font-size:var(--text-sm);color:var(--muted)}.navlinks a:hover,.navlinks a[aria-current="page"]{color:var(--text)}
-.toggle{width:44px;height:44px;border:1px solid var(--border);border-radius:999px;background:var(--surface);display:grid;place-items:center}
-.hero{position:relative;overflow:hidden;padding:5.5rem 0 3rem;border-bottom:1px solid var(--border)}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(11,13,18,.52),rgba(11,13,18,.82)),var(--hero-image) center/cover no-repeat;opacity:.95}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg, rgba(139,92,246,.14), transparent 34%, rgba(87,242,135,.08) 70%, transparent)}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .85fr;gap:1.5rem;align-items:end}
-.eyebrow,.tag{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .8rem;border-radius:999px;background:rgba(23,28,35,.88);border:1px solid var(--border);font-size:var(--text-xs);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-h1,h2{font-family:var(--font-display);line-height:1.02;letter-spacing:-.03em}
-h1{font-size:var(--text-2xl);max-width:12ch;margin-top:1rem}
-h2{font-size:var(--text-xl)}
-h3{font-size:var(--text-lg);line-height:1.16}
-p,li{color:var(--muted)}
-.lede{max-width:68ch;margin-top:1rem}
-.cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
-.btn{display:inline-flex;align-items:center;gap:.55rem;min-height:48px;padding:.95rem 1.2rem;border-radius:999px;font-size:var(--text-sm);font-weight:800}
-.btn.primary{background:var(--primary);color:var(--inverse);box-shadow:var(--shadow)}
-.btn.secondary{border:1px solid var(--border);background:rgba(23,28,35,.7)}
-.hero-panel,.card,.metric,.chart-card,.project{background:linear-gradient(180deg, rgba(29,36,48,.92), rgba(23,28,35,.92));border:1px solid var(--border);border-radius:var(--radius-xl);box-shadow:var(--shadow)}
-.hero-panel,.card,.metric,.chart-card,.project{padding:1.35rem;position:relative;overflow:hidden}
-.hero-panel::after,.card::after,.metric::after,.chart-card::after,.project::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--accent),transparent 75%);opacity:.85}
-.tag{box-shadow:0 0 0 1px rgba(87,242,135,.12),0 0 18px rgba(87,242,135,.08)}
-.btn.secondary{border:1px solid rgba(87,242,135,.35);color:var(--text)}
-.navlinks a[aria-current="page"]{text-shadow:0 0 12px rgba(87,242,135,.18)}
-.kpi b{color:var(--accent)}
-.list li::before{box-shadow:0 0 10px rgba(87,242,135,.35)}
-
-.hero-panel img,.media-card img{border-radius:calc(var(--radius-xl) - .35rem);margin-bottom:1rem;object-fit:cover;width:100%;height:220px}
-.section{padding:4rem 0}
-.section-head{display:grid;grid-template-columns:.9fr 1fr;gap:2rem;align-items:end;margin-bottom:1.5rem}
-.grid-2,.grid-3,.grid-4{display:grid;gap:1.15rem}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
-.metric strong{display:block;font-size:var(--text-xl);color:var(--text)}
-.list{list-style:none;display:grid;gap:.8rem;margin-top:1rem}.list li{position:relative;padding-left:1.15rem}.list li::before{content:'';position:absolute;left:0;top:.68rem;width:8px;height:8px;border-radius:999px;background:var(--accent)}
-.kpi-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:1rem}
-.kpi{padding:1rem;border-radius:var(--radius-lg);border:1px solid var(--border);background:rgba(15,19,24,.45)}
-.kpi b{display:block;font-size:1.6rem;color:var(--text)}
-.chart-wrap{margin-top:1rem;padding:1rem;border-radius:var(--radius-lg);border:1px solid var(--border);background:rgba(15,19,24,.4)}
-.bars{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;align-items:end;height:200px}.bar-col{display:grid;gap:.75rem;justify-items:center}.bar{width:100%;max-width:72px;border-radius:18px 18px 8px 8px;background:linear-gradient(180deg,var(--primary-2),var(--primary))}.bar-col span{font-size:var(--text-xs);text-align:center;color:var(--muted)}
-.media-card img{height:240px}
-.footer{padding:2rem 0 3rem;border-top:1px solid var(--border)}
-.footer-row{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start}.footer-links{display:flex;flex-wrap:wrap;gap:1rem}.footer-links a{color:var(--muted);font-size:var(--text-sm)}
-.muted{color:var(--faint)}
-@media (max-width: 960px){.hero-grid,.section-head,.grid-2,.footer-row{grid-template-columns:1fr}.grid-3,.grid-4,.kpi-strip{grid-template-columns:1fr 1fr}}
-@media (max-width:680px){
-  .nav{
-    align-items:flex-start;
-    flex-direction:column;
-    padding:.9rem 0 1rem;
-  }
-
-  .navlinks{
-    display:flex;
-    width:100%;
-    flex-wrap:nowrap;
-    gap:.85rem;
-    overflow-x:auto;
-    padding-bottom:.2rem;
-  }
-
-  .navlinks a{
-    white-space:nowrap;
-    padding:.3rem 0;
-  }
-
-  .toggle{
-    align-self:flex-end;
-    margin-top:-3.1rem;
-  }
-
-  .grid-3,
-  .pricing{
-    grid-template-columns:1fr;
-  }
-
-  .container{
-    width:min(var(--content),calc(100% - .9rem));
-  }
-
-  .card,
-  .panel{
-    padding:1.05rem;
-  }
-
-  .hero,
-  .section{
-    padding:2.25rem 0;
-  }
-
-  h1{
-    font-size:clamp(2rem,10vw,3rem);
-  }
-
-  .lede{
-    font-size:1rem;
-  }
-}
-  </style>
- </head>
- <body style="--hero-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1600&amp;q=80')">
-  <a class="skip" href="#content">
-   Skip to content
-  </a>
-  <header class="header">
-   <div class="container nav">
-    <a class="brand" href="./index.html">
-     <svg aria-label="DanielScience logo" fill="none" viewbox="0 0 64 64">
-      <rect height="48" rx="10" stroke="currentColor" stroke-width="4" width="20" x="10" y="8">
-      </rect>
-      <path d="M34 16h12c6.627 0 12 5.373 12 12v8c0 11.046-8.954 20-20 20H20" stroke="currentColor" stroke-linecap="round" stroke-width="4">
-      </path>
-     </svg>
-     <span>
-      DanielScience
-      <small>
-       Results-driven IT Engineering
-      </small>
-     </span>
-    </a>
-    <nav aria-label="Primary" class="navlinks">
-     <a href="./index.html">
-      Home
-     </a>
-     <a href="./services.html">
-      Services
-     </a>
-     <a aria-current="page" href="./project-case-studies.html">
-      Projects
-     </a>
-     <a href="./pricing.html">
-      Approach &amp; Rates
-     </a>
-     <a href="./resume.html">
-      Experience
-     </a>
-     <a href="./contact.html">
-      Contact
-     </a>
-    </nav>
-    <button aria-label="Toggle theme" class="toggle" data-theme-toggle="" type="button">
-     ◐
-    </button>
-   </div>
-  </header>
-  <main id="content">
-   <section class="hero">
-    <div class="container hero-grid">
-     <div>
-      <span class="eyebrow">
-       Case studies
-      </span>
-      <h1>
-       Case studies that translate technical work into business-relevant outcomes.
-      </h1>
-      <p class="lede">
-       A useful case study should show the operating problem, the technical response, and the practical result. That matters because employers and clients often need evidence that someone can translate technical skill into outcomes other people can understand and trust.
-      </p>
-      <div class="cta">
-       <a class="btn primary" href="./contact.html">
-        Start a conversation
-       </a>
-       <a class="btn secondary" href="./project-case-studies.html">
-        Review projects
-       </a>
-      </div>
-     </div>
-     <aside class="hero-panel media-card">
-      <img alt="Technology data visualization and analysis" height="800" loading="lazy" src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" width="1200"/>
-      <span class="tag">
-       Best practice
-      </span>
-      <h3 style="margin-top:1rem;">
-       Show the problem, the action, and the result.
-      </h3>
-     </aside>
-    </div>
-   </section>
-   <section class="section">
-    <div class="container">
-     <div class="grid-3">
-      <article class="card">
-       <h3>
-        Situation
-       </h3>
-       <p>
-        Open with the business or operational issue: outages, poor call quality, onboarding friction, weak visibility, or a manual process that was creating avoidable work.
-       </p>
-      </article>
-      <article class="card">
-       <h3>
-        Technical path
-       </h3>
-       <p>
-        Then explain what was investigated, what was changed, and which technical decisions mattered most.
-       </p>
-      </article>
-      <article class="card">
-       <h3>
-        Outcome
-       </h3>
-       <p>
-        Close with the improvement: better uptime, fewer tickets, faster onboarding, cleaner reporting, or stronger confidence in the environment.
-       </p>
-      </article>
-     </div>
-    </div>
-   </section>
-   <section class="section">
-    <div class="container">
-     <div class="grid-2">
-      <article class="card">
-       <span class="tag">
-        Tone
-       </span>
-       <h3>
-        Professional and trustworthy
-       </h3>
-       <p>
-        That approach makes the page useful for technical reviewers, hiring managers, operational leaders, and prospective clients at the same time.
-       </p>
-      </article>
-      <article class="card media-card">
-       <img alt="Team reviewing technical project materials" height="800" loading="lazy" src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" width="1200"/>
-       <h3>
-        Use screenshots and diagrams
-       </h3>
-       <p>
-        A simple topology image, dashboard screenshot, before-and-after comparison, or annotated result view will make each example more credible and easier to skim quickly.
-       </p>
-      </article>
-     </div>
-    </div>
-   </section>
-  </main>
-  <footer class="footer">
-   <div class="container footer-row">
-    <div>
-     <strong>
-      DanielScience
-     </strong>
-     <p class="muted" style="margin-top:.6rem;max-width:56ch;">
-      Professional positioning for contract work, recruiter review, employer-safe sharing, and long-term growth into a broader IT services platform.
-     </p>
-    </div>
-    <div class="footer-links">
-     <a href="./index.html">
-      Home
-     </a>
-     <a href="./services.html">
-      Services
-     </a>
-     <a href="./project-case-studies.html">
-      Projects
-     </a>
-     <a href="./pricing.html">
-      Approach &amp; Rates
-     </a>
-     <a href="./resume.html">
-      Experience
-     </a>
-     <a href="./contact.html">
-      Contact
-     </a>
-     <a href="https://www.linkedin.com/in/ryanmovesdata/" rel="noopener noreferrer" target="_blank">
-      LinkedIn
-     </a>
-     <a href="https://github.com/RyanDanielWillis/DanielScience.com" rel="noopener noreferrer" target="_blank">
-      GitHub
-     </a>
-     <a href="https://callsentry.danielscience.com/" rel="noopener noreferrer" target="_blank" style="display:inline-flex;align-items:center;gap:0.4rem">
-      <img src="callsentry-logo.png" alt="CallSentry" style="height:16px;width:auto" />
-      CallSentry
-     </a>
-    </div>
-   </div>
-  </footer>
-  <script>
-   (() => {
-        const root = document.documentElement;
-        const toggle = document.querySelector('[data-theme-toggle]');
-        let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        root.setAttribute('data-theme', theme);
-        toggle?.addEventListener('click', () => {
-          theme = theme === 'dark' ? 'light' : 'dark';
-          root.setAttribute('data-theme', theme);
-        });
-      })();
-  </script>
- </body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DanielScience case studies and project work by Ryan Willis.">
+    <link rel="icon" type="image/png" href="./favicon-tab.png">
+    <title>DanielScience Case Studies | Ryan Willis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/theme-tokens.css">
+    <link rel="stylesheet" href="./css/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header"><div class="header-inner"><a class="brand-mark" href="./index.html" aria-label="DanielScience home"><img src="./daniel_sience_logo.png" alt="DanielScience logo" width="104" height="104"><span><span class="brand-name">DanielScience</span><span class="brand-kicker">Results Driven IT Engineering</span></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation"><span></span><span></span><span></span></button><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-thumb"><span class="theme-sun">L</span><span class="theme-moon">D</span></span></span></button><nav class="nav-links" id="primary-navigation" aria-label="Primary"><a href="./index.html">Home</a><a href="./about.html">About</a><a href="./services.html">Services</a><a href="./project-case-studies.html" aria-current="page">Projects</a><a href="./blog.html">Blog</a><a href="./pricing.html">Approach &amp; Rates</a><a href="./resume.html">Experience</a><a href="./contact.html">Contact</a></nav></div></header>
+    <main id="content">
+      <section class="page-hero">
+        <div class="page-container page-hero-grid">
+          <div>
+            <span class="eyebrow">Case studies</span>
+            <h1 class="page-title">Project evidence is moving into the main Projects page.</h1>
+            <p class="page-intro">This page is kept as a clean compatibility route. The polished project cards and future case-study structure now live on the main Projects page.</p>
+            <div class="button-row"><a class="button primary" href="./project-case-studies.html">Open projects</a><a class="button secondary" href="./contact.html">Contact Ryan</a></div>
+          </div>
+          <aside class="page-panel">
+            <ul class="page-kicker-list">
+              <li>Use Projects for current featured work and case-study expansion.</li>
+              <li>Legacy links to this page still land in the same visual system.</li>
+              <li>Future deep case studies can be added without changing the main nav.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="page-container footer-inner"><div class="footer-brand"><strong>Ryan Willis</strong><span>&copy; 2026 Ryan Willis</span><br><a href="mailto:ryan@danielscience.com">ryan@danielscience.com</a></div><nav class="footer-links" aria-label="Footer"><a href="./index.html">Home</a><a href="./about.html">About</a><a href="./services.html">Services</a><a href="./project-case-studies.html">Projects</a><a href="./blog.html">Blog</a><a href="./pricing.html">Approach &amp; Rates</a><a href="./resume.html">Experience</a><a href="./contact.html">Contact</a><a href="https://www.linkedin.com/in/ryanmovesdata/" rel="noopener noreferrer" target="_blank">LinkedIn</a><a href="https://github.com/RyanDanielWillis" rel="noopener noreferrer" target="_blank">GitHub</a></nav></div></footer>
+    <button class="back-to-top" type="button" aria-label="Back to top"><span aria-hidden="true">^</span></button><script src="./js/site-config.js"></script><script src="./js/layout-components.js"></script>
+  </body>
 </html>

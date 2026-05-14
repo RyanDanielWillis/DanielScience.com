@@ -33,7 +33,7 @@
     mount.innerHTML = config.projects.map((project) => `
       <article class="project-card">
         <div class="project-preview">
-          <span>${project.eyebrow}</span>
+          <span>${project.category || project.eyebrow}${project.featured ? " / Featured" : ""}</span>
           <strong>${project.preview}</strong>
         </div>
         <div class="project-body">
@@ -66,7 +66,7 @@
     if (!mount || !config.blogPosts) return;
     mount.innerHTML = config.blogPosts.map((post) => `
       <article class="blog-card">
-        <span class="blog-meta">${post.label}</span>
+        <span class="blog-meta">${post.category || post.label}</span>
         <h3>${post.title}</h3>
         <p>${post.description}</p>
       </article>
