@@ -67,8 +67,25 @@
     });
   }
 
+  function setupBackToTop() {
+    const button = document.querySelector(".back-to-top");
+    if (!button) return;
+
+    function updateVisibility() {
+      button.classList.toggle("is-visible", window.scrollY > 520);
+    }
+
+    button.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    updateVisibility();
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+  }
+
   renderProjects();
   renderServices();
   renderBlogPosts();
   setupMenu();
+  setupBackToTop();
 })();
