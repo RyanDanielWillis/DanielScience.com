@@ -37,7 +37,7 @@
   --ds-text-base: 1rem;
   --ds-text-lg: clamp(1.07rem, 1.4vw, 1.2rem);
   --ds-text-xl: clamp(1.75rem, 2.7vw, 2.7rem);
-  --ds-text-2xl: clamp(2.45rem, 5.7vw, 5.3rem);
+  --ds-text-2xl: clamp(2.15rem, 4.6vw, 4.35rem);
   --ds-content: 1180px;
   --ds-radius-md: 14px;
   --ds-radius-lg: 20px;

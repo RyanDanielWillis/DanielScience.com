@@ -360,7 +360,7 @@ button {
   margin: clamp(2.25rem, 3vw, 3rem) 0 0;
   color: var(--ds-ink);
   font-family: var(--ds-font-display);
-  font-size: clamp(2.5rem, 5.6vw, 5.2rem);
+  font-size: var(--ds-text-2xl);
   font-weight: 600;
   line-height: 0.98;
 }
