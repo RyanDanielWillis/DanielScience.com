@@ -83,9 +83,33 @@
     window.addEventListener("scroll", updateVisibility, { passive: true });
   }
 
+  function setupThemeToggle() {
+    const button = document.querySelector(".theme-toggle");
+    if (!button) return;
+
+    const savedTheme = localStorage.getItem("ds-theme");
+    const initialTheme = savedTheme || "light";
+
+    function applyTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      const dark = theme === "dark";
+      button.setAttribute("aria-pressed", String(dark));
+      button.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+      localStorage.setItem("ds-theme", theme);
+    }
+
+    applyTheme(initialTheme);
+
+    button.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+    });
+  }
+
   renderProjects();
   renderServices();
   renderBlogPosts();
   setupMenu();
   setupBackToTop();
+  setupThemeToggle();
 })();
