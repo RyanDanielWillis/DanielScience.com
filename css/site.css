@@ -273,7 +273,7 @@ button {
 }
 
 .hero-title {
-  max-width: 12ch;
+  max-width: 15.5ch;
   margin-top: 2rem;
   font-size: var(--ds-text-2xl);
   line-height: 0.94;
@@ -281,7 +281,7 @@ button {
 
 .section-title,
 .cta-title {
-  margin-top: clamp(2.25rem, 3vw, 3rem);
+  margin-top: clamp(3rem, 4vw, 4rem);
   font-size: var(--ds-text-xl);
   line-height: 1.06;
 }
@@ -546,12 +546,17 @@ button {
 
 .trust-strip {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(8.5rem, 1fr));
   gap: 0.75rem;
+  align-items: stretch;
 }
 
 .trust-strip span {
   border-radius: var(--ds-radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.35rem;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.5)),
     radial-gradient(circle at 15% 20%, rgba(147, 197, 253, 0.18), transparent 35%),
@@ -559,8 +564,10 @@ button {
   color: var(--ds-ink-soft);
   font-size: var(--ds-text-xs);
   font-weight: 800;
+  line-height: 1.25;
   padding: 0.85rem;
   text-align: center;
+  white-space: normal;
 }
 
 .project-grid,
