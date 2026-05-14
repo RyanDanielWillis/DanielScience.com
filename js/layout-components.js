@@ -37,6 +37,7 @@
           <strong>${project.preview}</strong>
         </div>
         <div class="project-body">
+          ${project.meta ? `<span class="project-meta">${project.meta}</span>` : ""}
           <h3>${project.title}</h3>
           <p>${project.description}</p>
           <div class="tag-list">${tagList(project.stack)}</div>
@@ -57,6 +58,20 @@
         <span>${String(index + 1).padStart(2, "0")}</span>
         <h3>${service.title}</h3>
         <p>${service.description}</p>
+      </article>
+    `).join("");
+  }
+
+  function renderFocusAreas() {
+    const mount = document.querySelector("[data-focus-areas]");
+    if (!mount || !config.focusAreas) return;
+    mount.innerHTML = config.focusAreas.map((area) => `
+      <article class="focus-card">
+        <span class="focus-icon" aria-hidden="true">${area.icon}</span>
+        <div>
+          <h3>${area.title}</h3>
+          <p>${area.signal}</p>
+        </div>
       </article>
     `).join("");
   }
@@ -82,6 +97,20 @@
       button.setAttribute("aria-expanded", String(!open));
       button.setAttribute("aria-label", open ? "Open navigation" : "Close navigation");
       nav.classList.toggle("is-open", !open);
+    });
+
+    nav.addEventListener("click", (event) => {
+      if (!event.target.closest("a")) return;
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", "Open navigation");
+      nav.classList.remove("is-open");
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", "Open navigation");
+      nav.classList.remove("is-open");
     });
   }
 
@@ -126,7 +155,7 @@
 
   function setupSpotlights() {
     if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-    const targets = document.querySelectorAll(".project-card, .blog-card, .service-card, .info-card, .feature-card, .contact-panel");
+    const targets = document.querySelectorAll(".project-card, .blog-card, .service-card, .focus-card, .info-card, .feature-card, .contact-panel");
     targets.forEach((target) => {
       target.addEventListener("pointermove", (event) => {
         const rect = target.getBoundingClientRect();
@@ -138,8 +167,25 @@
     });
   }
 
+  function setupMagneticButtons() {
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    const buttons = document.querySelectorAll(".button");
+    buttons.forEach((button) => {
+      button.classList.add("is-magnetic");
+      button.addEventListener("pointermove", (event) => {
+        const rect = button.getBoundingClientRect();
+        const x = event.clientX - rect.left - rect.width / 2;
+        const y = event.clientY - rect.top - rect.height / 2;
+        button.style.transform = `translate(${x * 0.08}px, ${y * 0.12}px)`;
+      });
+      button.addEventListener("pointerleave", () => {
+        button.style.transform = "";
+      });
+    });
+  }
+
   function setupScrollReveals() {
-    const targets = document.querySelectorAll(".section-head, .trust-strip span, .project-card, .service-card, .blog-card, .feature-card, .info-card, .contact-panel, .page-panel");
+    const targets = document.querySelectorAll(".section-head, .trust-strip span, .project-card, .service-card, .blog-card, .focus-card, .feature-card, .info-card, .contact-panel, .page-panel");
     if (!targets.length) return;
     document.body.classList.add("is-enhanced");
     targets.forEach((target) => target.classList.add("reveal-item"));
@@ -165,7 +211,9 @@
   setupBackToTop();
   renderProjects();
   renderServices();
+  renderFocusAreas();
   renderBlogPosts();
   setupSpotlights();
+  setupMagneticButtons();
   setupScrollReveals();
 })();

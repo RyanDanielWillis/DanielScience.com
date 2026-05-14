@@ -4,10 +4,11 @@ window.DS_SITE_CONFIG = {
       title: "CallSentry",
       eyebrow: "Live technical product",
       category: "DevOps / Infrastructure",
+      meta: "Live product / diagnostics / support evidence",
       featured: true,
       description:
         "VoIP and network diagnostics with plain-English reporting and infrastructure-aware support decisions.",
-      stack: ["Python", "FastAPI", "SQLite", "Diagnostics", "VoIP"],
+      stack: ["Python", "FastAPI", "SQLite", "VoIP", "Network QA"],
       github: "https://github.com/RyanDanielWillis/CallSentry",
       demo: "https://callsentry.danielscience.com/",
       preview: "Signal health, incident evidence, and operational clarity"
@@ -16,6 +17,7 @@ window.DS_SITE_CONFIG = {
       title: "Infrastructure Automation",
       eyebrow: "Operations tooling",
       category: "Automation / MSP Ops",
+      meta: "Internal tools / repeatable workflows",
       featured: true,
       description:
         "Scripts, dashboards, and workflow tooling that reduce repetitive support work and improve visibility.",
@@ -28,6 +30,7 @@ window.DS_SITE_CONFIG = {
       title: "Modern Portfolio System",
       eyebrow: "Frontend foundation",
       category: "Frontend / Design System",
+      meta: "Static delivery / design system / content config",
       featured: false,
       description:
         "A responsive portfolio foundation with centralized content, reusable layout pieces, and premium UI polish.",
@@ -36,6 +39,14 @@ window.DS_SITE_CONFIG = {
       demo: "./index.html",
       preview: "Fast static delivery with a polished recruiter experience"
     }
+  ],
+  focusAreas: [
+    { icon: "FS", title: "Full-Stack Systems", signal: "UI, APIs, data flow" },
+    { icon: "CI", title: "Cloud & Infrastructure", signal: "deployments, monitoring, reliability" },
+    { icon: "DS", title: "DevSecOps", signal: "secure workflows, practical checks" },
+    { icon: "AU", title: "Automation", signal: "scripts, dashboards, handoff tools" },
+    { icon: "MSP", title: "MSP Operations", signal: "endpoints, VoIP, support context" },
+    { icon: "UI", title: "Modern Interfaces", signal: "responsive, accessible, polished" }
   ],
   services: [
     {
@@ -73,21 +84,21 @@ window.DS_SITE_CONFIG = {
     {
       label: "Future article",
       category: "Automation",
-      title: "Building useful internal tools without turning them into science projects",
+      title: "The small internal tool test: will anyone still use it in 90 days?",
       description:
         "Keeping automation practical, maintainable, and useful for real teams."
     },
     {
       label: "Future article",
       category: "DevSecOps",
-      title: "What DevSecOps looks like for small teams and MSP environments",
+      title: "DevSecOps habits that fit small teams and MSP realities",
       description:
         "Secure workflows, deployment habits, visibility, and practical guardrails."
     },
     {
       label: "Future article",
       category: "AI-Assisted Workflows",
-      title: "AI-assisted engineering workflows that still require judgment",
+      title: "Where AI helps engineering work, and where judgment still owns the room",
       description:
         "Faster delivery with human judgment still owning architecture and reliability."
     }
