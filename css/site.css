@@ -99,7 +99,7 @@ button {
 .site-header {
   position: relative;
   z-index: 100;
-  width: min(1280px, calc(100% - 2rem));
+  width: min(1360px, calc(100% - 1.5rem));
   margin: 1rem auto 0;
   border: 1px solid var(--ds-header-border);
   border-radius: var(--ds-radius-pill);
@@ -145,13 +145,13 @@ button {
 
 .header-inner {
   display: grid;
-  grid-template-columns: minmax(230px, 0.46fr) auto minmax(0, 1.54fr);
+  grid-template-columns: minmax(205px, 0.34fr) auto minmax(0, 1.66fr);
   align-items: center;
   width: 100%;
   min-height: 82px;
   margin-inline: auto;
-  gap: clamp(1rem, 2vw, 2.25rem);
-  padding: 0 1.45rem 0 1.65rem;
+  gap: clamp(0.55rem, 1.25vw, 1.35rem);
+  padding: 0 1.2rem 0 1.35rem;
 }
 
 .theme-toggle {
@@ -261,7 +261,7 @@ button {
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center;
-  gap: clamp(0.35rem, 0.75vw, 0.75rem);
+  gap: clamp(0.18rem, 0.48vw, 0.48rem);
   width: 100%;
 }
 
@@ -269,9 +269,10 @@ button {
   border: 1px solid transparent;
   border-radius: var(--ds-radius-pill);
   color: var(--ds-muted);
-  font-size: clamp(0.78rem, 0.86vw, 0.92rem);
+  font-size: clamp(0.72rem, 0.78vw, 0.86rem);
   font-weight: 700;
-  padding: 0.56rem 0.5rem;
+  padding: 0.5rem 0.36rem;
+  white-space: nowrap;
   text-align: center;
   transition: background var(--ds-motion-fast), border-color var(--ds-motion-fast), color var(--ds-motion-fast), transform var(--ds-motion-fast);
 }
@@ -329,11 +330,11 @@ button {
 
 .hero {
   position: relative;
-  padding: clamp(6rem, 10vw, 9rem) 0 clamp(4rem, 8vw, 7rem);
+  padding: clamp(4.75rem, 7vw, 6.75rem) 0 clamp(4rem, 8vw, 7rem);
 }
 
 .page-hero {
-  padding: clamp(4.25rem, 8vw, 7rem) 0 clamp(2.75rem, 5vw, 4.5rem);
+  padding: clamp(4.85rem, 7vw, 6.25rem) 0 clamp(2.75rem, 5vw, 4.5rem);
 }
 
 .page-hero-grid {
@@ -1142,7 +1143,7 @@ button {
   }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1120px) {
   .site-header {
     width: min(var(--ds-content), calc(100% - 1rem));
     border-radius: var(--ds-radius-xl);
