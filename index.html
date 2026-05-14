@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Ryan Willis is a full-stack developer and infrastructure-minded technologist focused on automation, secure workflows, cloud systems, and modern IT operations."
+    >
+    <link rel="icon" type="image/png" href="./daniel_sience_logo.png">
+    <title>DanielScience | Ryan Willis Full-Stack, DevSecOps, Cloud, and IT Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./css/theme-tokens.css">
+    <link rel="stylesheet" href="./css/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand-mark" href="./index.html" aria-label="DanielScience home">
+          <img src="./daniel_sience_logo.png" alt="DanielScience logo" width="104" height="104">
+          <span>
+            <span class="brand-name">DanielScience</span>
+            <span class="brand-kicker">Full-stack, DevSecOps, cloud, and IT systems</span>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-links" id="primary-navigation" aria-label="Primary">
+          <a href="./index.html" aria-current="page">Home</a>
+          <a href="./services.html">Services</a>
+          <a href="./project-case-studies.html">Projects</a>
+          <a href="./index.html#blog">Blog</a>
+          <a href="./pricing.html">Approach &amp; Rates</a>
+          <a href="./resume.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero">
+        <div class="page-container hero-grid">
+          <div>
+            <span class="eyebrow">Full-stack + infrastructure-minded</span>
+            <h1 class="hero-title">Modern software, secure systems, practical delivery.</h1>
+            <p class="lede">
+              Ryan Willis builds across the layers that make technology useful: responsive
+              frontend systems, backend workflows, API integrations, cloud and deployment tooling,
+              automation, and the day-to-day IT operations that keep businesses moving.
+            </p>
+            <p class="lede">
+              His background spans Navy system administration, hosting, data analysis, VoIP, and
+              working software products. The result is a technical professional who can speak with
+              users, ship interfaces, reason through infrastructure, and turn messy operational
+              problems into cleaner systems.
+            </p>
+            <div class="button-row" aria-label="Primary actions">
+              <a class="button primary" href="./project-case-studies.html">View Projects</a>
+              <a class="button secondary" href="mailto:ryan@danielscience.com">Contact Ryan</a>
+            </div>
+            <div class="hero-meta" aria-label="Experience highlights">
+              <span>Frontend / Backend</span>
+              <span>Cloud-minded delivery</span>
+              <span>Automation-first operations</span>
+              <span>Security-conscious workflows</span>
+            </div>
+          </div>
+
+          <aside class="hero-visual" aria-label="Infrastructure dashboard preview">
+            <div class="orbit one" aria-hidden="true"></div>
+            <div class="orbit two" aria-hidden="true"></div>
+            <div class="dashboard-card">
+              <span class="dashboard-label">Systems view</span>
+              <strong>Application, infrastructure, and support context in one mental model.</strong>
+              <p>
+                Ryan is comfortable moving between code, deployment paths, endpoint behavior,
+                network symptoms, users, and business impact.
+              </p>
+              <div class="mini-grid" aria-hidden="true">
+                <span>UI</span>
+                <span>API</span>
+                <span>Cloud</span>
+              </div>
+            </div>
+            <div class="dashboard-card offset">
+              <span class="dashboard-label">Delivery pipeline</span>
+              <strong>Build useful things, then make them easier to run.</strong>
+              <p>
+                Tooling, monitoring, automation, secure configuration, and documentation are part
+                of the work, not an afterthought.
+              </p>
+              <div class="pipeline" aria-hidden="true">
+                <div class="pipeline-row"><span>Build</span><i class="pipeline-line"></i><span>92%</span></div>
+                <div class="pipeline-row"><span>Secure</span><i class="pipeline-line"></i><span>78%</span></div>
+                <div class="pipeline-row"><span>Operate</span><i class="pipeline-line"></i><span>64%</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-wrapper compact" aria-label="Technical strengths">
+        <div class="page-container trust-strip">
+          <span>Full-Stack Development</span>
+          <span>DevSecOps Mindset</span>
+          <span>Cloud &amp; Infrastructure</span>
+          <span>Automation &amp; Tooling</span>
+          <span>MSP / IT Operations</span>
+          <span>Secure Workflows</span>
+        </div>
+      </section>
+
+      <section class="section-wrapper" id="projects" aria-labelledby="projects-title">
+        <div class="page-container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Featured projects</span>
+              <h2 class="section-title" id="projects-title">Work that shows product thinking and operational awareness.</h2>
+            </div>
+            <p class="section-copy">
+              The strongest technical work solves a real problem and leaves behind something
+              maintainable. These project cards are data-driven so future case studies, previews,
+              GitHub links, and live demos can be updated without restructuring the page.
+            </p>
+          </div>
+          <div class="project-grid" data-projects></div>
+        </div>
+      </section>
+
+      <section class="section-wrapper" id="services" aria-labelledby="services-title">
+        <div class="page-container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">What I can help with</span>
+              <h2 class="section-title" id="services-title">A useful bridge between software teams and IT operations.</h2>
+            </div>
+            <p class="section-copy">
+              Ryan fits teams that need someone who can build, support, troubleshoot, document,
+              automate, and improve systems without treating the frontend, backend, cloud,
+              security, and operations as unrelated worlds.
+            </p>
+          </div>
+          <div class="service-grid" data-services></div>
+        </div>
+      </section>
+
+      <section class="section-wrapper compact" id="blog" aria-labelledby="blog-title">
+        <div class="page-container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Blog preview</span>
+              <h2 class="section-title" id="blog-title">Technical notes for builders, operators, and decision makers.</h2>
+            </div>
+            <p class="section-copy">
+              This section is ready for future MDX or static post integration. Planned topics
+              include full-stack engineering, DevSecOps workflows, cloud tooling, infrastructure
+              systems, AI-assisted engineering, MSP operations, and deployment pipelines.
+            </p>
+          </div>
+          <div class="blog-grid" data-blog-posts></div>
+          <div class="blog-actions">
+            <a class="button secondary" href="./index.html#blog">Read the Blog</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wrapper compact" id="contact" aria-labelledby="contact-title">
+        <div class="page-container">
+          <div class="contact-panel">
+            <div>
+              <span class="eyebrow">Contact</span>
+              <h2 class="cta-title" id="contact-title">Need someone who can build and operate with real-world judgment?</h2>
+              <p class="section-copy" style="margin-top: 2rem">
+                Reach out for full-stack development, DevSecOps-aware implementation, cloud and
+                automation work, MSP support, infrastructure troubleshooting, or technical roles
+                where adaptability and follow-through matter.
+              </p>
+              <a class="contact-email" href="mailto:ryan@danielscience.com">ryan@danielscience.com</a>
+            </div>
+            <div class="button-row" style="margin-top: 0">
+              <a class="button primary" href="mailto:ryan@danielscience.com">Email Ryan</a>
+              <a class="button secondary" href="./contact.html">Contact page</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-container footer-inner">
+        <div class="footer-brand">
+          <strong>Ryan Willis</strong>
+          <span>&copy; 2026 Ryan Willis</span><br>
+          <a href="mailto:ryan@danielscience.com">ryan@danielscience.com</a>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="./index.html">Home</a>
+          <a href="./services.html">Services</a>
+          <a href="./project-case-studies.html">Projects</a>
+          <a href="./index.html#blog">Blog</a>
+          <a href="./pricing.html">Approach &amp; Rates</a>
+          <a href="./resume.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+          <a href="https://www.linkedin.com/in/ryanmovesdata/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+          <a href="https://github.com/RyanDanielWillis" rel="noopener noreferrer" target="_blank">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./js/site-config.js"></script>
+    <script src="./js/layout-components.js"></script>
+  </body>
+</html>
