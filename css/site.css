@@ -95,7 +95,7 @@ button {
   position: sticky;
   top: 1rem;
   z-index: 100;
-  width: min(1440px, calc(100% - 2rem));
+  width: min(1280px, calc(100% - 2rem));
   margin: 1rem auto 0;
   border: 1px solid rgba(255, 255, 255, 0.68);
   border-radius: var(--ds-radius-pill);
@@ -106,7 +106,7 @@ button {
 
 .header-inner {
   display: grid;
-  grid-template-columns: minmax(230px, 0.48fr) minmax(0, 1.52fr);
+  grid-template-columns: minmax(230px, 0.46fr) minmax(0, 1.54fr);
   align-items: center;
   width: 100%;
   min-height: 82px;
@@ -139,16 +139,17 @@ button {
   color: var(--ds-muted);
   font-size: var(--ds-text-xs);
   font-weight: 700;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.08em;
   line-height: 1.35;
   text-transform: uppercase;
 }
 
 .nav-links {
   display: grid;
-  grid-template-columns: repeat(7, minmax(max-content, 1fr));
+  grid-template-columns: repeat(7, max-content);
+  justify-content: end;
   align-items: center;
-  gap: 0.35rem;
+  gap: clamp(0.35rem, 0.75vw, 0.75rem);
   width: 100%;
 }
 
@@ -156,9 +157,9 @@ button {
   border: 1px solid transparent;
   border-radius: var(--ds-radius-pill);
   color: var(--ds-muted);
-  font-size: var(--ds-text-sm);
+  font-size: clamp(0.78rem, 0.86vw, 0.92rem);
   font-weight: 700;
-  padding: 0.62rem 0.58rem;
+  padding: 0.56rem 0.5rem;
   text-align: center;
   transition: background var(--ds-motion-fast), border-color var(--ds-motion-fast), color var(--ds-motion-fast), transform var(--ds-motion-fast);
 }
@@ -507,13 +508,13 @@ button {
 }
 
 .section-wrapper.compact {
-  padding-block: clamp(4rem, 7vw, 6.5rem);
+  padding-block: clamp(3.25rem, 5.5vw, 4.75rem);
 }
 
 .section-wrapper::before {
   content: "";
   position: absolute;
-  inset: 1.5rem 0;
+  inset: 0.75rem 0;
   z-index: -1;
   pointer-events: none;
   opacity: 0.72;
@@ -535,7 +536,7 @@ button {
   grid-template-columns: minmax(0, 0.74fr) minmax(0, 1fr);
   gap: clamp(2rem, 5vw, 4rem);
   align-items: end;
-  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+  margin-bottom: clamp(2.25rem, 4vw, 3.5rem);
 }
 
 .section-copy {
@@ -724,15 +725,16 @@ button {
 .footer-links {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-end;
-  gap: 0.85rem;
+  gap: clamp(0.5rem, 1.2vw, 0.85rem);
 }
 
 .footer-links a {
   color: var(--ds-muted);
-  font-size: var(--ds-text-sm);
+  font-size: clamp(0.78rem, 0.86vw, 0.92rem);
   font-weight: 700;
+  white-space: nowrap;
 }
 
 @keyframes drift {
@@ -807,6 +809,7 @@ button {
   }
 
   .footer-links {
+    flex-wrap: wrap;
     justify-content: flex-start;
   }
 }

@@ -38,5 +38,5 @@
   --ds-shadow-card: 0 24px 70px rgba(37, 99, 235, 0.12);
   --ds-motion-fast: 160ms ease;
   --ds-motion-base: 240ms ease;
-  --ds-section: clamp(5rem, 9vw, 8rem);
+  --ds-section: clamp(4rem, 7vw, 6rem);
 }
