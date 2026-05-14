@@ -28,7 +28,7 @@
   --ds-text-base: 1rem;
   --ds-text-lg: clamp(1.07rem, 1.4vw, 1.2rem);
   --ds-text-xl: clamp(1.75rem, 2.7vw, 2.7rem);
-  --ds-text-2xl: clamp(3rem, 7vw, 6.8rem);
+  --ds-text-2xl: clamp(2.45rem, 5.7vw, 5.3rem);
   --ds-content: 1180px;
   --ds-radius-md: 14px;
   --ds-radius-lg: 20px;
@@ -38,5 +38,5 @@
   --ds-shadow-card: 0 24px 70px rgba(37, 99, 235, 0.12);
   --ds-motion-fast: 160ms ease;
   --ds-motion-base: 240ms ease;
-  --ds-section: clamp(4rem, 7vw, 6rem);
+  --ds-section: clamp(3.25rem, 5.5vw, 4.75rem);
 }
