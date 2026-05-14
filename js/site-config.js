@@ -6,7 +6,7 @@ window.DS_SITE_CONFIG = {
       category: "DevOps / Infrastructure",
       featured: true,
       description:
-        "A VoIP and network diagnostics platform built around real troubleshooting workflows, plain-English reporting, and infrastructure-aware support decisions.",
+        "VoIP and network diagnostics with plain-English reporting and infrastructure-aware support decisions.",
       stack: ["Python", "FastAPI", "SQLite", "Diagnostics", "VoIP"],
       github: "https://github.com/RyanDanielWillis/CallSentry",
       demo: "https://callsentry.danielscience.com/",
@@ -18,7 +18,7 @@ window.DS_SITE_CONFIG = {
       category: "Automation / MSP Ops",
       featured: true,
       description:
-        "Reusable scripts, dashboards, and process tooling for reducing repetitive support work, improving visibility, and giving teams clearer deployment and maintenance paths.",
+        "Scripts, dashboards, and workflow tooling that reduce repetitive support work and improve visibility.",
       stack: ["Automation", "Dashboards", "APIs", "Monitoring", "Workflows"],
       github: "https://github.com/RyanDanielWillis",
       demo: "./project-case-studies.html",
@@ -30,7 +30,7 @@ window.DS_SITE_CONFIG = {
       category: "Frontend / Design System",
       featured: false,
       description:
-        "A responsive, editable portfolio architecture with centralized content, reusable layout pieces, and a design system ready for richer components and case studies.",
+        "A responsive portfolio foundation with centralized content, reusable layout pieces, and premium UI polish.",
       stack: ["HTML", "CSS", "JavaScript", "Responsive UI", "Design Systems"],
       github: "https://github.com/RyanDanielWillis/DanielScience.com",
       demo: "./index.html",
@@ -41,32 +41,32 @@ window.DS_SITE_CONFIG = {
     {
       title: "Full-stack application development",
       description:
-        "Responsive interfaces, backend logic, API integrations, and practical product workflows that move from idea to usable system."
+        "Responsive interfaces, backend logic, API integrations, and practical workflows."
     },
     {
       title: "React / Next.js and UI modernization",
       description:
-        "Modern frontend architecture, accessible layouts, component cleanup, performance improvements, and interfaces that feel polished without becoming heavy."
+        "Accessible layouts, component cleanup, performance improvements, and polished UI."
     },
     {
       title: "Backend and API integration",
       description:
-        "Service wiring, data flow, authentication-aware patterns, reporting endpoints, and the glue code that makes business systems work together."
+        "Service wiring, data flow, reporting endpoints, and business-system glue code."
     },
     {
       title: "Cloud and deployment tooling",
       description:
-        "Deployment paths, environment setup, automation scripts, monitoring hooks, and pipelines designed for maintainability."
+        "Deployment paths, environment setup, automation scripts, monitoring hooks, and maintainable pipelines."
     },
     {
       title: "DevSecOps-aware workflows",
       description:
-        "Security-conscious delivery habits, safer configuration, access-aware processes, and practical checks that reduce operational risk."
+        "Safer configuration, access-aware processes, and checks that reduce operational risk."
     },
     {
       title: "MSP and IT operations support",
       description:
-        "Endpoint support, infrastructure troubleshooting, documentation, reliability improvements, and help for teams that need someone who understands the whole stack."
+        "Endpoint support, infrastructure troubleshooting, documentation, and reliability improvements."
     }
   ],
   blogPosts: [
@@ -75,21 +75,21 @@ window.DS_SITE_CONFIG = {
       category: "Automation",
       title: "Building useful internal tools without turning them into science projects",
       description:
-        "Notes on keeping automation practical, maintainable, and valuable for real IT and business workflows."
+        "Keeping automation practical, maintainable, and useful for real teams."
     },
     {
       label: "Future article",
       category: "DevSecOps",
       title: "What DevSecOps looks like for small teams and MSP environments",
       description:
-        "A plain-language look at secure workflows, deployment habits, visibility, and operational guardrails."
+        "Secure workflows, deployment habits, visibility, and practical guardrails."
     },
     {
       label: "Future article",
       category: "AI-Assisted Workflows",
       title: "AI-assisted engineering workflows that still require judgment",
       description:
-        "How modern tools can accelerate delivery while the human engineer stays responsible for architecture, reliability, and quality."
+        "Faster delivery with human judgment still owning architecture and reliability."
     }
   ]
 };

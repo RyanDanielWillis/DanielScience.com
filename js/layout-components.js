@@ -31,7 +31,7 @@
     const mount = document.querySelector("[data-projects]");
     if (!mount || !config.projects) return;
     mount.innerHTML = config.projects.map((project) => `
-      <article class="project-card">
+      <article class="project-card${project.featured ? " is-featured" : ""}">
         <div class="project-preview">
           <span>${project.category || project.eyebrow}${project.featured ? " / Featured" : ""}</span>
           <strong>${project.preview}</strong>
@@ -124,10 +124,48 @@
     });
   }
 
+  function setupSpotlights() {
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    const targets = document.querySelectorAll(".project-card, .blog-card, .service-card, .info-card, .feature-card, .contact-panel");
+    targets.forEach((target) => {
+      target.addEventListener("pointermove", (event) => {
+        const rect = target.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * 100;
+        const y = ((event.clientY - rect.top) / rect.height) * 100;
+        target.style.setProperty("--spotlight-x", `${x}%`);
+        target.style.setProperty("--spotlight-y", `${y}%`);
+      });
+    });
+  }
+
+  function setupScrollReveals() {
+    const targets = document.querySelectorAll(".section-head, .trust-strip span, .project-card, .service-card, .blog-card, .feature-card, .info-card, .contact-panel, .page-panel");
+    if (!targets.length) return;
+    document.body.classList.add("is-enhanced");
+    targets.forEach((target) => target.classList.add("reveal-item"));
+
+    if (!("IntersectionObserver" in window)) {
+      targets.forEach((target) => target.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+    targets.forEach((target) => observer.observe(target));
+  }
+
   setupThemeToggle();
   setupMenu();
   setupBackToTop();
   renderProjects();
   renderServices();
   renderBlogPosts();
+  setupSpotlights();
+  setupScrollReveals();
 })();
