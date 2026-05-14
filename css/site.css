@@ -135,9 +135,8 @@ button {
     linear-gradient(135deg, rgba(37, 99, 235, 0.86), rgba(6, 182, 212, 0.78));
   box-shadow: 0 18px 42px rgba(37, 99, 235, 0.24);
   color: #fff;
-  font-size: 1.9rem;
+  font-size: 1.35rem;
   font-weight: 800;
-  line-height: 1;
   opacity: 0;
   pointer-events: none;
   transform: translateY(0.75rem) scale(0.96);
@@ -153,11 +152,6 @@ button {
 .back-to-top:hover {
   box-shadow: 0 22px 52px rgba(37, 99, 235, 0.32);
   transform: translateY(-2px) scale(1.02);
-}
-
-.back-to-top span {
-  display: block;
-  transform: translateY(-1px);
 }
 
 .header-inner {
@@ -208,9 +202,6 @@ button {
   background: rgba(255, 255, 255, 0.94);
   color: var(--ds-blue-deep);
   box-shadow: 0 8px 18px rgba(23, 32, 51, 0.18);
-  font-size: 1rem;
-  font-weight: 800;
-  line-height: 1;
   transform: translateY(-50%);
   transition: transform var(--ds-motion-base), background var(--ds-motion-base), color var(--ds-motion-base);
 }
@@ -567,10 +558,6 @@ button {
   transform: translateY(-2px);
 }
 
-.button.is-magnetic {
-  transition: transform 80ms ease, box-shadow var(--ds-motion-fast), border-color var(--ds-motion-fast), background var(--ds-motion-fast);
-}
-
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
@@ -601,21 +588,6 @@ button {
     radial-gradient(circle at 15% 20%, rgba(34, 211, 238, 0.18), transparent 34%);
   color: #0b1220;
   box-shadow: 0 12px 28px rgba(34, 211, 238, 0.1);
-}
-
-.proof-points {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-top: 1rem;
-}
-
-.proof-points span {
-  border-left: 2px solid rgba(6, 182, 212, 0.58);
-  color: var(--ds-ink-soft);
-  font-size: var(--ds-text-xs);
-  font-weight: 800;
-  padding: 0.12rem 0 0.12rem 0.7rem;
 }
 
 .glass-card,
@@ -885,122 +857,10 @@ button {
   margin-bottom: clamp(2.75rem, 4.8vw, 4.25rem);
 }
 
-.section-head.compact-head {
-  align-items: center;
-  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
-}
-
 .section-copy {
   max-width: 58ch;
   margin: clamp(2.35rem, 3.4vw, 3.35rem) 0 0;
   color: var(--ds-muted);
-}
-
-.focus-section {
-  overflow: hidden;
-}
-
-.focus-section::after {
-  content: "";
-  position: absolute;
-  inset: 18% auto auto 8%;
-  z-index: -1;
-  width: min(28rem, 62vw);
-  aspect-ratio: 1;
-  border-radius: 42% 58% 56% 44%;
-  background:
-    radial-gradient(circle at 34% 28%, rgba(255, 255, 255, 0.74), transparent 24%),
-    linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(124, 58, 237, 0.1), rgba(16, 185, 129, 0.1));
-  filter: blur(3px);
-  opacity: 0.52;
-  pointer-events: none;
-}
-
-.focus-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.9fr 1.05fr;
-  gap: 1rem;
-}
-
-.focus-card {
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.95rem;
-  align-items: center;
-  min-height: 116px;
-  border: 1px solid rgba(255, 255, 255, 0.64);
-  border-radius: var(--ds-radius-lg);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.5)),
-    radial-gradient(circle at 100% 0%, rgba(147, 197, 253, 0.18), transparent 32%),
-    radial-gradient(circle at 0% 100%, rgba(167, 243, 208, 0.14), transparent 34%);
-  box-shadow: var(--ds-shadow-card);
-  padding: 1.1rem;
-  transition: transform var(--ds-motion-base), border-color var(--ds-motion-base), box-shadow var(--ds-motion-base);
-}
-
-.focus-card:nth-child(2),
-.focus-card:nth-child(5) {
-  transform: translateY(1rem);
-}
-
-.focus-card:hover {
-  border-color: rgba(37, 99, 235, 0.24);
-  box-shadow: 0 30px 74px rgba(37, 99, 235, 0.14);
-  transform: translateY(-4px);
-}
-
-.focus-card:nth-child(2):hover,
-.focus-card:nth-child(5):hover {
-  transform: translateY(0.65rem);
-}
-
-.focus-icon {
-  display: grid;
-  place-items: center;
-  width: 3.15rem;
-  height: 3.15rem;
-  border: 1px solid rgba(37, 99, 235, 0.14);
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 28% 20%, rgba(255, 255, 255, 0.92), transparent 32%),
-    linear-gradient(135deg, rgba(147, 197, 253, 0.34), rgba(196, 181, 253, 0.24));
-  color: var(--ds-blue-deep);
-  font-family: var(--ds-font-mono);
-  font-size: 0.8rem;
-  font-weight: 800;
-}
-
-.focus-card h3 {
-  margin: 0;
-  color: var(--ds-ink);
-  font-size: 1rem;
-  line-height: 1.25;
-}
-
-.focus-card p {
-  margin: 0.42rem 0 0;
-  color: var(--ds-muted);
-  font-size: var(--ds-text-sm);
-  line-height: 1.45;
-}
-
-[data-theme="dark"] .focus-card {
-  border-color: rgba(148, 163, 184, 0.2);
-  background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.54)),
-    radial-gradient(circle at 100% 0%, rgba(34, 211, 238, 0.14), transparent 32%),
-    radial-gradient(circle at 0% 100%, rgba(52, 211, 153, 0.12), transparent 34%);
-}
-
-[data-theme="dark"] .focus-icon {
-  border-color: rgba(34, 211, 238, 0.24);
-  background:
-    radial-gradient(circle at 28% 20%, rgba(34, 211, 238, 0.22), transparent 32%),
-    linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(88, 28, 135, 0.42));
-  color: var(--ds-cyan);
 }
 
 .trust-strip {
@@ -1153,7 +1013,6 @@ button {
 .project-card::before,
 .blog-card::before,
 .service-card::before,
-.focus-card::before,
 .info-card::before,
 .feature-card::before,
 .contact-panel::before {
@@ -1214,7 +1073,6 @@ button {
 .blog-card:hover::after,
 .service-card:hover::before,
 .service-card:hover::after,
-.focus-card:hover::before,
 .info-card:hover::before,
 .feature-card:hover::before,
 .contact-panel:hover::before {
@@ -1271,24 +1129,6 @@ button {
 .service-card {
   position: relative;
   padding: 1.5rem;
-}
-
-.project-meta {
-  display: inline-flex;
-  width: fit-content;
-  border: 1px solid rgba(37, 99, 235, 0.14);
-  border-radius: var(--ds-radius-pill);
-  background: rgba(255, 255, 255, 0.5);
-  color: var(--ds-ink-soft);
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 0.34rem 0.56rem;
-}
-
-[data-theme="dark"] .project-meta {
-  border-color: rgba(34, 211, 238, 0.2);
-  background: rgba(15, 23, 42, 0.54);
-  color: var(--ds-cyan);
 }
 
 [data-theme="dark"] .service-card {
@@ -1540,18 +1380,10 @@ button {
   .project-grid,
   .service-grid,
   .blog-grid,
-  .focus-grid,
   .feature-grid,
   .content-grid.two,
   .proof-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .focus-card:nth-child(2),
-  .focus-card:nth-child(5),
-  .focus-card:nth-child(2):hover,
-  .focus-card:nth-child(5):hover {
-    transform: none;
   }
 
   .footer-links {
@@ -1597,7 +1429,6 @@ button {
   .project-grid,
   .service-grid,
   .blog-grid,
-  .focus-grid,
   .feature-grid,
   .content-grid.two,
   .proof-grid,
