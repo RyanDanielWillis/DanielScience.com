@@ -1,5 +1,23 @@
 (function () {
   const config = window.DS_SITE_CONFIG || {};
+  const memoryStore = {};
+
+  function getStoredTheme() {
+    try {
+      return localStorage.getItem("ds-theme") || memoryStore.theme || "";
+    } catch (error) {
+      return memoryStore.theme || "";
+    }
+  }
+
+  function setStoredTheme(theme) {
+    memoryStore.theme = theme;
+    try {
+      localStorage.setItem("ds-theme", theme);
+    } catch (error) {
+      // Some browsers block storage in strict privacy modes; the button should still work.
+    }
+  }
 
   function externalAttrs(href) {
     return /^https?:\/\//.test(href) ? ' target="_blank" rel="noopener noreferrer"' : "";
@@ -87,7 +105,7 @@
     const button = document.querySelector(".theme-toggle");
     if (!button) return;
 
-    const savedTheme = localStorage.getItem("ds-theme");
+    const savedTheme = getStoredTheme();
     const initialTheme = savedTheme || "light";
 
     function applyTheme(theme) {
@@ -95,7 +113,7 @@
       const dark = theme === "dark";
       button.setAttribute("aria-pressed", String(dark));
       button.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
-      localStorage.setItem("ds-theme", theme);
+      setStoredTheme(theme);
     }
 
     applyTheme(initialTheme);
@@ -106,10 +124,10 @@
     });
   }
 
+  setupThemeToggle();
+  setupMenu();
+  setupBackToTop();
   renderProjects();
   renderServices();
   renderBlogPosts();
-  setupMenu();
-  setupBackToTop();
-  setupThemeToggle();
 })();
