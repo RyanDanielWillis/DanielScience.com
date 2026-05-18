@@ -201,23 +201,17 @@
   function renderNewsFeed() {
     const mount = document.querySelector("[data-news-feed]");
     if (!mount) return;
-    const since = Math.floor((Date.now() - 30 * 24 * 3600000) / 1000);
-    const url = `https://hn.algolia.com/api/v1/search?query=cybersecurity+zero+trust+quantum+cryptography+network+infrastructure&tags=story&hitsPerPage=8&numericFilters=created_at_i%3E${since}`;
-    fetch(url)
-      .then((r) => r.json())
+    fetch("./news-data.json")
+      .then((r) => { if (!r.ok) throw new Error("no feed"); return r.json(); })
       .then((data) => {
-        const items = (data.hits || []).filter((h) => h.url && h.title).slice(0, 6);
+        const items = (data.items || []).filter((h) => h.link && h.title).slice(0, 9);
         if (!items.length) { mount.innerHTML = ""; return; }
-        mount.innerHTML = items.map((h) => {
-          let domain = "";
-          try { domain = new URL(h.url).hostname.replace("www.", ""); } catch (_) { domain = "hn"; }
-          return `
-            <a class="news-card" href="${h.url}" target="_blank" rel="noopener noreferrer">
-              <span class="news-source">${domain}</span>
+        mount.innerHTML = items.map((h) => `
+            <a class="news-card" href="${h.link}" target="_blank" rel="noopener noreferrer">
+              <span class="news-source">${h.source}</span>
               <h3>${h.title}</h3>
-              <span class="news-time">${timeAgo(h.created_at_i * 1000)}</span>
-            </a>`;
-        }).join("");
+              <span class="news-time">${timeAgo(h.ts)}</span>
+            </a>`).join("");
         setupSpotlights();
       })
       .catch(() => { mount.innerHTML = ""; });
