@@ -41,40 +41,6 @@ body {
   from { opacity: 0; }
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(37, 54, 83, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 54, 83, 0.045) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.88), transparent 82%);
-}
-
-[data-theme="dark"] body::before {
-  background-image:
-    linear-gradient(rgba(34, 211, 238, 0.075) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(167, 139, 250, 0.07) 1px, transparent 1px);
-}
-
-[data-theme="dark"] body::after {
-  opacity: 0.22;
-  background-image: radial-gradient(rgba(96, 165, 250, 0.28) 0.8px, transparent 0.8px);
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.35;
-  background-image: radial-gradient(rgba(23, 32, 51, 0.13) 0.7px, transparent 0.7px);
-  background-size: 5px 5px;
-}
 
 body.is-enhanced .reveal-item {
   opacity: 0;
@@ -560,7 +526,6 @@ button {
   font-weight: 800;
   padding: 0.92rem 1.3rem;
   transition: transform var(--ds-motion-fast), box-shadow var(--ds-motion-fast), border-color var(--ds-motion-fast), background var(--ds-motion-fast);
-  will-change: transform;
 }
 
 .button::before {
@@ -657,7 +622,6 @@ button {
   min-height: 560px;
   padding: 1.5rem;
   isolation: isolate;
-  transform-style: preserve-3d;
   transition: transform var(--ds-motion-base), box-shadow var(--ds-motion-base), border-color var(--ds-motion-base);
 }
 
