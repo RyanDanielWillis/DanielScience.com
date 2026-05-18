@@ -71,25 +71,25 @@ window.DS_SITE_CONFIG = {
   ],
   blogPosts: [
     {
-      label: "Future article",
       category: "Automation",
       title: "Building useful internal tools without turning them into science projects",
       description:
-        "Keeping automation practical, maintainable, and useful for real teams."
+        "Most internal tooling fails not because it was built wrong, but because it was built for the wrong reason.",
+      href: "./posts/building-internal-tools.html"
     },
     {
-      label: "Future article",
       category: "DevSecOps",
       title: "What DevSecOps looks like for small teams and MSP environments",
       description:
-        "Secure workflows, deployment habits, visibility, and practical guardrails."
+        "DevSecOps for small teams is about habits and defaults — not enterprise security frameworks.",
+      href: "./posts/devsecops-small-teams.html"
     },
     {
-      label: "Future article",
       category: "AI-Assisted Workflows",
       title: "AI-assisted engineering workflows that still require judgment",
       description:
-        "Faster delivery with human judgment still owning architecture and reliability."
+        "AI tools are genuinely useful. But the judgment about what to build and whether it's correct still belongs to the engineer.",
+      href: "./posts/ai-assisted-workflows.html"
     }
   ]
 };

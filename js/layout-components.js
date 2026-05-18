@@ -64,13 +64,17 @@
   function renderBlogPosts() {
     const mount = document.querySelector("[data-blog-posts]");
     if (!mount || !config.blogPosts) return;
-    mount.innerHTML = config.blogPosts.map((post) => `
-      <article class="blog-card">
+    mount.innerHTML = config.blogPosts.map((post) => {
+      const inner = `
         <span class="blog-meta">${post.category || post.label}</span>
         <h3>${post.title}</h3>
         <p>${post.description}</p>
-      </article>
-    `).join("");
+      `;
+      if (post.href) {
+        return `<a class="blog-card" href="${post.href}"${externalAttrs(post.href)}>${inner}</a>`;
+      }
+      return `<article class="blog-card">${inner}</article>`;
+    }).join("");
   }
 
   function setupMenu() {

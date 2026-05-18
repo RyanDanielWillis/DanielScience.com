@@ -1,0 +1,13 @@
+{
+  "name": "danielscience-com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DanielScience.com — Ryan Willis portfolio and blog",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve --watch"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

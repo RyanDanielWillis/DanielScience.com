@@ -8,6 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - name: Build blog posts
+        run: npm ci && npm run build
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -23,4 +29,9 @@ jobs:
             --exclude 'README.md' \
             --exclude 'nginx-*.conf' \
             --exclude 'grafana/' \
+            --exclude 'node_modules/' \
+            --exclude 'posts-src/' \
+            --exclude '_includes/' \
+            --exclude '.eleventy.js' \
+            --exclude 'package*.json' \
             ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.DEPLOY_PATH }}/

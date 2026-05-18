@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ title }} | DanielScience Blog">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="https://danielscience.com/daniel_sience_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="author" content="Ryan Willis">
+    <link rel="icon" type="image/png" href="/favicon-tab.png">
+    <title>{{ title }} | DanielScience Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme-tokens.css">
+    <link rel="stylesheet" href="/css/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand-mark" href="/index.html" aria-label="DanielScience home">
+          <img src="/daniel_sience_logo.png" alt="DanielScience logo" width="104" height="104">
+          <span>
+            <span class="brand-name">DanielScience</span>
+            <span class="brand-kicker">Results Driven IT Engineering</span>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb">
+              <span class="theme-sun"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></span>
+              <span class="theme-moon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </span>
+          </span>
+        </button>
+        <nav class="nav-links" id="primary-navigation" aria-label="Primary">
+          <a href="/index.html">Home</a>
+          <a href="/services.html">Services</a>
+          <a href="/project-case-studies.html">Projects</a>
+          <a href="/blog.html" aria-current="page">Blog</a>
+          <a href="/pricing.html">Approach &amp; Rates</a>
+          <a href="/resume.html">Experience</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content">
+      <article class="page-container post-article">
+        <a class="post-nav-back" href="/blog.html">← All posts</a>
+        <header class="post-header">
+          <span class="eyebrow">{{ category }}</span>
+          <h1 class="page-title">{{ title }}</h1>
+          <p class="post-meta">{{ date | readableDate }}</p>
+        </header>
+        <div class="post-body">
+          {{ content | safe }}
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-container footer-inner">
+        <div class="footer-brand">
+          <strong>Ryan Willis</strong>
+          <span>&copy; 2026 Ryan Willis</span><br>
+          <a href="mailto:ryan@danielscience.com">ryan@danielscience.com</a>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="/index.html">Home</a>
+          <a href="/services.html">Services</a>
+          <a href="/project-case-studies.html">Projects</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/pricing.html">Approach &amp; Rates</a>
+          <a href="/resume.html">Experience</a>
+          <a href="/contact.html">Contact</a>
+          <a href="https://www.linkedin.com/in/ryanmovesdata/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+          <a href="https://github.com/RyanDanielWillis" rel="noopener noreferrer" target="_blank">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <script src="/js/site-config.js"></script>
+    <script src="/js/layout-components.js"></script>
+  </body>
+</html>
