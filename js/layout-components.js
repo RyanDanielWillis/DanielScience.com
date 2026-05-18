@@ -209,6 +209,7 @@
           <a class="news-card" href="${h.link}" target="_blank" rel="noopener noreferrer">
             <span class="news-source">${h.source}</span>
             <h3>${h.title}</h3>
+            ${h.description ? `<p class="news-desc">${h.description}</p>` : ""}
             <span class="news-time">${timeAgo(h.ts)}</span>
           </a>`).join("");
       setupSpotlights();
@@ -239,6 +240,35 @@
       .catch(fallbackHN);
   }
 
+  function renderFullNewsFeed() {
+    const mount = document.querySelector("[data-full-news-feed]");
+    if (!mount) return;
+    const sourcesMount = document.querySelector("[data-news-sources]");
+    fetch("/news-data.json")
+      .then((r) => { if (!r.ok) throw new Error("no feed"); return r.json(); })
+      .then((data) => {
+        if (sourcesMount && data.sources) {
+          sourcesMount.innerHTML = Object.entries(data.sources).map(([name, desc]) => `
+            <article class="info-card">
+              <h3>${name}</h3>
+              <p>${desc}</p>
+            </article>`).join("");
+        }
+        const items = (data.items || []).filter((h) => h.link && h.title);
+        if (!items.length) { mount.innerHTML = "<p>No items available. Check back soon.</p>"; return; }
+        mount.innerHTML = items.map((h) => `
+          <a class="news-card" href="${h.link}" target="_blank" rel="noopener noreferrer">
+            <span class="news-source">${h.source}</span>
+            <h3>${h.title}</h3>
+            ${h.description ? `<p class="news-desc full">${h.description}</p>` : ""}
+            <span class="news-time">${timeAgo(h.ts)}</span>
+          </a>`).join("");
+        setupSpotlights();
+        setupScrollReveals();
+      })
+      .catch(() => { mount.innerHTML = "<p>Feed temporarily unavailable. Try again soon.</p>"; });
+  }
+
   setupThemeToggle();
   setupMenu();
   setupBackToTop();
@@ -246,6 +276,7 @@
   renderServices();
   renderBlogPosts();
   renderNewsFeed();
+  renderFullNewsFeed();
   setupSpotlights();
   setupScrollReveals();
 })();
