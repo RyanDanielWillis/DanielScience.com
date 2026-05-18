@@ -308,23 +308,29 @@
       setupSpotlights();
     }
 
-    fetch("./news-data.json")
-      .then((r) => { if (!r.ok) throw new Error("no feed"); return r.json(); })
-      .then((data) => {
-        if (sourcesMount && data.sources) {
-          sourcesMount.innerHTML = Object.entries(data.sources).map(([name, desc]) => `
-            <article class="info-card">
-              <h3>${name}</h3>
-              <p>${desc}</p>
-            </article>`).join("");
-          setupSpotlights();
-          setupScrollReveals();
-        }
-        allItems = (data.items || []).filter((h) => h.link && h.title);
-        if (!allItems.length) { mount.innerHTML = "<p>No items available. Check back soon.</p>"; return; }
-        renderPage();
-      })
-      .catch(() => { mount.innerHTML = "<p>Feed temporarily unavailable. Try again soon.</p>"; });
+    function applyData(data) {
+      if (sourcesMount && data.sources) {
+        sourcesMount.innerHTML = Object.entries(data.sources).map(([name, desc]) => `
+          <article class="info-card">
+            <h3>${name}</h3>
+            <p>${desc}</p>
+          </article>`).join("");
+        setupSpotlights();
+        setupScrollReveals();
+      }
+      allItems = (data.items || []).filter((h) => h.link && h.title);
+      if (!allItems.length) { mount.innerHTML = "<p>No items available. Check back soon.</p>"; return; }
+      renderPage();
+    }
+
+    if (window.DS_NEWS_DATA) {
+      applyData(window.DS_NEWS_DATA);
+    } else {
+      fetch("./news-data.json")
+        .then((r) => { if (!r.ok) throw new Error("no feed"); return r.json(); })
+        .then(applyData)
+        .catch(() => { mount.innerHTML = "<p>Feed temporarily unavailable. Try again soon.</p>"; });
+    }
   }
 
   function renderFooter() {

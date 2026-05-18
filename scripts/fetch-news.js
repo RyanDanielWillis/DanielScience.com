@@ -3,6 +3,7 @@ const { writeFileSync } = require("fs");
 const { join } = require("path");
 
 const OUT_PATH = join(__dirname, "..", "news-data.json");
+const EMBED_PATH = join(__dirname, "..", "js", "news-embed.js");
 
 const SOURCES = [
   { url: "https://seclists.org/rss/fulldisclosure.rss", label: "Full Disclosure" },
@@ -180,8 +181,11 @@ async function main() {
   // Remove raw field from output
   const clean = items.map(({ raw: _raw, ...rest }) => rest);
 
-  writeFileSync(OUT_PATH, JSON.stringify({ updated: new Date().toISOString(), sources: SOURCE_META, items: clean }, null, 2));
+  const payload = { updated: new Date().toISOString(), sources: SOURCE_META, items: clean };
+  writeFileSync(OUT_PATH, JSON.stringify(payload, null, 2));
   console.log(`Done — wrote ${clean.length} items to news-data.json`);
+  writeFileSync(EMBED_PATH, `window.DS_NEWS_DATA = ${JSON.stringify(payload)};`);
+  console.log(`Also wrote js/news-embed.js`);
 }
 
 main().catch((err) => { console.error(err); process.exit(1); });
