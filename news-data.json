@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-18T01:14:40.285Z",
+  "updated": "2026-05-18T01:29:23.391Z",
   "items": [
     {
       "title": "APPLE-SA-05-13-2026-1 Safari 26.5",
@@ -18,24 +18,6 @@
       "link": "https://seclists.org/fulldisclosure/2026/May/14",
       "ts": 1779052589000,
       "source": "Full Disclosure"
-    },
-    {
-      "title": "CVE-2026-8721: Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs",
-      "link": "https://seclists.org/oss-sec/2026/q2/569",
-      "ts": 1779047830000,
-      "source": "OSS Security"
-    },
-    {
-      "title": "CVE-2026-8507: Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out of bound (OOB) write flaws",
-      "link": "https://seclists.org/oss-sec/2026/q2/568",
-      "ts": 1779047721000,
-      "source": "OSS Security"
-    },
-    {
-      "title": "[vim-security] Vimscript Code Injection in cucumber filetype plugin via crafted step-definition regex affects Vim < 9.2.0496",
-      "link": "https://seclists.org/oss-sec/2026/q2/567",
-      "ts": 1779047300000,
-      "source": "OSS Security"
     },
     {
       "title": "verifying the entire AS path against the customer cone on a route server",

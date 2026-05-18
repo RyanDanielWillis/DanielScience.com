@@ -201,11 +201,12 @@
   function renderNewsFeed() {
     const mount = document.querySelector("[data-news-feed]");
     if (!mount) return;
+    const section = mount.closest("section");
     fetch("./news-data.json")
       .then((r) => { if (!r.ok) throw new Error("no feed"); return r.json(); })
       .then((data) => {
         const items = (data.items || []).filter((h) => h.link && h.title).slice(0, 9);
-        if (!items.length) { mount.innerHTML = ""; return; }
+        if (!items.length) { if (section) section.hidden = true; return; }
         mount.innerHTML = items.map((h) => `
             <a class="news-card" href="${h.link}" target="_blank" rel="noopener noreferrer">
               <span class="news-source">${h.source}</span>
@@ -214,7 +215,7 @@
             </a>`).join("");
         setupSpotlights();
       })
-      .catch(() => { mount.innerHTML = ""; });
+      .catch(() => { if (section) section.hidden = true; });
   }
 
   setupThemeToggle();
