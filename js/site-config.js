@@ -39,34 +39,34 @@ window.DS_SITE_CONFIG = {
   ],
   services: [
     {
-      title: "Full-stack application development",
+      title: "Technical architecture & full-stack delivery",
       description:
-        "Responsive interfaces, backend logic, API integrations, and practical workflows."
+        "System design, API-first architecture, and end-to-end delivery for software products your business depends on. Your users get a polished product. You get code you can maintain and a system you understand."
     },
     {
-      title: "React / Next.js and UI modernization",
+      title: "Cybersecurity & zero-trust implementation",
       description:
-        "Accessible layouts, component cleanup, performance improvements, and polished UI."
+        "Threat posture assessment, zero-trust network design, identity-centric access controls, and security hardening that protects your business without slowing it down. Built around NIST frameworks, not checkbox compliance."
     },
     {
-      title: "Backend and API integration",
+      title: "Post-quantum cryptography planning",
       description:
-        "Service wiring, data flow, reporting endpoints, and business-system glue code."
+        "Quantum computers will break today's encryption. NIST standardized the first post-quantum algorithms in 2024. Ryan audits your cryptographic exposure and builds a phased migration plan — before the window closes."
     },
     {
-      title: "Cloud and deployment tooling",
+      title: "AI-augmented IT operations",
       description:
-        "Deployment paths, environment setup, automation scripts, monitoring hooks, and maintainable pipelines."
+        "AI tools integrated into your real workflows: anomaly detection, automated triage, pattern-based alerting, and documentation that stays current. Fewer fires, faster resolution, and a team that spends time on work that matters."
     },
     {
-      title: "DevSecOps-aware workflows",
+      title: "Cloud infrastructure & deployment",
       description:
-        "Safer configuration, access-aware processes, and checks that reduce operational risk."
+        "Reliable deployment pipelines, infrastructure-as-code, environment management, and monitoring that catches problems before your customers do. Cloud-native or hybrid — built to scale without heroics."
     },
     {
-      title: "MSP and IT operations support",
+      title: "Enterprise IT & MSP operations leadership",
       description:
-        "Endpoint support, infrastructure troubleshooting, documentation, and reliability improvements."
+        "Full ownership of your technology environment: endpoints, networking, VoIP, vendor relationships, compliance, and IT strategy. One accountable leader instead of a list of contractors and unresolved tickets."
     }
   ],
   blogPosts: [

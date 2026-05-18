@@ -13,7 +13,7 @@ jobs:
           node-version: "20"
           cache: "npm"
       - name: Build blog posts
-        run: npm ci && npm run build
+        run: npm install && npm run build
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
