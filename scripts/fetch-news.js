@@ -22,6 +22,11 @@ const SOURCE_META = {
 
 const MAX_ITEMS = 30;
 const MAX_PER_SOURCE = 6;
+const SUMMARY_CONCURRENCY = 5;
+
+// Load Anthropic SDK if available
+let Anthropic = null;
+try { Anthropic = (require("@anthropic-ai/sdk").default || require("@anthropic-ai/sdk")); } catch (_) {}
 
 function decodeEntities(str) {
   return str
@@ -38,21 +43,17 @@ function extractTag(xml, tag) {
   return m ? decodeEntities(m[1].replace(/<!\[CDATA\[|\]\]>/g, "").trim()) : "";
 }
 
-function cleanDescription(raw, title) {
+function cleanRaw(raw, title) {
   if (!raw) return "";
   let text = raw.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-  // Strip mailing list header lines
   text = text.replace(/\b(From|To|Cc|Subject|Date|Message-Id|In-Reply-To|References|MIME-Version|Content-Type|Content-Transfer-Encoding)\s*:[^\n]{0,200}/gi, "");
-  // Strip "Posted by X via Y on Z" intros common in seclists RSS
   text = text.replace(/Posted by\s.{0,120}\son\s\w+\s\d+/gi, "");
-  // Strip the title from the start if RSS repeats it
   if (title) {
     const t = title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     text = text.replace(new RegExp(`^\\s*${t}\\s*`, "i"), "");
   }
   text = text.replace(/\s+/g, " ").trim();
-  if (text.length < 20) return "";
-  return text.length > 240 ? text.slice(0, 237) + "…" : text;
+  return text.length < 20 ? "" : text.slice(0, 500);
 }
 
 function parseRSS(xml, label) {
@@ -64,9 +65,9 @@ function parseRSS(xml, label) {
     if (!link) link = extractTag(block, "guid");
     const pubDate = extractTag(block, "pubDate");
     const ts = pubDate ? Date.parse(pubDate) : 0;
-    const description = cleanDescription(extractTag(block, "description"), title);
+    const raw = cleanRaw(extractTag(block, "description"), title);
     if (title && link && link.startsWith("http")) {
-      items.push({ title, link, ts, source: label, description });
+      items.push({ title, link, ts, source: label, raw });
     }
   }
   return items;
@@ -81,9 +82,9 @@ function parseAtom(xml, label) {
     const link = linkMatch ? linkMatch[1] : "";
     const updated = extractTag(block, "updated") || extractTag(block, "published");
     const ts = updated ? Date.parse(updated) : 0;
-    const description = cleanDescription(extractTag(block, "summary") || extractTag(block, "content"), title);
+    const raw = cleanRaw(extractTag(block, "summary") || extractTag(block, "content"), title);
     if (title && link && link.startsWith("http")) {
-      items.push({ title, link, ts, source: label, description });
+      items.push({ title, link, ts, source: label, raw });
     }
   }
   return items;
@@ -104,6 +105,29 @@ async function fetchFeed(source) {
   }
 }
 
+async function summarise(client, item) {
+  if (!client) { item.description = item.raw; return; }
+  try {
+    const msg = await client.messages.create({
+      model: "claude-haiku-4-5-20251001",
+      max_tokens: 120,
+      messages: [{
+        role: "user",
+        content: `Write a 1-2 sentence plain-English summary of what this security or networking news item is actually about. Be specific — name what software, protocol, or topic is involved and what's happening. Don't start with "This post" or "This article".
+
+Title: ${item.title}
+Context: ${item.raw || "(no further context)"}
+
+Summary:`,
+      }],
+    });
+    item.description = msg.content[0].text.trim();
+  } catch (err) {
+    console.warn(`  [summary] failed for "${item.title.slice(0, 40)}": ${err.message}`);
+    item.description = item.raw;
+  }
+}
+
 async function main() {
   console.log("Fetching news feeds...");
   const results = await Promise.all(SOURCES.map(fetchFeed));
@@ -113,11 +137,27 @@ async function main() {
     .sort((a, b) => b.ts - a.ts)
     .slice(0, MAX_ITEMS);
 
-  writeFileSync(OUT_PATH, JSON.stringify({ updated: new Date().toISOString(), sources: SOURCE_META, items }, null, 2));
-  console.log(`Done — wrote ${items.length} items to news-data.json`);
+  const client = Anthropic && process.env.ANTHROPIC_API_KEY
+    ? new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+    : null;
+
+  if (client) {
+    console.log(`Generating summaries for ${items.length} items...`);
+    for (let i = 0; i < items.length; i += SUMMARY_CONCURRENCY) {
+      await Promise.all(items.slice(i, i + SUMMARY_CONCURRENCY).map((item) => summarise(client, item)));
+      process.stdout.write(`  ${Math.min(i + SUMMARY_CONCURRENCY, items.length)}/${items.length}\r`);
+    }
+    console.log("\nSummaries done.");
+  } else {
+    console.log("No ANTHROPIC_API_KEY — using raw descriptions.");
+    items.forEach((item) => { item.description = item.raw; });
+  }
+
+  // Remove raw field from output
+  const clean = items.map(({ raw: _raw, ...rest }) => rest);
+
+  writeFileSync(OUT_PATH, JSON.stringify({ updated: new Date().toISOString(), sources: SOURCE_META, items: clean }, null, 2));
+  console.log(`Done — wrote ${clean.length} items to news-data.json`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+main().catch((err) => { console.error(err); process.exit(1); });

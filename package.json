@@ -8,6 +8,7 @@
     "serve": "npx @11ty/eleventy --serve --watch"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@anthropic-ai/sdk": "^0.39.0"
   }
 }
