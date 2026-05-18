@@ -31,7 +31,8 @@
     const mount = document.querySelector("[data-projects]");
     if (!mount || !config.projects) return;
     mount.innerHTML = config.projects.map((project) => `
-      <article class="project-card${project.featured ? " is-featured" : ""}">
+      <article class="project-card${project.featured ? " is-featured" : ""}${project.image ? " has-image" : ""}">
+        ${project.image ? `<img class="project-card-img" src="${project.image}" alt="${project.title} screenshot" loading="lazy">` : ""}
         <div class="project-preview">
           <span>${project.category || project.eyebrow}${project.featured ? " / Featured" : ""}</span>
           <strong>${project.preview}</strong>
@@ -47,6 +48,29 @@
         </div>
       </article>
     `).join("");
+  }
+
+  function renderTechStack() {
+    const mount = document.querySelector("[data-tech-stack]");
+    if (!mount || !config.techStack) return;
+    const base = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
+    mount.innerHTML = config.techStack.map(({ name, icon }) => `
+      <div class="tech-item">
+        <img src="${base}/${icon}/${icon}-original.svg"
+             alt="${name}" width="34" height="34" loading="lazy"
+             onerror="this.replaceWith(document.createTextNode(''))">
+        <span>${name}</span>
+      </div>`).join("");
+  }
+
+  function renderSkills() {
+    const mount = document.querySelector("[data-skills]");
+    if (!mount || !config.skills) return;
+    mount.innerHTML = config.skills.map(({ category, items }) => `
+      <div class="skills-category">
+        <h4>${category}</h4>
+        <ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>
+      </div>`).join("");
   }
 
   function renderServices() {
@@ -308,6 +332,8 @@
   renderProjects();
   renderServices();
   renderBlogPosts();
+  renderTechStack();
+  renderSkills();
   renderNewsFeed();
   renderFullNewsFeed();
   setupSpotlights();

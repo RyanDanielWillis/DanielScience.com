@@ -5,6 +5,7 @@ window.DS_SITE_CONFIG = {
       eyebrow: "Live technical product",
       category: "DevOps / Infrastructure",
       featured: true,
+      image: "./callsentry-logo.png",
       description:
         "VoIP and network diagnostics with plain-English reporting and infrastructure-aware support decisions.",
       stack: ["Python", "FastAPI", "SQLite", "Diagnostics", "VoIP"],
@@ -68,6 +69,30 @@ window.DS_SITE_CONFIG = {
       description:
         "Full ownership of your technology environment: endpoints, networking, VoIP, vendor relationships, compliance, and IT strategy. One accountable leader instead of a list of contractors and unresolved tickets."
     }
+  ],
+  techStack: [
+    { name: "Python",      icon: "python" },
+    { name: "JavaScript",  icon: "javascript" },
+    { name: "FastAPI",     icon: "fastapi" },
+    { name: "Docker",      icon: "docker" },
+    { name: "PostgreSQL",  icon: "postgresql" },
+    { name: "Linux",       icon: "linux" },
+    { name: "Git",         icon: "git" },
+    { name: "Bash",        icon: "bash" },
+    { name: "Nginx",       icon: "nginx" },
+    { name: "HTML5",       icon: "html5" },
+    { name: "CSS3",        icon: "css3" },
+    { name: "Grafana",     icon: "grafana" },
+    { name: "SQLite",      icon: "sqlite" },
+    { name: "GitHub",      icon: "github" },
+  ],
+  skills: [
+    { category: "Languages",          items: ["Python", "JavaScript", "TypeScript", "Bash / Shell", "SQL"] },
+    { category: "Frameworks & APIs",  items: ["FastAPI", "Node.js", "REST APIs", "Eleventy"] },
+    { category: "Infrastructure",     items: ["Linux", "Docker", "Nginx", "GitHub Actions", "CI / CD", "Infrastructure-as-Code"] },
+    { category: "Databases",          items: ["PostgreSQL", "SQLite", "SQL Server"] },
+    { category: "Networking & Security", items: ["TCP / IP", "VoIP / SIP", "Wireshark", "Zero-Trust", "BGP", "Firewalls", "PKI / TLS"] },
+    { category: "Monitoring & AI",    items: ["Grafana", "Anomaly Detection", "Claude API", "Automated Triage", "Log Analysis"] },
   ],
   blogPosts: [
     {
