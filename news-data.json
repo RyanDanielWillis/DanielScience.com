@@ -1,59 +1,1027 @@
 {
-  "updated": "2026-05-18T01:53:15.466Z",
+  "updated": "2026-05-18T02:39:20.368Z",
+  "sources": {
+    "Full Disclosure": "Public vulnerability disclosures, exploit details, and security advisories from researchers and vendors worldwide.",
+    "OSS Security": "Coordinated CVE disclosures, patches, and security fixes for open source software projects.",
+    "InfoSec News": "Curated security headlines aggregated from major industry publications and researchers.",
+    "NANOG": "North American network operators discussing routing, peering, BGP, infrastructure operations, and industry events.",
+    "ipSpace.net": "Deep technical networking by Ivan Pepelnjak: BGP, EVPN, data center fabrics, SD-WAN, and cloud architecture."
+  },
   "items": [
     {
       "title": "APPLE-SA-05-13-2026-1 Safari 26.5",
       "link": "https://seclists.org/fulldisclosure/2026/May/16",
       "ts": 1779052594000,
-      "source": "Full Disclosure"
+      "source": "Full Disclosure",
+      "description": "Safari 26.5 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127121 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. WebKit Available for: macOS Sonoma and macOS Sequoia Impact: Processing maliciously crafted web content may prevent Content..."
     },
     {
       "title": "APPLE-SA-05-11-2026-11 visionOS 26.5",
       "link": "https://seclists.org/fulldisclosure/2026/May/15",
       "ts": 1779052591000,
-      "source": "Full Disclosure"
+      "source": "Full Disclosure",
+      "description": "visionOS 26.5 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127120 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. Accelerate Available for: Apple Vision Pro (all models) Impact: An app may be able to cause a denial-of-service Description:..."
     },
     {
       "title": "APPLE-SA-05-11-2026-10 watchOS 26.5",
       "link": "https://seclists.org/fulldisclosure/2026/May/14",
       "ts": 1779052589000,
-      "source": "Full Disclosure"
+      "source": "Full Disclosure",
+      "description": "watchOS 26.5 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127119 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. Accelerate Available for: Apple Watch Series 6 and later Impact: An app may be able to cause a denial-of-service Description:..."
+    },
+    {
+      "title": "APPLE-SA-05-11-2026-9 tvOS 26.5",
+      "link": "https://seclists.org/fulldisclosure/2026/May/13",
+      "ts": 1779052587000,
+      "source": "Full Disclosure",
+      "description": "tvOS 26.5 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127118 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. Accelerate Available for: Apple TV HD and Apple TV 4K (all models) Impact: An app may be able to cause a denial-of-service..."
+    },
+    {
+      "title": "APPLE-SA-05-11-2026-8 macOS Sonoma 14.8.7",
+      "link": "https://seclists.org/fulldisclosure/2026/May/7",
+      "ts": 1779052584000,
+      "source": "Full Disclosure",
+      "description": "macOS Sonoma 14.8.7 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127117 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. APFS Available for: macOS Sonoma Impact: An app may be able to cause unexpected system termination Description: A..."
+    },
+    {
+      "title": "APPLE-SA-05-11-2026-7 macOS Sequoia 15.7.7",
+      "link": "https://seclists.org/fulldisclosure/2026/May/12",
+      "ts": 1779052582000,
+      "source": "Full Disclosure",
+      "description": "macOS Sequoia 15.7.7 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127116 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. APFS Available for: macOS Sequoia Impact: An app may be able to cause unexpected system termination Description:..."
+    },
+    {
+      "title": "APPLE-SA-05-11-2026-6 macOS Tahoe 26.5",
+      "link": "https://seclists.org/fulldisclosure/2026/May/11",
+      "ts": 1779052580000,
+      "source": "Full Disclosure",
+      "description": "macOS Tahoe 26.5 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127115 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. Accelerate Available for: macOS Tahoe Impact: An app may be able to cause a denial-of-service Description: An..."
+    },
+    {
+      "title": "APPLE-SA-05-11-2026-5 iOS 15.8.8 and iPadOS 15.8.8",
+      "link": "https://seclists.org/fulldisclosure/2026/May/10",
+      "ts": 1779052577000,
+      "source": "Full Disclosure",
+      "description": "iOS 15.8.8 and iPadOS 15.8.8 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127114 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. Notification Services Available for: iPhone 6s (all models), iPhone 7 (all models), iPhone SE..."
+    },
+    {
+      "title": "APPLE-SA-05-11-2026-4 iOS 16.7.16 and iPadOS 16.7.16",
+      "link": "https://seclists.org/fulldisclosure/2026/May/9",
+      "ts": 1779052575000,
+      "source": "Full Disclosure",
+      "description": "iOS 16.7.16 and iPadOS 16.7.16 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127113 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. Notification Services Available for: iPhone 8, iPhone 8 Plus, iPhone X, iPad 5th generation,..."
+    },
+    {
+      "title": "APPLE-SA-05-11-2026-3 iPadOS 17.7.11",
+      "link": "https://seclists.org/fulldisclosure/2026/May/8",
+      "ts": 1779052572000,
+      "source": "Full Disclosure",
+      "description": "iPadOS 17.7.11 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127112 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. Notification Services Available for: iPad Pro 12.9-inch 2nd generation, iPad Pro 10.5-inch, and iPad 6th generation Impact:..."
+    },
+    {
+      "title": "APPLE-SA-05-11-2026-2 iOS 18.7.9 and iPadOS 18.7.9",
+      "link": "https://seclists.org/fulldisclosure/2026/May/6",
+      "ts": 1779052568000,
+      "source": "Full Disclosure",
+      "description": "iOS 18.7.9 and iPadOS 18.7.9 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127111 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. Accounts Available for: iPhone XS, iPhone XS Max, iPhone XR, iPad 7th generation Impact: An app..."
+    },
+    {
+      "title": "APPLE-SA-05-11-2026-1 iOS 26.5 and iPadOS 26.5",
+      "link": "https://seclists.org/fulldisclosure/2026/May/5",
+      "ts": 1779052566000,
+      "source": "Full Disclosure",
+      "description": "iOS 26.5 and iPadOS 26.5 addresses the following issues. Information about the security content is also available at https://support.apple.com/en-us/127110 . Apple maintains a Security Releases page at https://support.apple.com/100100 which lists recent software updates with security advisories. Accelerate Available for: iPhone 11 and later, iPad Pro 12.9-inch 3rd generation and later, iPad Pro..."
+    },
+    {
+      "title": "Full disclosure: Impersonation attacks on Edupage portal",
+      "link": "https://seclists.org/fulldisclosure/2026/May/4",
+      "ts": 1779052495000,
+      "source": "Full Disclosure",
+      "description": "VULNERABILITY Non-sanitised submission of malicious SVG files on the Edupage portal in combination with CSRF vulnerability allows triggering various actions on behalf of other users, e.g. identity spoofing, sending fake messages, giving fake approvals, etc. Full disclosure report: https://jkosik.github.io/posts/edupage/ Reference: https://www.edupage.org/ VENDOR: Applied Software Consultants PRODUCT: Edupage - https://www.edupage.org/ Web..."
+    },
+    {
+      "title": "Full disclosure: Edupage web and mobile application authorization bypass leaks PII and IBAN codes",
+      "link": "https://seclists.org/fulldisclosure/2026/May/3",
+      "ts": 1779052493000,
+      "source": "Full Disclosure",
+      "description": "VULNERABILITY Both authenticated and publicly accessible anonymous guest accounts on Edupage portal allow an attacker to capture the complete list of user IDs, names (students, parents, and teachers), and the associated banking details (IBAN codes) Full disclosure report: https://jkosik.github.io/posts/edupage/ Reference: https://www.edupage.org/ VENDOR: Applied Software Consultants PRODUCT: Edupage - https://www.edupage.org/ Web application..."
+    },
+    {
+      "title": "Dovecot Security Advisory OXDC-2026-0002",
+      "link": "https://seclists.org/fulldisclosure/2026/May/2",
+      "ts": 1779052296000,
+      "source": "Full Disclosure",
+      "description": "Hi! We&apos;re sharing our latest advisory with you and like to thank everyone who contributed in finding and solving those vulnerabilities. This advisory is also published at https://documentation.open-xchange.com/dovecot/security/advisories/html/2026/oxdc-adv-2026-0002.html --- Classification: TLP:GREEN Internal reference: DOV-8967 Type: CWE-235 (Improper Handling of Extra Parameters) Component: core Report confidence: Confirmed Solution..."
     },
     {
       "title": "CVE-2026-8721: Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs",
       "link": "https://seclists.org/oss-sec/2026/q2/569",
       "ts": 1779047830000,
-      "source": "OSS Security"
+      "source": "OSS Security",
+      "description": "======================================================================== CVE-2026-8721 CPAN Security Group ======================================================================== CVE ID: CVE-2026-8721 Distribution: Crypt-OpenSSL-PKCS12 Versions: through 1.94 MetaCPAN: https://metacpan.org/dist/Crypt-OpenSSL-PKCS12 VCS Repo:..."
     },
     {
       "title": "CVE-2026-8507: Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out of bound (OOB) write flaws",
       "link": "https://seclists.org/oss-sec/2026/q2/568",
       "ts": 1779047721000,
-      "source": "OSS Security"
+      "source": "OSS Security",
+      "description": "======================================================================== CVE-2026-8507 CPAN Security Group ======================================================================== CVE ID: CVE-2026-8507 Distribution: Crypt-OpenSSL-PKCS12 Versions: through 1.94 MetaCPAN: https://metacpan.org/dist/Crypt-OpenSSL-PKCS12 VCS Repo:..."
     },
     {
       "title": "[vim-security] Vimscript Code Injection in cucumber filetype plugin via crafted step-definition regex affects Vim < 9.2.0496",
       "link": "https://seclists.org/oss-sec/2026/q2/567",
       "ts": 1779047300000,
-      "source": "OSS Security"
+      "source": "OSS Security",
+      "description": "Vimscript Code Injection in cucumber filetype plugin via crafted step-definition regex affects Vim ============================================================================================================= ummary A code..."
+    },
+    {
+      "title": "[vim-security] Vimscript Code Injection in netrw NetrwBookHistSave() via crafted directory name affects Vim < 9.2.495",
+      "link": "https://seclists.org/oss-sec/2026/q2/566",
+      "ts": 1779044546000,
+      "source": "OSS Security",
+      "description": "Vimscript Code Injection in netrw NetrwBookHistSave() via crafted directory name affects Vim ====================================================================================================== ent (CWE-74) ## Summary A..."
     },
     {
       "title": "verifying the entire AS path against the customer cone on a route server",
       "link": "https://seclists.org/nanog/2026/May/126",
       "ts": 1779044346000,
-      "source": "NANOG"
+      "source": "NANOG",
+      "description": "Hi. I was working on a route server configuration for BIRD and while it&apos;s commonplace and often publicly documented [1, 2] that a route server checks that the origin AS number is in the as-set, then I didn&apos;t find a single route server documentation which states that the entire AS-path is checked. Same is true for software [3] used for building the route servers configuration. I mean that in principle, route servers running BIRD and..."
+    },
+    {
+      "title": "CVE-2026-46720: Net::Statsd::Tiny versions before 0.3.8 for Perl allowed metric injections",
+      "link": "https://seclists.org/oss-sec/2026/q2/565",
+      "ts": 1779042747000,
+      "source": "OSS Security",
+      "description": "======================================================================== CVE-2026-46720 CPAN Security Group ======================================================================== CVE ID: CVE-2026-46720 Distribution: Net-Statsd-Tiny Versions: before 0.3.8 MetaCPAN: https://metacpan.org/dist/Net-Statsd-Tiny VCS Repo: ..."
+    },
+    {
+      "title": "Re: Recent Kernel exploits, attack surface reduction, example IPSEC",
+      "link": "https://seclists.org/oss-sec/2026/q2/564",
+      "ts": 1779028514000,
+      "source": "OSS Security",
+      "description": "By the way, I&apos;ve just added such a feature to kmod for us: https://github.molgen.mpg.de/mariux64/kmod/compare/v34.2...v34.2-mpi Previously, we experimented with a wrapper script for /proc/sys/kernel/modprobe: https://github.molgen.mpg.de/mariux64/mxtools/pull/532 But this would guard only the modules requested by the kernel, not the modules pulled in as dependencies. So I think we&apos;ll discontinue that approach and use the kmod..."
+    },
+    {
+      "title": "CVE-2026-46719: Net::Statsd::Lite versions before 0.9.0 for Perl allowed metric injections",
+      "link": "https://seclists.org/oss-sec/2026/q2/563",
+      "ts": 1778955876000,
+      "source": "OSS Security",
+      "description": "======================================================================== CVE-2026-46719 CPAN Security Group ======================================================================== CVE ID: CVE-2026-46719 Distribution: Net-Statsd-Lite Versions: before 0.9.0 MetaCPAN: https://metacpan.org/dist/Net-Statsd-Lite VCS Repo: ..."
+    },
+    {
+      "title": "Re: Recent Kernel exploits, attack surface reduction, example IPSEC",
+      "link": "https://seclists.org/oss-sec/2026/q2/562",
+      "ts": 1778955771000,
+      "source": "OSS Security",
+      "description": "Another option on x86 is to isolate drivers from the kernel, and make drivers Ring 1 or RIng 2. Leave the kernel to Ring 0, and userland to Ring 3. A compromised driver cannot get root, and remains isolated in the system. It works on x86 because there are two supervisor bits on x86, not one like on the old DEC Alphas. Jeff"
+    },
+    {
+      "title": "Re: Recent Kernel exploits, attack surface reduction, example IPSEC",
+      "link": "https://seclists.org/oss-sec/2026/q2/561",
+      "ts": 1778955659000,
+      "source": "OSS Security",
+      "description": "Hi, > Multiple of the recent kernel exploits have affected the \"esp\" Linux > Kernel module. ESP is, as far as I understand, part of IPSEC, and I > think it&apos;s fair to say that IPSEC is not widely used these days. I > think this raises some questions about attack surface. I want to note > that I use IPSEC as an example here, but it likely applies in very > similar ways to many features that are part of the..."
+    },
+    {
+      "title": "Re: Recent Kernel exploits, attack surface reduction, example IPSEC",
+      "link": "https://seclists.org/oss-sec/2026/q2/560",
+      "ts": 1778955546000,
+      "source": "OSS Security",
+      "description": "* Hanno Böck [260516 15:07]: The packaging complexity would likely not be that much of a problem, the overhead in packaging metadata would add some more cost (also consider that deciding which packages to install easily gets into the 2^package number complexity). But the biggest disadvantage would be the missing granularity (you don&apos;t wont to make a package for every single module) and the hassle is something is..."
+    },
+    {
+      "title": "Re: Recent Kernel exploits, attack surface reduction, example IPSEC",
+      "link": "https://seclists.org/oss-sec/2026/q2/559",
+      "ts": 1778951797000,
+      "source": "OSS Security",
+      "description": "Hello Hanno, I understand your rationale. To reduce the \"complexity\" of your proposal, those modules can be configured as modules (I mean CONFIG_[snip]=m) and blacklisted by default in /etc/modprobe.d/ What do you think?"
+    },
+    {
+      "title": "Re: Recent Kernel exploits, attack surface reduction, example IPSEC",
+      "link": "https://seclists.org/oss-sec/2026/q2/558",
+      "ts": 1778950393000,
+      "source": "OSS Security",
+      "description": "FWIW OpenWRT has had separate packaging for a long time for most driver and protocol type kernel modules. I assume it was originally done for space-saving reasons, but it has now become a useful feature for other reasons too. Their strongswan package depends on the needed kmod packages, to continue with the ipsec example. So splitting up modules on a physical machine or VM seems fairly tractable. I would expect that container users might be the..."
     },
     {
       "title": "Re: Cogent abuse?",
       "link": "https://seclists.org/nanog/2026/May/125",
       "ts": 1778945024000,
-      "source": "NANOG"
+      "source": "NANOG",
+      "description": "RCE territory? --srs ________________________________ t abuse? Apparently their normal address routes emails directly into a php..."
     },
     {
       "title": "Cogent abuse?",
       "link": "https://seclists.org/nanog/2026/May/124",
       "ts": 1778941651000,
-      "source": "NANOG"
+      "source": "NANOG",
+      "description": "Anyone know of a backup way to contact Cogent abuse? Apparently their normal address routes emails directly into a php script, which sounds perfectly safe, but that is now broken: This is the mail system at host abuse01-hhc.sys.cogentco.com. ... mailto:report () abuse01-hhc sys cogentco com>> (expanded from mailto:report () abuse sys cogentco..."
+    },
+    {
+      "title": "Recent Kernel exploits, attack surface reduction, example IPSEC",
+      "link": "https://seclists.org/oss-sec/2026/q2/557",
+      "ts": 1778936853000,
+      "source": "OSS Security",
+      "description": "Hi, Multiple of the recent kernel exploits have affected the \"esp\" Linux Kernel module. ESP is, as far as I understand, part of IPSEC, and I think it&apos;s fair to say that IPSEC is not widely used these days. I think this raises some questions about attack surface. I want to note that I use IPSEC as an example here, but it likely applies in very similar ways to many features that are part of the Linux Kernel and are not used in most..."
+    },
+    {
+      "title": "Re: Coordinated Disclosure in the LLM Age",
+      "link": "https://seclists.org/oss-sec/2026/q2/556",
+      "ts": 1778918256000,
+      "source": "OSS Security",
+      "description": "Yes, but to be pedantic, September 2026 is when _manufacturers_ need to start reporting the bugs they are notified of or find on their own. I predict that&apos;s just going to be a slow trickle, and that&apos;s what the EU is planning for. But, come December 2027, that&apos;s when all open source projects that end up under the \"steward\" category, requirements kick in. That&apos;s when they are responsible for reporting all..."
+    },
+    {
+      "title": "Sv: Coordinated Disclosure in the LLM Age",
+      "link": "https://seclists.org/oss-sec/2026/q2/555",
+      "ts": 1778890844000,
+      "source": "OSS Security",
+      "description": "Not sure I understand this feedback. Openstack has a lot of low hanging vulnerabilities due to legacy code. This is the central issue, not me or LLMs. A lot of people are clamoring for sovereign cloud right now: https://news.ycombinator.com/item?id=48120629 An example: https://bugs.launchpad.net/swift/+bug/2152384/comments/14 ROI AI"
+    },
+    {
+      "title": "Weekly Global IPv4 Routing Table Report",
+      "link": "https://seclists.org/nanog/2026/May/123",
+      "ts": 1778868255000,
+      "source": "NANOG",
+      "description": "This is an automated weekly mailing describing the state of the Global IPv4 Routing Table as seen from APNIC&apos;s router in Japan. The posting is sent to APOPS, NANOG, AfNOG, SANOG, PacNOG, SAFNOG UKNOF, TZNOG, MENOG, BJNOG, SDNOG, CMNOG, LACNOG and the RIPE Routing WG. Daily listings are sent to bgp-stats () lists apnic net. For historical data, please see https://thyme.apnic.net . If you have any comments please contact Philip Smith..."
+    },
+    {
+      "title": "Lab: EVPN Asymmetric IRB with Anycast Gateways",
+      "link": "https://blog.ipspace.net/2026/05/lab-evpn-asymmetric-irb-anycast/?utm_source=atom_feed",
+      "ts": 1778824320000,
+      "source": "ipSpace.net",
+      "description": "I postponed the discussion of ARP issues with EVPN anycast gateways to keep yesterday&rsquo;s blog post reasonably short. If you&rsquo;re impatient and want to try that out, I have just the right lab exercise for you; you&rsquo;ll have to extend VLANs into end-to-end MAC-VRF instances and add IRB and anycast gateways: Explore the lab exercise You can run the lab on your own netlab -enabled infrastructure ( more details ), but also within a free GitHub Codespace or even on your Apple-silicon Mac "
+    },
+    {
+      "title": "ARP with EVPN Asymmetric IRB",
+      "link": "https://blog.ipspace.net/2026/05/arp-issues-evpn-asymmetric-irb/?utm_source=atom_feed",
+      "ts": 1778737500000,
+      "source": "ipSpace.net",
+      "description": "In a previous blog post , I described the ARP issues you&rsquo;ll encounter when using centralized routing (on a spine switch) between two EVPN MAC-VRF instances (a fancy name for a VLAN encapsulated in VXLAN or MPLS). That blog post established a baseline that will help us unravel the ARP behavior in a more realistic scenario: asymmetric Integrated Routing and Bridging (IRB). That&rsquo;s a mouthful, but it&rsquo;s really quite a simple concept; the following diagram explains the asymmetric for"
+    },
+    {
+      "title": "Re: Does SOA expire for root matters?",
+      "link": "https://seclists.org/nanog/2026/May/122",
+      "ts": 1778675709000,
+      "source": "NANOG",
+      "description": "and, as has been discussed a number of times, here there be dragons randy"
+    },
+    {
+      "title": "Re: Does SOA expire for root matters?",
+      "link": "https://seclists.org/nanog/2026/May/121",
+      "ts": 1778658493000,
+      "source": "NANOG",
+      "description": "There is no such BCP. There is a specification for how to this, but it does not have (IETF) BCP status, not least because providing downstream AXFR service to resolvers is not a formal part of the root server system&apos;s function. Ray"
+    },
+    {
+      "title": "Hands-On Introduction to SR-MPLS",
+      "link": "https://blog.ipspace.net/2026/05/sr-mpls-intro/?utm_source=atom_feed",
+      "ts": 1778652960000,
+      "source": "ipSpace.net",
+      "description": "The second demo 1 I did during the Segment Routing workshop @ ITNOG10 illustrated how easy it is to set up and explore a small SR-MPLS network with netlab . The lab topology described a small three-router network (you need three routers to see &ldquo;true&rdquo; labels besides the penultimate-hop popping ones): Read more &hellip;"
+    },
+    {
+      "title": "Re: Does SOA expire for root matters?",
+      "link": "https://seclists.org/nanog/2026/May/120",
+      "ts": 1778637245000,
+      "source": "NANOG",
+      "description": "Of more interest is probably how the SOA values affect your and other random operators’ resolvers. The BCP is for resolvers to AXFR the root zone and not query the roots for recursive resolution. What values make sense for that?"
+    },
+    {
+      "title": "Re: Does SOA expire for root matters?",
+      "link": "https://seclists.org/nanog/2026/May/119",
+      "ts": 1778619296000,
+      "source": "NANOG",
+      "description": "It&apos;s true for the F-root nodes that I run. Note however that as soon as the zone expires and the server at a site starts returning SERVFAIL, a watchdog script detects this and withdraws the Anycast BGP announcements for that site. Ray"
+    },
+    {
+      "title": "Microsoft MCC ASN",
+      "link": "https://seclists.org/nanog/2026/May/118",
+      "ts": 1778595454000,
+      "source": "NANOG",
+      "description": "Hello NANOG community, Hopefully someone from the Microsoft MCC (connected cache) team is part of this mailing list. We have been fighting for months with Microsoft to get them to accept AS401485 as a valid ASN to host a caching server. However, Microsoft still doesn&apos;t recognize this ASN as part of their valid ASN range and claims we need to pay Azure support to get this resolved which simply doesn&apos;t make sense in this context. This..."
+    },
+    {
+      "title": "Re: \"Peering Router\"",
+      "link": "https://seclists.org/nanog/2026/May/117",
+      "ts": 1778571121000,
+      "source": "NANOG",
+      "description": "On 12/05/2026 06:49:40, \"Mark Tinka via NANOG\" wrote: The reason we started doing that way back was IX used to be quite fragile with regular storms that would often take out connected routers too. We still have a frangible peering router per IX port limiting blast radius. brandon"
+    },
+    {
+      "title": "Re: \"Peering Router\"",
+      "link": "https://seclists.org/nanog/2026/May/116",
+      "ts": 1778569520000,
+      "source": "NANOG",
+      "description": "100% -- we do this too. In a pinch we&apos;ve done \"peering in a VRF\", but I wouldn&apos;t recommend it. It&apos;s a pain in the ass to set up, and an even bigger pain to troubleshoot if you don&apos;t understand how it works. Plus it doesn&apos;t scale."
+    },
+    {
+      "title": "MUST READ: The Future of Everything is Lies, I Guess",
+      "link": "https://blog.ipspace.net/2026/05/worth-reading-future-everything-lies/?utm_source=atom_feed",
+      "ts": 1778565900000,
+      "source": "ipSpace.net",
+      "description": "Kyle Kingsbury published a long (10-part) article about his frustrations with AI, aptly named The Future of Everything is Lies, I Guess . Regardless of where you are on the skeptic-to-fanboy spectrum, I would highly recommend you read it, even if you believe you&rsquo;ll disagree with everything he wrote."
+    },
+    {
+      "title": "Re: \"Peering Router\"",
+      "link": "https://seclists.org/nanog/2026/May/115",
+      "ts": 1778565013000,
+      "source": "NANOG",
+      "description": "This. A dedicated peering router also ensures you eliminate providing transit to a peer if you make a configuration error, as the peering router neither carries the DFZ nor 0/0, ::/0. Mark."
+    },
+    {
+      "title": "Re: Does SOA expire for root matters?",
+      "link": "https://seclists.org/nanog/2026/May/114",
+      "ts": 1778503602000,
+      "source": "NANOG",
+      "description": "Actually, no - it is all just AXFR, and each RSO transfers from a private set of servers managed by the Root Zone Maintainer (Verisign). IXFR doesn&apos;t work well for the root zone where RRSIGs are regenerated twice every day. Ray (Director of DNS Operations, ISC - F-Root)"
+    },
+    {
+      "title": "Reorganized ipSpace.net Segment Routing Resources",
+      "link": "https://blog.ipspace.net/2026/05/sr-reorg/?utm_source=atom_feed",
+      "ts": 1778480280000,
+      "source": "ipSpace.net",
+      "description": "I created nine sample SR-MPLS topologies for the ITNOG 10 SR-MPLS workshop , and of course, we ran out of time. I plan to cover those topologies and resulting printouts in a series of blog posts; to prepare for those, I cleaned up and reorganized the Segment Routing blog category, which is now split into two: Segment Routing with MPLS Labels (SR-MPLS) Segment Routing over IPv6 (SRv6) Hope you&rsquo;ll find them useful! Also, if you know of other non-vendor Segment Routing resources, please leave"
+    },
+    {
+      "title": "Need Zayo to fix a PTR",
+      "link": "https://seclists.org/nanog/2026/May/113",
+      "ts": 1778410586000,
+      "source": "NANOG",
+      "description": "Soneone in Zayo forgot a little “.” after “zayo.com http://zayo.com/ >” in a DNS zone and this is a/ messing up the formatting of a very legacy mtr report I run and b/ messing up with my OCD: ❯ host 2001:438:ffff::407d:1f69 9.6.f.1.d.7.0.4.0.0.0.0.0.0.0.0.0.0.0.0.f.f.f.f.8.3.4.0.1.0.0.2.ip6.arpa domain name pointer ae11.er1.ams1.nl.zip.zayo.com.d.7.0.4.0.0.0.0.0.0.0.0.0.0.0.0.f.f.f.f.8.3.4.0.1.0.0.2.ip6.arpa. After adding the..."
+    },
+    {
+      "title": "Re: Geolocation and OfficeDepot.com",
+      "link": "https://seclists.org/nanog/2026/May/112",
+      "ts": 1778383046000,
+      "source": "NANOG",
+      "description": "Hi Cory, I work for IPinfo. We monitor NANOG threads regularly. Can you share the ranges or ASN with me? IPinfo is reporting the correct location, but I can check our internal data for any hints or overrides worth investigating. It is possible Office Depot&apos;s geolocation provider is prioritizing some location hints over published geofeeds. Office Depot is not a customer of ours, and I do not have a direct contact there, but I will see..."
+    },
+    {
+      "title": "Public Videos: Segment Routing 101",
+      "link": "https://blog.ipspace.net/2026/05/sr101-videos/?utm_source=atom_feed",
+      "ts": 1778222280000,
+      "source": "ipSpace.net",
+      "description": "In the spring of 2017, Jeff Tantsura , the IETF Routing Area chair , delivered a short &ldquo; Introduction to Segment Routing &rdquo; webinar. In mid-April 2026, we had ~100 people at ITNOG 10 attending the excellent &ldquo;Segment Routing: From Theory to Practice&rdquo; workshop by the great Tiziano Tofoni . The future is obviously not evenly distributed. If you&rsquo;re in the early stages of your Segment Routing journey, you might appreciate the videos from Jeff&rsquo;s webinar ; you can now"
+    },
+    {
+      "title": "On ARP and MAC Aging Timers",
+      "link": "https://blog.ipspace.net/2026/05/arp-mac-aging-timers/?utm_source=atom_feed",
+      "ts": 1778134440000,
+      "source": "ipSpace.net",
+      "description": "Naveen Kumar Devaraj mentioned an interesting fact in his EVPN-related comment : The EOS default ARP timeout is 4 hours, and MAC aging is 5 minutes. Arista is not the only platform using these default values; did you ever wonder where they came from? Read more &hellip;"
+    },
+    {
+      "title": "Hmmm: Cloudflare's Automatic Return Routing",
+      "link": "https://blog.ipspace.net/2026/05/worth-reading-cloudflare-automatic-return-routing/?utm_source=atom_feed",
+      "ts": 1778047920000,
+      "source": "ipSpace.net",
+      "description": "A while ago, I found the How Automatic Return Routing solves IP overlap article on Cloudflare&rsquo;s blog. They evidently have a technology that addresses a pain point well worth solving (access to shared resources from clients using overlapping address ranges). I just hate how they&rsquo;re selling it. Go read the article first; I&rsquo;ll wait. OK, here&rsquo;s what bothers me: the &ldquo;VRFs and NAT are bad&rdquo; claims, while they use the same technology in disguise. Read more &hellip;"
+    },
+    {
+      "title": "ARP Issues in EVPN Centralized Routing Design",
+      "link": "https://blog.ipspace.net/2026/05/arp-issues-evpn-central-routing/?utm_source=atom_feed",
+      "ts": 1777959900000,
+      "source": "ipSpace.net",
+      "description": "Adding IRB to a EVPN MAC-VRFs (the fancy way of saying stretched VLANs ) seems like a no-brainer: Add IP addresses to VLAN interfaces Optionally add a shared anycast gateway Declare &ldquo;Mission Accomplished&rdquo; (and try to ignore the inevitable phone call at 2 AM on a Sunday night) Making that work in a multi-vendor environment is even more fun 1 , as I sadly discovered when creating the EVPN lab exercises or trying to figure out why some EVPN implementations were failing netlab EVPN integ"
+    },
+    {
+      "title": "SwiNOG 41: It Was Nice to Be Back",
+      "link": "https://blog.ipspace.net/2026/05/swinog-41/?utm_source=atom_feed",
+      "ts": 1777871340000,
+      "source": "ipSpace.net",
+      "description": "Last week&rsquo;s SwiNOG was (as expected) great fun at a phenomenal location , starting with the first slide of the first presentation: &ldquo;6 Stages of Network De-sh*tification&rdquo;. I particularly loved the &ldquo;talk less, chat more&rdquo; schedule. The longer breaks gave us plenty of time to catch up with old friends and discuss interesting, sometimes completely unexpected, topics. For example, I learned that SIP MESSAGE is used to carry SMS messages these days. As much as I loved chat"
+    },
+    {
+      "title": "SR-MPLS Workshop Materials",
+      "link": "https://blog.ipspace.net/2026/04/sr-mpls-workshop/?utm_source=atom_feed",
+      "ts": 1777813860000,
+      "source": "ipSpace.net",
+      "description": "We had a wonderful SR-MPLS workshop @ ITNOG 10 in Bologna on April 20th 2025. If you missed it, explore: The Segment Routing: from Theory to Practice presentation by Tiziano Tofoni The slide deck for the hands-on part of the workshop The lab topologies , and the usage guidelines ."
+    },
+    {
+      "title": "Generate Partial Device Configurations with netlab",
+      "link": "https://blog.ipspace.net/2026/04/netlab-generate-device-configs/?utm_source=atom_feed",
+      "ts": 1777526760000,
+      "source": "ipSpace.net",
+      "description": "At ITNOG 10, I&rsquo;ve seen something that I haven&rsquo;t seen in a very long time: a mini-Interop-style physical lab using a dozen devices from different vendors. The network core was a leaf-and-spine fabric with off-path BGP route reflectors and numerous other devices attached to it. I&rsquo;ve configured a few networks in the past, so I know it must have been a beast to configure all those devices by hand (and fix all the IP addressing errors), but then a thought struck me: unless one wants"
+    },
+    {
+      "title": "On Generating EVPN MAC/IP Routes",
+      "link": "https://blog.ipspace.net/2026/04/evpn-generating-macip-routes/?utm_source=atom_feed",
+      "ts": 1777441080000,
+      "source": "ipSpace.net",
+      "description": "Naveen Kumar Devaraj was reading my Integrated Routing and Bridging (IRB) with EVPN MAC-VRF Instances lab exercise and spotted this detail: Arista EOS originates MAC-IP routes with and without IP addresses, effectively doubling the size of the EVPN BGP table He kindly wrote a LinkedIn comment explaining that behavior: Read more &hellip;"
+    },
+    {
+      "title": "Worth Reading: Lab as Code (containerlab and netlab)",
+      "link": "https://blog.ipspace.net/2026/04/worth-reading-lab-as-code/?utm_source=atom_feed",
+      "ts": 1777357560000,
+      "source": "ipSpace.net",
+      "description": "@sjhloco wrote an excellent in-depth description of how you can use containerlab and netlab to manage your labs as code . He also documented a few netlab shortcomings (one of which caused a crash); fortunately, I found his blog post (admittedly over a year later) and fixed most of them in release 26.04 : Read more &hellip;"
+    },
+    {
+      "title": "State of Network Automation with Urs Baumann",
+      "link": "https://blog.ipspace.net/2026/04/state-network-automation/?utm_source=atom_feed",
+      "ts": 1777012860000,
+      "source": "ipSpace.net",
+      "description": "I stopped tracking the (lack of) progress in network automation years ago, when I realized I had nothing new to say. As an eternal optimist, I hoped I was just missing something, but Urs Baumann (the guest of Software Gone Wild Episode 206 ) destroyed my hopes when he said, &ldquo; I can still use the same slides I created 10 years ago &rdquo;. On a more positive note, he recently completed his Master&rsquo;s thesis on AI in network engineering, so we ended with a nice chat on its potential impa"
+    },
+    {
+      "title": "Ten Years of ITNOG",
+      "link": "https://blog.ipspace.net/2026/04/itnog-10/?utm_source=atom_feed",
+      "ts": 1777012200000,
+      "source": "ipSpace.net",
+      "description": "I spent the last two days in Bologna at ITNOG 10 in the excellent company of Italian networking engineers (many of them personal friends) and a few guests from around the world. As always, the organizers and the program committee didn&rsquo;t disappoint &ndash; it was a smoothly organized, lovely event full of interesting presentations. Thanks a million to everyone involved; I&rsquo;ll definitely be back! Now for the highlights, starting with the ultimate catnip for the differently attentive: ru"
+    },
+    {
+      "title": "Worth Reading: AI and Knowledge Stagnation",
+      "link": "https://blog.ipspace.net/2026/04/worth-reading-ai-lost-knowledge/?utm_source=atom_feed",
+      "ts": 1776923280000,
+      "source": "ipSpace.net",
+      "description": "Another week, another interesting AI article (is anyone writing about anything else these days?), this time from Noah Smith (another author worth following). I found this gem hidden in his weekly roundup : Instead of trying to write a piece of code from scratch, or prove a math theorem from scratch, or figure out some piece of knowledge for yourself, you just ask AI to do it all for you. So everyone ends up getting the right answers to questions whose answers are already known, so they don’t end"
+    },
+    {
+      "title": "Hmmm: Rail-Optimized Networking for AI Workloads",
+      "link": "https://blog.ipspace.net/2026/04/worth-reading-rail-optimized-networking/?utm_source=atom_feed",
+      "ts": 1776750240000,
+      "source": "ipSpace.net",
+      "description": "Phil Gervasi wrote an interesting article describing Rail-Optimized Networking for AI Training Workloads . Go read it first; I&rsquo;ll wait. Does it sound interesting? Were you able to see behind the curtain and figure out what it&rsquo;s really about? Read more &hellip;"
+    },
+    {
+      "title": "Lab: Integrated Routing and Bridging (IRB) with EVPN MAC-VRF Instances",
+      "link": "https://blog.ipspace.net/2026/04/lab-evpn-irb/?utm_source=atom_feed",
+      "ts": 1776406380000,
+      "source": "ipSpace.net",
+      "description": "Most EVPN documentation rushes into the complexities of symmetric IRB, type-5 EVPN routes, and EVPN IP-VRFs, but if you want to master a technology, it&rsquo;s better to take it slow and proceed with small steps. In today&rsquo;s lab exercise , we&rsquo;ll do just that: explore what happens when you add IP addresses (we&rsquo;ll use anycast gateways) to VLAN interfaces tied to EVPN MAC-VRF instances. Explore the lab exercise You can run the lab on your own netlab -enabled infrastructure ( more d"
+    },
+    {
+      "title": "Testing FRRouting Pull Requests with netlab",
+      "link": "https://blog.ipspace.net/2026/04/frr-pr-testing/?utm_source=atom_feed",
+      "ts": 1776318600000,
+      "source": "ipSpace.net",
+      "description": "Every other blue moon, I discover a bug in FRRouting ( example ). Because the FRRouting developers care about their work, it usually gets fixed within a few days, often resulting in a &ldquo;can you test this PR?&rdquo; question. It turns out that&rsquo;s surprisingly easy to do with netlab &ndash; here&rsquo;s the step-by-step procedure (assuming you already have the topology file that reproduced the bug): Read more &hellip;"
+    },
+    {
+      "title": "BGP Labs: Graceful Degradation for Unsupported Devices",
+      "link": "https://blog.ipspace.net/2026/04/bgp-labs-graceful-degradation/?utm_source=atom_feed",
+      "ts": 1776232740000,
+      "source": "ipSpace.net",
+      "description": "A few weeks ago, I described the changes in the online BGP labs that allow you to use most of the common network operating systems as &ldquo;external&rdquo; routers 1 . However, while we keep improving it, netlab still can&rsquo;t configure all BGP features on all supported devices (PRs from Nokia and Mikrotik fans would be highly appreciated 😎), which means that it&rsquo;s possible to configure your environment in a way where some of the more complex labs would simply fail to start. The limite"
+    },
+    {
+      "title": "OSPFv3 Router ID Documentation on Arista EOS",
+      "link": "https://blog.ipspace.net/2025/11/arista-eos-ospfv3-router-id/?utm_source=atom_feed",
+      "ts": 1776182100000,
+      "source": "ipSpace.net",
+      "description": "When I published a blog post making fun of the ridiculously incorrect Cisco IOS/XE OSPFv3 documentation , an engineer working for Cisco quickly sent me an email saying, &ldquo;Well, the other vendors are not much better.&rdquo; Let&rsquo;s see how well Arista EOS is doing; this is their description of the router-id command (taken from EOS 4.35.0F documentation; unchanged for at least a dozen releases): 2026-04-14 : The EOS documentation has been fixed around release 4.36.0F. Thanks a million! Re"
+    },
+    {
+      "title": "What is Netlab and Why Network Engineers Should Care",
+      "link": "https://blog.ipspace.net/2026/04/worth-reading-what-is-netlab/?utm_source=atom_feed",
+      "ts": 1776149700000,
+      "source": "ipSpace.net",
+      "description": "Milan Zapletal, the author of the biggest netlab topology I&rsquo;ve seen so far ( full story ), has published a nice introductory article explaining What is Netlab and Why Network Engineers Should Care . Thank you, Milan! Much appreciated ;)"
+    },
+    {
+      "title": "netlab 26.04: EXOS, BGP Prefix Origination, More Static Routes",
+      "link": "https://blog.ipspace.net/2026/04/netlab-26-04/?utm_source=atom_feed",
+      "ts": 1776058080000,
+      "source": "ipSpace.net",
+      "description": "netlab release 26.04 is out. Here are the highlights: Extreme Networks EXOS is supported as a Vagrant box or containerlab node with OSPF, VLAN, and VRRP configuration (by Seb d’Argoeuves ). The new bgp.advertise node attribute allows you to advertise networks in the IP routing table into BGP. It’s supported on most platforms. The bgp.originate attribute is now dual-stack and VRF-aware , allowing you to originate IPv4 and IPv6 prefixes into per-VRF BGP instances. New platforms with static route s"
+    },
+    {
+      "title": "SR Linux Configuration Conversion Tool",
+      "link": "https://blog.ipspace.net/2026/04/srlinux-config-conversion/?utm_source=atom_feed",
+      "ts": 1775924880000,
+      "source": "ipSpace.net",
+      "description": "A year ago, I was complaining about SR Linux breaking its configuration data model with a new software release . At that time, I was promised it would only happen once a year, and, like clockwork, that moment arrived with the SR Linux release 26.03. However, this year Miguel Redondo fixed the netlab SR Linux configuration templates ( VRF export policies , LocPref routing policy changes ) before I could even start looking at them, and Roman Dodin released a tool that tells you exactly what change"
+    },
+    {
+      "title": "Public Videos: Docker 101",
+      "link": "https://blog.ipspace.net/2026/04/docker-101-videos/?utm_source=atom_feed",
+      "ts": 1775802960000,
+      "source": "ipSpace.net",
+      "description": "While according to the GIFEE True Believers™, Docker is dead and Kubernetes rules the world, people who want to have a bit of life might be perfectly happy running “obsolete” stuff like Docker on their laptops or Linux VMs. If you happen to be one of the latter, you might like the Introduction to Docker webinar I put together a few years ago. It’s now public; you can watch it with an ipSpace.net account. Read more &hellip;"
+    },
+    {
+      "title": "Interoperability of EVPN/VXLAN with IPv6 Next Hops",
+      "link": "https://blog.ipspace.net/2026/04/frr-evpn-ipv6-pmsi/?utm_source=atom_feed",
+      "ts": 1775629140000,
+      "source": "ipSpace.net",
+      "description": "FRRouting release 10.6 promised &ldquo; BGP IPv6 VTEP support ,&rdquo; claiming &ldquo; it enables EVPN deployments using IPv6 tunnel endpoints while maintaining full backward compatibility with IPv4 VTEPs .&rdquo; Of course, I had to try it out, and since we already have EVPN over IPv6 running on Arista EOS (since netlab release 26.01 ), I decided to set up a simple lab with an Arista cEOS device running release 4.35.2F and the latest FRRouting container. I was not exactly surprised when it did"
+    },
+    {
+      "title": "Worth Reading: Shameless Guesses, Not Hallucinations",
+      "link": "https://blog.ipspace.net/2026/04/worth-reading-ai-shameless-guesses/?utm_source=atom_feed",
+      "ts": 1775540160000,
+      "source": "ipSpace.net",
+      "description": "In a recent article, Scott Alexander made an interesting point: What AI produces are not hallucinations but shameless guesses (also known as bullshit ) because the training process rewards the correct answers but does not penalize the incorrect ones. After all, having an AI model say, &ldquo;I don&rsquo;t know that&rdquo; is not good for business, is it? On a tangential note, calling those blunders hallucinations was a marketing masterstroke. Not being a native English speaker, I might be missin"
+    },
+    {
+      "title": "Lab: Summarizing IS-IS Level-1 Routes",
+      "link": "https://blog.ipspace.net/2026/04/isis-summary/?utm_source=atom_feed",
+      "ts": 1775199720000,
+      "source": "ipSpace.net",
+      "description": "IS-IS was designed to carry node addresses (NSAPs) between level-1 routers (called Intermediate Systems ) within an area and area prefixes between level-2 routers, resulting in a perfect separation of concerns and forwarding information summarization. When IETF tried to use the same routing protocol for a networking stack with a completely different addressing mentality , something had to give. Read more &hellip;"
+    },
+    {
+      "title": "Every Layer of Review Makes You 10x Slower",
+      "link": "https://blog.ipspace.net/2026/04/worth-reading-reviews-are-slowing-you/?utm_source=atom_feed",
+      "ts": 1775024700000,
+      "source": "ipSpace.net",
+      "description": "Avery Pennarun published yet another excellent article: every layer of review makes you 10x slower , effectively reiterating what I&rsquo;ve been saying for decades : all the technology in the world won’t help you unless you re-architect the broken processes. AI is no exception, but of course, the AI evangelists, LinkedIn AI Wranglers 1 , and Thought Leaders will never tell you that (or even admit it). Yes, you can find BS like that on LinkedIn. You&rsquo;re not surprised, are you?&#160; &#x21a9"
+    },
+    {
+      "title": "BGP Labs: Use Your Preferred Device for External Routers",
+      "link": "https://blog.ipspace.net/2026/03/bgp-labs-device-flexibility/?utm_source=atom_feed",
+      "ts": 1774935240000,
+      "source": "ipSpace.net",
+      "description": "TL&DR: With the recent changes to online BGP labs , you can also use Aruba CX, Cisco IOS, Cisco IOS XE, Cisco IOS XR, Dell OS10, Junos, or VyOS as external lab devices in most lab exercises (you could always use these devices for the routers you worked on). Previously, you could choose between Arista EOS and FRRouting, both of which are (obviously) still supported. One of the goals of the Online BGP Labs project was to create an environment in which you could practice the BGP features you were i"
+    },
+    {
+      "title": "Changing Interfaces Connected to netlab Links",
+      "link": "https://blog.ipspace.net/2026/03/netlab-ifindex/?utm_source=atom_feed",
+      "ts": 1774848420000,
+      "source": "ipSpace.net",
+      "description": "Some netlab users want to accurately replicate their physical network&rsquo;s topology in a virtual lab. Ignoring the obvious caveats for a moment, the first hiccup is usually the interface naming. All bets are off if you&rsquo;re using anything but Ethernet in your actual network, but even if you did standardize on Ethernet, the container/VM interface names might not match the physical ones. netlab provided a solution for a long time &ndash; you can specify interface ifindex when attaching a no"
+    },
+    {
+      "title": "MANRS for Enterprise Customers",
+      "link": "https://blog.ipspace.net/2026/03/manrs-enterprise/?utm_source=atom_feed",
+      "ts": 1774550160000,
+      "source": "ipSpace.net",
+      "description": "In October 2023, I was talking about Internet routing security at the DEEP conference in Zadar, Croatia. After explaining the (obvious) challenges and the initiatives aimed at making Internet routing more secure ( MANRS ), I made my usual recommendation: vote with your wallet. However, if you&rsquo;re a company in Croatia (or Slovenia, or a number of other countries), you&rsquo;re stuck. While ISPs in Croatia might be doing a great job, none of them is a MANRS participant 1 , so we don&rsquo;t k"
+    },
+    {
+      "title": "Worth Reading: Securing NTP and the Origins of Time",
+      "link": "https://blog.ipspace.net/2026/03/worth-reading-ntp-origins-time/?utm_source=atom_feed",
+      "ts": 1774508040000,
+      "source": "ipSpace.net",
+      "description": "Geoff Huston published an article supposedly describing the challenge of securing NTP , but as is usually the case, he couldn&rsquo;t skip the prior art going all the way back (almost) to the formation of Earth. Before coming to the how do we secure NTP section, you&rsquo;ll learn everything about the wobbly Earth rotation, the changes in the Earth&rsquo;s angular speed, the impact of tides, the smearing of leap seconds, the differences between UT1 and UTC, why we use quasars to measure time, an"
+    },
+    {
+      "title": "Worth Reading: Why We've Tried to Replace Developers Every Decade",
+      "link": "https://blog.ipspace.net/2026/03/worth-reading-replacing-developers/?utm_source=atom_feed",
+      "ts": 1774336740000,
+      "source": "ipSpace.net",
+      "description": "The never-ending &ldquo;we will replace developers&rdquo; (or networking engineers) pipe dream didn&rsquo;t start with the latest bout of AI hype (or SDN). As Stephan Schwab explains in his Why We&rsquo;ve Tried to Replace Developers Every Decade article, it started with COBOL, the magic high-level programming language that businesspeople would use to write their own programs. At least some of us know how well that ended. I was also unfortunate to be there for the 5GL hype, the forms-driven prog"
+    },
+    {
+      "title": "Lab: Anycast Gateways on VXLAN Segments",
+      "link": "https://blog.ipspace.net/2026/03/lab-vxlan-anycast/?utm_source=atom_feed",
+      "ts": 1773990540000,
+      "source": "ipSpace.net",
+      "description": "Most vendors &ldquo;discovered&rdquo; anycast gateways when they tried implementing routing between MAC-VRFs in an EVPN environment and hit all the usual tripwires (more about that later). A few exceptions (like Arista ) supported them on VLAN segments for over a decade, and it was a no-brainer to extend that support to VXLAN segments. Want to try out how that works? The Anycast Gateways on VXLAN Segments lab exercise is just what you need. Read more &hellip;"
+    },
+    {
+      "title": "Arista EOS MPLS P/PE-router Behavior",
+      "link": "https://blog.ipspace.net/2026/03/arista-eos-mpls-behavior/?utm_source=atom_feed",
+      "ts": 1773903780000,
+      "source": "ipSpace.net",
+      "description": "Something didn&rsquo;t feel right as I tried to check whether the IPv4 ECMP I observed in the latest version of Arista cEOS containers works with my MPLS/anycast scenario . The forwarding tables seemed OK, but I wasn&rsquo;t getting MPLS labels in the ICMP replies (see RFC 4950 for details), even though I know Arista EOS can generate them. I decided to go down that rabbit hole and built the simplest possible BGP-free core (the addition of BGP will become evident in a few seconds) to investigate "
+    },
+    {
+      "title": "BGP Labs: Goodbye, Cumulus Linux",
+      "link": "https://blog.ipspace.net/2026/03/bgp-labs-goodbye-cumulus/?utm_source=atom_feed",
+      "ts": 1773811800000,
+      "source": "ipSpace.net",
+      "description": "When I started the Online BGP Labs project in mid-2023, Cumulus Linux still seemed like a good platform to use. You could run devices as virtual machines (we were still supporting VirtualBox) or in containers (containerlab was improving with every release), and it looked more polished than bare-bones FRRouting. Things only went downhill from there (from the perspective of offering a free and easy-to-use solution with a CLI resembling commonly-used devices): Read more &hellip;"
+    },
+    {
+      "title": "Network Device Telemetry Protocols with Dinesh Dutt",
+      "link": "https://blog.ipspace.net/2026/03/network-device-telemetry-protocols/?utm_source=atom_feed",
+      "ts": 1773384060000,
+      "source": "ipSpace.net",
+      "description": "Whenever I&rsquo;m ranting about vendors changing their data models or APIs with every other release, there is inevitably a vendor engineer chiming in, saying , &ldquo;Life would be so much better if the customers wouldn&rsquo;t insist on doing screen scraping for the last 50 years.&rdquo; While some of that screen scraping is pure inertia, we sometimes have good reasons to do it rather than use protocols like NETCONF, gNMI, or protobufs. In Episode 205 of Software Gone Wild, I&rsquo;m discussin"
+    },
+    {
+      "title": "IPv4 ECMP Works on Arista cEOS Release 4.35.2F",
+      "link": "https://blog.ipspace.net/2026/03/ecmp-arista-ceos/?utm_source=atom_feed",
+      "ts": 1773306540000,
+      "source": "ipSpace.net",
+      "description": "When I wrote about the anycast-ECMP-in-MPLS behavior in 2011, I had to use Cisco IOS to prove that ECMP worked, since Arista cEOS (running the Linux kernel for IP forwarding) didn&rsquo;t install more than one equal-cost path into the Linux forwarding table. Arista cEOS got better in the meantime; IPv4 ECMP works like a charm on cEOS release 4.35.02F. With the same lab topology I&rsquo;d used in 2021 , I was able to see the traffic spread across multiple nodes: Read more &hellip;"
+    },
+    {
+      "title": "Dynamic Path MTU Discovery in Cloudflare One Client",
+      "link": "https://blog.ipspace.net/2026/03/worth-reading-cloudflare-vpn-dynamic-mtu/?utm_source=atom_feed",
+      "ts": 1773213240000,
+      "source": "ipSpace.net",
+      "description": "Here&rsquo;s an interesting tidbit from the what took them so long department: Cloudflare One Client continuously measures end-to-end MTU and adjusts the local tunnel interface MTU size accordingly (warning: there&rsquo;s a fair amount of dubious handwaving over the interesting details), generating ICMP packet-too-big messages as close to the source as possible. I managed to avoid VPN clients most of my life, so I have no idea whether this is a &ldquo; finally someone figured that out 🎉&rdquo; "
+    },
+    {
+      "title": "netlab 26.03: EVPN/MPLS, IOS XR Features",
+      "link": "https://blog.ipspace.net/2026/03/netlab-26-03/?utm_source=atom_feed",
+      "ts": 1773130260000,
+      "source": "ipSpace.net",
+      "description": "netlab release 26.03 is out. Here are the highlights: New Cisco IOS XR features : SR-MPLS, MPLS/VPN, MPLS 6PE, EVPN over MPLS, VRRP, BGP session parameters, routing policies, prefix filters, AS-path filters, community filters, and static routes Juniper cRPD support (mostly by @leec-666 ) EVPN/VXLAN on Juniper vPTX and vJunos-router by @rickycraft OpenBSD BGP support by @remilocherer SR-MPLS support for OSPFv2 on EOS, FRR, IOS XE, IOS XR EVPN/MPLS improvements, including using SR-MPLS transport F"
+    },
+    {
+      "title": "Automating netlab-Based Cisco SD-WAN Deployment",
+      "link": "https://blog.ipspace.net/2026/03/cisco-sdwan-netlab/?utm_source=atom_feed",
+      "ts": 1773041340000,
+      "source": "ipSpace.net",
+      "description": "We haven&rsquo;t implemented support for Cisco SD-WAN in netlab yet, and we might never do so; after all, netlab isn&rsquo;t meant to be a kitchen sink of vendor-specific features. However, having an open-source tool that uses input and output files with standardized encoding (JSON or YAML) makes it easy to develop an independent solution that adds functionality. That&rsquo;s exactly what Sebastien d&rsquo;Argoeuves did: he developed a solution that automates Cisco SD-WAN deployment after the co"
+    },
+    {
+      "title": "Presentation: netlab Overview and Use Cases (NetBCN)",
+      "link": "https://blog.ipspace.net/2026/03/netlab-use-cases/?utm_source=atom_feed",
+      "ts": 1772699040000,
+      "source": "ipSpace.net",
+      "description": "Yesterday, I had a short presentation on netlab use cases during the NetBCN event. It covered a dozen examples, from rapid prototyping to testing network automation software and arguing with vendor TAC. I added the &ldquo;use cases&rdquo; part of the presentation to the standard netlab presentation; you can view the results on ipSpace.net (no account or registration required). Explore"
+    },
+    {
+      "title": "The Tale of Two EVPN/MPLS Encapsulations",
+      "link": "https://blog.ipspace.net/2026/03/tale-two-evpn-mpls-encapsulations/?utm_source=atom_feed",
+      "ts": 1772608140000,
+      "source": "ipSpace.net",
+      "description": "I decided it was high time to create EVPN/MPLS netlab integration tests and wanted to use the same approach I used for the EVPN/VXLAN ones: One of the PE-devices is the device we want to test The other PE-device is a device that is known to work (ideally, an FRRouting container). Bonus points if the other PE-device can generate operational data in JSON format. Using a device for which we already have a validation plugin is close to perfection. Add a P-router in the middle because MPLS. Attach so"
+    },
+    {
+      "title": "Worth Reading: Faster than Dijkstra?",
+      "link": "https://blog.ipspace.net/2026/03/worth-reading-faster-than-dijkstra/?utm_source=atom_feed",
+      "ts": 1772520180000,
+      "source": "ipSpace.net",
+      "description": "Bruce Davie published a nice article explaining why it makes little sense to use an algorithm that&rsquo;s supposedly faster than Dijkstra&rsquo;s in link-state routing protocols. Other interesting data points from the article (and linked presentations): People are running (a few) thousands of routers in a single area Running Dijkstra&rsquo;s algorithm on an emulated network with 2000 nodes took 100 msec&hellip; in 2003 (page 18 of this NANOG presentation ). It turns out (as I expected) that all"
+    },
+    {
+      "title": "netlab: Using L3VPN (MPLS/VPN) with SR-MPLS Core",
+      "link": "https://blog.ipspace.net/2026/03/netlab-sr-mpls-l3vpn/?utm_source=atom_feed",
+      "ts": 1772447941000,
+      "source": "ipSpace.net",
+      "description": "Someone recently asked me whether it&rsquo;s possible to use netlab to build an MPLS/VPN (technically, BGP/MPLS IP VPN ) lab with SR-MPLS core. Of course, let&rsquo;s build a simple lab using Arista EOS and Linux containers to implement this topology: Lab topology Here&rsquo;s the lab topology we&rsquo;ll use (also available on GitHub ): Read more &hellip;"
+    },
+    {
+      "title": "Lab: More Complex EVPN/VXLAN Bridging Scenario",
+      "link": "https://blog.ipspace.net/2026/02/lab-evpn-bridging-complex/?utm_source=atom_feed",
+      "ts": 1772179980000,
+      "source": "ipSpace.net",
+      "description": "In the first EVPN/VXLAN lab, we added the EVPN control plane to bridging over VXLAN . Now, let&rsquo;s try out a more complex scenario: several EVPN MAC-VRFs mapped to different VLAN segments on individual PE-devices. Explore the lab exercise You can run the lab on your own netlab -enabled infrastructure ( more details ), but also within a free GitHub Codespace or even on your Apple-silicon Mac ( installation , using Arista cEOS container , using VXLAN/EVPN labs )."
+    },
+    {
+      "title": "Configuring 6PE Route Reflector on Cisco IOS",
+      "link": "https://blog.ipspace.net/2026/02/ios-6pe-route-reflector/?utm_source=atom_feed",
+      "ts": 1772090340000,
+      "source": "ipSpace.net",
+      "description": "Imagine you want to deploy a BGP route reflector for MPLS 6PE or L3VPN service. Both services run over MPLS LSPs, use IPv4 BGP sessions, and use IPv4 next hops for BGP routes. There&rsquo;s absolutely no reason to need IPv6 routing on a node that handles solely the control-plane activity (it never appears as a BGP next hop anywhere), right? Cisco IOS disagrees, as I discovered when running route reflector integration tests for netlab 6PE and (MPLS) L3VPN functionality . Most platforms failed tho"
+    },
+    {
+      "title": "On AI Agents Speaking BGP",
+      "link": "https://blog.ipspace.net/2026/02/ai-speaking-bgp/?utm_source=atom_feed",
+      "ts": 1772001540000,
+      "source": "ipSpace.net",
+      "description": "I guess your LinkedIn feed is as full of AI nonsense as mine is, so I usually just skip all that posturing. However, every now and then, I stumble upon an idea that makes sense&hellip; until you start to dig deeper into it. There was this post about AI agents speaking BGP with an associated GitHub repo , so I could go take a look at what it&rsquo;s all about. The proof-of-concept (so the post author) has two components: Read more &hellip;"
+    },
+    {
+      "title": "Interesting: Open Space Events",
+      "link": "https://blog.ipspace.net/2026/02/worth-reading-open-space-conferences/?utm_source=atom_feed",
+      "ts": 1771915500000,
+      "source": "ipSpace.net",
+      "description": "Following a link in another Martin Fowler&rsquo;s blog post , I stumbled upon his thoughts on Open Space events &ndash; a way to set up self-organizing events. I&rsquo;m not sure I&rsquo;m brave (or young) enough to try it out, but if you&rsquo;re planning to organize a small gathering (like a local Network Operator Group), this might be an interesting, slightly more structured approach than a Net::Beer event. It would also be nice to know whether someone managed to pull it off in an online form"
+    },
+    {
+      "title": "netlab: The Caveats of Using Startup Configurations",
+      "link": "https://blog.ipspace.net/2026/02/netlab-startup-config-caveats/?utm_source=atom_feed",
+      "ts": 1771827780000,
+      "source": "ipSpace.net",
+      "description": "Petr Ankudinov wrote an excellent comment about netlab Fast cEOS Configuration implementation. Paraphrasing the original comment : If the use case is the initial lab deployment, why don&rsquo;t you use containerlab startup-config option to change the device&rsquo;s startup configuration? I have to admit, I&rsquo;m too old to boldly go with the just use the startup configuration approach. In ancient times, Cisco IOS did crazy stuff if you rearranged the commands in the startup configuration. But "
+    },
+    {
+      "title": "Cisco IOS/XR OSPFv2 Not-So-Passive Interfaces",
+      "link": "https://blog.ipspace.net/2026/02/iosxr-ospfv2-not-so-passive/?utm_source=atom_feed",
+      "ts": 1771483560000,
+      "source": "ipSpace.net",
+      "description": "What&rsquo;s wrong with me? Why do I have to uncover another weirdness every single time I run netlab integration tests on a new platform? Today, it&rsquo;s Cisco IOS/XR (release 25.2.1) and its understanding of what &ldquo;passive&rdquo; means. According to the corresponding documentation , the passive interface configuration command is exactly what I understood it to be: Use the passive command in appropriate mode to suppress the sending of OSPF protocol operation on an interface. However, whe"
+    },
+    {
+      "title": "EVPN IP-VRFs on Cisco IOS/XE: Configuration Notes",
+      "link": "https://blog.ipspace.net/2026/02/evpn-cisco-l3vpn/?utm_source=atom_feed",
+      "ts": 1771396260000,
+      "source": "ipSpace.net",
+      "description": "Last week, I described some of the gotchas I encountered while trying to make EVPN MAC-VRFs work on Cisco IOS/XE . In the meantime, I got IP-VRFs with transit VXLAN segments working . Here are the CliffsNotes: Starting with the disgusting configuration mechanism: Read more &hellip;"
+    },
+    {
+      "title": "Worth Reading: Modern Forwarding Architectures",
+      "link": "https://blog.ipspace.net/2026/02/worth-reading-modern-forwarding-architectures/?utm_source=atom_feed",
+      "ts": 1771311300000,
+      "source": "ipSpace.net",
+      "description": "Ignoring the obligatory misguided mention of OpenFlow and a few other unicorns, I found this article to be a nice introduction to modern forwarding architectures, including networking infrastructure for AI clusters and distributed cell-based fabrics."
+    },
+    {
+      "title": "Explore Configurations of Unfamiliar Devices with netlab",
+      "link": "https://blog.ipspace.net/2026/02/netlab-device-configs/?utm_source=atom_feed",
+      "ts": 1771226880000,
+      "source": "ipSpace.net",
+      "description": "Apart from IP multicast and QoS, netlab can configure commonly used networking technologies across dozens of devices from most networking vendors. Why don&rsquo;t you use all that embedded knowledge (supported by hundreds of integration tests ) to help you configure unfamiliar devices? You don&rsquo;t have to install VM or container managers (Vagrant/containerlab), or beg vendors to give you access to device VMs/containers, to get working device configurations. All you need is a Python package t"
+    },
+    {
+      "title": "Lab: Build an SR-MPLS Network with IS-IS",
+      "link": "https://blog.ipspace.net/2026/02/isis-sr-mpls/?utm_source=atom_feed",
+      "ts": 1770966120000,
+      "source": "ipSpace.net",
+      "description": "Want to spend an hour or two configuring some cool stuff this weekend? How about getting SR-MPLS to work with IS-IS and building a BGP-free core with it ? If you already set up your own netlab environment, you probably know what to do (or you can get the details here ). Alternatively, you can click here to start the lab in your browser using GitHub Codespaces . After starting the lab environment, change the directory to advanced/10-sr and execute netlab up . Read more &hellip;"
+    },
+    {
+      "title": "EVPN on Cisco IOS/XE: Configuration Notes",
+      "link": "https://blog.ipspace.net/2026/02/evpn-cisco-ios/?utm_source=atom_feed",
+      "ts": 1770878460000,
+      "source": "ipSpace.net",
+      "description": "After reading the L2 Vxlan On Catalyst blog post, I decided to add EVPN configuration templates to netlab -supported Cisco IOS/XE devices. It wasn&rsquo;t the easiest EVPN implementation I encountered; here&rsquo;s what I learned (hoping you&rsquo;ll find it helpful ). Starting with the trivial hiccups: Read more &hellip;"
+    },
+    {
+      "title": "netlab 26.02: KinD support, more EVPN/VXLAN",
+      "link": "https://blog.ipspace.net/2026/02/netlab-26-02/?utm_source=atom_feed",
+      "ts": 1770801300000,
+      "source": "ipSpace.net",
+      "description": "netlab release 26.02 is out, including the usual potpourri of goodies: Support for Kubernetes (KinD) clusters based on work by @wnagele Layer-2 EVPN/VXLAN support on Cat8000v, IOL, and IOLL2 netlab graph command can create graphs from a subset of nodes or links You can specify the parameters of core links in the fabric plugin OSPFv3 reports The fun part, however, are the new container configuration methods: Read more &hellip;"
+    },
+    {
+      "title": "Open-Source Network Simulators (2026 Edition)",
+      "link": "https://blog.ipspace.net/2026/02/worth-reading-opensource-network-simulators/?utm_source=atom_feed",
+      "ts": 1770707340000,
+      "source": "ipSpace.net",
+      "description": "Brian Linkletter published an updated overview of open-source network simulators and emulators . containerlab and GNS3 are clear leaders (no surprise there) with the original vrnetlab becoming abandonware (fortunately, we have Roman Dodin&rsquo;s fork ), which makes me think we should focus on using netlab primarily with containerlab and slowly sunset the Vagrant support, particularly considering some people actively hate the license change. Also, if anyone feels like writing an interface (provi"
+    },
+    {
+      "title": "Fast Arista cEOS Container Configuration",
+      "link": "https://blog.ipspace.net/2026/02/netlab-eos-configuration/?utm_source=atom_feed",
+      "ts": 1770618180000,
+      "source": "ipSpace.net",
+      "description": "After the enormous speedup I achieved with the FRR containers , I tried to do something similar with the Arista cEOS ones. After all, Arista&rsquo;s pretty open about running its software on standard Linux, so it should be possible to map host-side configuration files into container-side scripts and execute them, right? There was just one tiny gotcha: all netlab -generated EOS configuration files are device configuration snippets that are intended to be submitted via EOS CLI, and I didn&rsquo;t "
+    },
+    {
+      "title": "Lab: Routing Between VXLAN Segments",
+      "link": "https://blog.ipspace.net/2026/02/lab-vxlan-irb/?utm_source=atom_feed",
+      "ts": 1770361140000,
+      "source": "ipSpace.net",
+      "description": "In the previous EVPN/VXLAN lab exercises , we covered the basics of Ethernet bridging over VXLAN and the use of the EVPN control plane to build layer-2 segments. It&rsquo;s time to move up the protocol stack. Let&rsquo;s see how you can route between VXLAN segments, this time using unique unicast IP addresses on the layer-3 switches. Explore the lab exercise You can run the lab on your own netlab -enabled infrastructure ( more details ), but also within a free GitHub Codespace or even on your Ap"
+    },
+    {
+      "title": "On MPLS Forwarding Performance Myths",
+      "link": "https://blog.ipspace.net/2026/02/mpls-forwarding-performance/?utm_source=atom_feed",
+      "ts": 1770276000000,
+      "source": "ipSpace.net",
+      "description": "Whenever I claim that the initial use case for MPLS was improved forwarding performance (using the RFC that matches the IETF MPLS BoF slides as supporting evidence), someone inevitably comes up with a source claiming something along these lines: The idea of speeding up the lookup operation on an IP datagram turned out to have little practical impact. That might be true 1 , although I do remember how hard it was for Cisco to build the first IP forwarding hardware in the AGS+ CBUS controller. Swit"
+    },
+    {
+      "title": "OMG, After a Decade, VXLAN Is Still Insecure",
+      "link": "https://blog.ipspace.net/2026/02/worth-reading-omg-vxlan-still-insecure/?utm_source=atom_feed",
+      "ts": 1770186120000,
+      "source": "ipSpace.net",
+      "description": "In 2017 (over eight years ago), I was making fun of the fact that &ldquo; VXLAN is insecure &rdquo; was news to some people. Obviously, the message needed to be repeated, as the same author gave a very similar presentation two years later at a security conference. Unfortunately, it seems that everything old is new again (see also RFC 1925 rules 4 and 11), as proved by a &ldquo;Using GRE and VXLAN for Fun and Profit&rdquo; (my summary) presentation at DEFCON 33 . Even if you knew that unencrypted"
+    },
+    {
+      "title": "Interface MAC Address in IOS Layer-2 Images",
+      "link": "https://blog.ipspace.net/2026/02/ios-layer2-mac-address/?utm_source=atom_feed",
+      "ts": 1770102480000,
+      "source": "ipSpace.net",
+      "description": "Here&rsquo;s another &ldquo;You can&rsquo;t make this up, but it sounds too crazy to be true&rdquo; story: Cisco IOS layer-2 images change the interface MAC address when you change the interface switchport status. Let me start with a bit of background: IOL Layer 2 image starts with interfaces enabled and in bridged ( switchport ) mode ( details ) netlab has to run a normalize script (applicable to IOLL2, IOSv L2, and Arista EOS) before configuring anything else to ensure all interfaces are shut "
+    },
+    {
+      "title": "Fast FRR Container Configuration",
+      "link": "https://blog.ipspace.net/2026/02/netlab-frr-configuration/?utm_source=atom_feed",
+      "ts": 1770014820000,
+      "source": "ipSpace.net",
+      "description": "After creating the infrastructure that generates the device configuration files within netlab (not in an Ansible playbook), it was time to try to apply it to something else, not just Linux containers. FRR containers were the obvious next target. netlab uses two different mechanisms to configure FRR containers: Data-plane features are configured with bash scripts using ip commands and friends. Control-plane features are configured with FRR&rsquo;s vtysh I wanted to replace both with Linux scripts"
+    },
+    {
+      "title": "Opinion: Impact of AI on Networking Engineers",
+      "link": "https://blog.ipspace.net/2026/01/ai-impact-networking-engineers/?utm_source=atom_feed",
+      "ts": 1769670240000,
+      "source": "ipSpace.net",
+      "description": "A friend of mine sent me a series of questions that might also be on your mind (unless you&rsquo;re lucky enough to live under a rock or on a different planet): I wanted to ask you how you think AI will affect networking jobs. What&rsquo;s real and what&rsquo;s hype? Before going into the details, let&rsquo;s make a few things clear: Read more &hellip;"
+    },
+    {
+      "title": "Worth Reading: A Tech Career in 2026",
+      "link": "https://blog.ipspace.net/2026/01/worth-reading-tech-career-2026/?utm_source=atom_feed",
+      "ts": 1769584920000,
+      "source": "ipSpace.net",
+      "description": "There&rsquo;s no &ldquo; networking in 20xx &rdquo; video this year, so this insightful article by Anil Dash will have to do ;) He seems to be based in Silicon Valley, so keep in mind the Three IT Geographies , but one cannot beat advice like this: So much opportunity, inspiration, creativity, and possibility lies in applying the skills and experience that you may have from technological disciplines in other realms and industries that are often far less advanced in their deployment of technologi"
+    },
+    {
+      "title": "Lab: VXLAN Bridging with EVPN Control Plane",
+      "link": "https://blog.ipspace.net/2026/01/lab-evpn-bridging/?utm_source=atom_feed",
+      "ts": 1769497140000,
+      "source": "ipSpace.net",
+      "description": "In the previous VXLAN labs , we covered the basics of Ethernet bridging over VXLAN and a more complex scenario with multiple VLANs . Now let&rsquo;s add the EVPN control plane into the mix . The data plane (VLANs mapped into VXLAN-over-IPv4) will remain unchanged, but we&rsquo;ll use EVPN (a BGP address family) to build the ingress replication lists and MAC-to-VTEP mappings. Read more &hellip;"
+    },
+    {
+      "title": "Deploy Partially-Configured Training Labs with netlab",
+      "link": "https://blog.ipspace.net/2026/01/netlab-partial-configuration/?utm_source=atom_feed",
+      "ts": 1769410380000,
+      "source": "ipSpace.net",
+      "description": "Imagine you want to use netlab to build training labs, like the free BGP labs I created. Sometimes, you want to give students a device to work on while the other lab devices are already configured, just waiting for the students to get their job done. My BGP labs were designed for self-study. You might also want to listen to how Sander Steffann uses netlab in classroom training . For example, in the initial BGP lab , I didn&rsquo;t want any BGP-related configuration on RTR while X1 would already "
+    },
+    {
+      "title": "MUST WATCH: BGP: the First 18 Years",
+      "link": "https://blog.ipspace.net/2026/01/worth-reading-bgp-first-18-years/?utm_source=atom_feed",
+      "ts": 1769152620000,
+      "source": "ipSpace.net",
+      "description": "If you&rsquo;re at all interested in the history of networking, you simply MUST watch the BGP at 18: Lessons In Protocol Design lecture by Dr. Yakov Rekhter recorded in 2007 (as you can probably guess from the awful video quality) (HT: Berislav Todorovic via LinkedIn)."
+    },
+    {
+      "title": "Why Doesn't netlab Use X for Device Configuration Templates?",
+      "link": "https://blog.ipspace.net/2026/01/netlab-not-using-vendor-templates/?utm_source=atom_feed",
+      "ts": 1769066040000,
+      "source": "ipSpace.net",
+      "description": "Petr Ankudinov made an interesting remark when I complained about how much time I wasted waiting for Cisco 8000v to boot when developing netlab device configuration templates: For Arista part - just use AVD with all templates included and ANTA for testing. I was always wondering why netlab is not doing that. Like any other decent network automation platform, netlab uses a high-level data model (lab topology) to describe the network. That data model is then transformed into a device-level data mo"
+    },
+    {
+      "title": "Lab: Distributing Level-2 IS-IS Routes into Level-1 Areas",
+      "link": "https://blog.ipspace.net/2026/01/isis-inter-area-routes/?utm_source=atom_feed",
+      "ts": 1768979160000,
+      "source": "ipSpace.net",
+      "description": "One of the major differences between OSPF and IS-IS is their handling of inter-area routes. Non-backbone OSPF intra-area routes are copied into the backbone area and later (after the backbone SPF run) copied into other areas. IS-IS does not copy level-2 routes into level-1 areas; level-1 areas (by default) behave like totally stubby OSPF areas with the level-1 routers using the Attached (ATT) bit of level-1-2 routers in the same area to generate the default route. Read more &hellip;"
+    },
+    {
+      "title": "On MPLS Paths, Tunnels and Interfaces",
+      "link": "https://blog.ipspace.net/2026/01/mpls-paths-tunnels-interfaces/?utm_source=atom_feed",
+      "ts": 1768890540000,
+      "source": "ipSpace.net",
+      "description": "One of my readers attempted to implement a multi-vendor multicast VPN over MPLS but failed. As a good network engineer, he tried various duct tapes but found that the only working one was a GRE tunnel within a VRF, resulting in considerable frustration. In his own words: How is a GRE tunnel different compared to an MPLS LSP? I feel like conceptually, they kind of do the same thing. They just tunnel traffic by wrapping it with another header (one being IP/GRE, the other being MPLS). Instead of go"
+    },
+    {
+      "title": "How Moving Away from Ansible Made netlab Faster",
+      "link": "https://blog.ipspace.net/2026/01/netlab-faster-without-ansible/?utm_source=atom_feed",
+      "ts": 1768804560000,
+      "source": "ipSpace.net",
+      "description": "TL&DR: Of course, the title is clickbait. While the differences are amazing, you won&rsquo;t notice them in small topologies or when using bloatware that takes minutes to boot . Let&rsquo;s start with the background story: due to the (now fixed) suboptimal behavior of bleeding-edge Ansible releases , I decided to generate the device configuration files within netlab (previously, netlab prepared the device data, and the configuration files were rendered in an Ansible playbook). As we use bash scr"
+    },
+    {
+      "title": "Has Ansible Team Abandoned Network Automation?",
+      "link": "https://blog.ipspace.net/2025/12/ansible-abandoned-network-automation/?utm_source=atom_feed",
+      "ts": 1768558680000,
+      "source": "ipSpace.net",
+      "description": "A month ago, I described how Ansible release 12 broke the network device configuration modules , the little engines ( that could ) that brought us from the dark days of copy-and-paste into the more-survivable land of configuration templates. In the meantime, the Ansible networking team fixed the ansible.netcommon collection, but (according to that PR) the ability to process templated configurations directly in the network configuration modules is scheduled to disappear in January 2028 ( more det"
+    },
+    {
+      "title": "Infrahub with Damien Garros",
+      "link": "https://blog.ipspace.net/2026/01/infrahub-damien-garros/?utm_source=atom_feed",
+      "ts": 1768546020000,
+      "source": "ipSpace.net",
+      "description": "Why do we need Infrahub , another network automation tool? What does it bring to the table, who should be using it, and why is it using a graph database internally? I discussed these questions with Damien Garros , the driving force behind Infrahub, the founder of OpsMill (the company developing it), and a speaker in the ipSpace.net Network Automation course . Listen to the podcast"
+    },
+    {
+      "title": "Using netlab to Set Up Demos",
+      "link": "https://blog.ipspace.net/2026/01/using-netlab-demos/?utm_source=atom_feed",
+      "ts": 1768461300000,
+      "source": "ipSpace.net",
+      "description": "David Gee was time-pressed to set up a demo network to showcase his network automation solution and found that a Ubuntu VM running netlab to orchestrate Arista cEOS containers on his Apple Silicon laptop was exactly what he needed. I fixed a few blog posts based on his feedback (I can&rsquo;t tell you how much I appreciate receiving a detailed &ldquo;you should fix this stuff&rdquo; message, and how rare it is, so thanks a million!), and David was kind enough to add a delightful cherry on top of"
+    },
+    {
+      "title": "Do You Need IS-IS Areas?",
+      "link": "https://blog.ipspace.net/2026/01/is-is-areas/?utm_source=atom_feed",
+      "ts": 1768376700000,
+      "source": "ipSpace.net",
+      "description": "TL&DR : Most probably not, but if you do, you&rsquo;d better not rely on random blogs for professional advice #justSaying 😜 Here&rsquo;s an interesting question I got from a reader in the midst of an OSPF-to-IS-IS migration: Why should one bother with different [IS-IS] areas when the routing hierarchy is induced by the two levels and the appropriate IS-IS circuit types on the links between the routers? Well, if you think you need a routing hierarchy, you&rsquo;re bound to use IS-IS areas becaus"
+    },
+    {
+      "title": "netlab 26.01: EVPN for VXLAN-over-IPv6, Netscaler",
+      "link": "https://blog.ipspace.net/2026/01/netlab-26-01/?utm_source=atom_feed",
+      "ts": 1768285140000,
+      "source": "ipSpace.net",
+      "description": "I completely rewrote netlab&rsquo;s device configuration file generation during the New Year break. netlab Release 26.01 no longer uses Ansible Jinja2 functionality and works with Ansible releases 12/13, which are used solely for configuration deployment. I had to break a few eggs to get there; if you encounter any problems, please open an issue . Other new features include: EVPN for VXLAN-over-IPv6 The ‘skip_config’ node attribute that can be used to deploy partially-provisioned labs Lightweigh"
+    },
+    {
+      "title": "Happy Holidays and All the Best in 2026!",
+      "link": "https://blog.ipspace.net/2025/12/wrapup-2025/?utm_source=atom_feed",
+      "ts": 1766138460000,
+      "source": "ipSpace.net",
+      "description": "They say time goes faster as you get older, and it seems to be true. Another year has (almost) gone by. Try to disconnect from the crazy pace of the networking world, forget the &ldquo; vibe coding with AI will make engineers obsolete &rdquo; stupidities (hint: Fifth Generation Languages and Natural Language Programming were all the rage in the 1980s and 1990s), and focus on your loved ones. I would also like to wish you all the best in 2026! Read more &hellip;"
+    },
+    {
+      "title": "Hilarious: HTTP Status Codes as Pizza Images",
+      "link": "https://blog.ipspace.net/2025/12/worth-reading-http-pizza/?utm_source=atom_feed",
+      "ts": 1765967460000,
+      "source": "ipSpace.net",
+      "description": "Want to look up various HTTP status/error codes when troubleshooting a DNS BGP network server problem? Start at http.pizza for badly-needed stress relief (HT: Networking Notes ), then start a chat session with your new AI friend exploring more focused resources like the Wikipedia list of HTTP status codes ."
+    },
+    {
+      "title": "Underscores (in Hostnames) Strike Again",
+      "link": "https://blog.ipspace.net/2025/12/underscores-strike-again/?utm_source=atom_feed",
+      "ts": 1765779780000,
+      "source": "ipSpace.net",
+      "description": "I don&rsquo;t know why I decided to allow underscores in netlab node names. Maybe it&rsquo;s a leftover from the ancient days when some network devices refused to accept hyphens in hostnames, or perhaps it&rsquo;s a programmer&rsquo;s subconscious hatred of hyphens in identifiers (no programming language I&rsquo;m aware of allows them for a very good reason). Regardless, you can use underscores in netlab node names (and plugins like multilab use them to create unique hostnames), and they work gr"
+    },
+    {
+      "title": "Lab: Multilevel IS-IS Deployments",
+      "link": "https://blog.ipspace.net/2025/12/multilevel-isis/?utm_source=atom_feed",
+      "ts": 1765536300000,
+      "source": "ipSpace.net",
+      "description": "Like OSPF, IS-IS was designed when router memory was measured in megabytes and clock speeds in megahertz. Not surprisingly, it includes a scalability mechanism similar to OSPF areas. An IS-IS router could be a level-1 router (having in-area prefixes and a default route), a level-2 router (knowing just inter-area prefixes), or a level-1-2 router (equivalent to OSPF ABR). Even though multilevel IS-IS is rarely used today, it always makes sense to understand how things work, and the Multilevel IS-I"
+    },
+    {
+      "title": "IETF v6ops Working Group with Nick Buraglio",
+      "link": "https://blog.ipspace.net/2025/12/v6ops-ietf-working-group/?utm_source=atom_feed",
+      "ts": 1765436580000,
+      "source": "ipSpace.net",
+      "description": "The first IPv6 specs were published in 1995, and yet 30 years later, we still have a pretty active IETF working group focused on &ldquo; developing guidelines for the deployment and operation of new and existing IPv6 networks. &rdquo; (taken from the old charter ; they updated it in late October 2025). Why is it taking so long, and what problems are they trying to solve? Nick Buraglio, one of the working group chairs, provided some answers in Episode 203 of the Software Gone Wild podcast. Read m"
+    },
+    {
+      "title": "Evergreen: The Big Ball of Mud",
+      "link": "https://blog.ipspace.net/2025/12/worth-reading-big-ball-mud/?utm_source=atom_feed",
+      "ts": 1765350420000,
+      "source": "ipSpace.net",
+      "description": "In 2007, Jeff Atwood published a legendary blog post summarizing a 1997 paper by Brian Foote and Joseph Yoder. Reading that blog post (or the original paper), the inevitable conclusion is that we haven&rsquo;t made much progress in the last 20 years. Even worse, almost every single pathological architecture described in that blog post applies quite well to real-life organically grown networks. Keep reading"
+    },
+    {
+      "title": "netlab 25.12: Cisco IOS/XR Configuration Modules, More VXLAN Goodies",
+      "link": "https://blog.ipspace.net/2025/12/netlab-25-12/?utm_source=atom_feed",
+      "ts": 1765174560000,
+      "source": "ipSpace.net",
+      "description": "netlab release 25.12 (25.12.02 to be exact &ndash; I had a few PEBCAK moments) was published last Friday. Here are the highlights: Significantly improved Cisco IOS/XR support. With the netlab release 25.12, you can configure VLANs, VRFs, static routes, route redistribution, OSPF default routes, BGP confederations, and BGP local-as VXLAN-over-IPv6 on Arista EOS VXLAN with ingress replication on Cisco Catalyst 8000v The shutdown link/interface attribute can be used to start labs with interfaces tu"
+    },
+    {
+      "title": "Lab: More Complex VXLAN Deployment Scenario",
+      "link": "https://blog.ipspace.net/2025/12/vxlan-complex/?utm_source=atom_feed",
+      "ts": 1764915720000,
+      "source": "ipSpace.net",
+      "description": "In the first VXLAN lab , we covered the very basics. Now it&rsquo;s time for a few essential concepts (before introducing the EVPN control plane or integrated routing and bridging): Each VXLAN segment could have a different set of VTEPs (used to build the BUM flooding list) While the VXLAN Network Identifier (VNI) must be unique across the participating VTEPs, you could map different VLAN IDs into a single VNI (allowing you to merge two VLAN segments over VXLAN) Neither VXLAN VNI nor VLAN ID has"
+    },
+    {
+      "title": "Technical Writing: Lower Your Expectations",
+      "link": "https://blog.ipspace.net/2025/12/worth-reading-technical-writing/?utm_source=atom_feed",
+      "ts": 1764829440000,
+      "source": "ipSpace.net",
+      "description": "Sean Goedecke published an excellent set of recommendations for good technical writing , including: Keep it short Try to make your point in the first sentence Details matter less than you think. Based on some emails I received in the past (and the lack of response to the lengthy emails I sent), we should apply the same rules to emails (and all other forms of technical communication)."
+    },
+    {
+      "title": "Worth Watching: AI/ML Data Center Design",
+      "link": "https://blog.ipspace.net/2025/12/worth-reading-ai-ml-data-center-design/?utm_source=atom_feed",
+      "ts": 1764754200000,
+      "source": "ipSpace.net",
+      "description": "What could be better than watching 0x02 Jeffs discuss networking? How about having Petr Lapukhov of the RFC 7938 fame as a guest discussing AI/ML Data Center Design ? Note: Petr disappeared into the information black hole called Facebook over a decade ago, so I wondered how they allowed him to chat on a podcast for hours. It turns out he moved to NVIDIA, which might influence the podcast content a bit, but I&rsquo;m pretty sure Petr is still Petr ;)"
+    },
+    {
+      "title": "Multi-Pod EVPN Troubleshooting: Extended BGP Communities",
+      "link": "https://blog.ipspace.net/2025/12/evpn-multi-pod-tshoot-xc/?utm_source=atom_feed",
+      "ts": 1764654420000,
+      "source": "ipSpace.net",
+      "description": "Last week, we fixed the mismatched route targets in our sample multi-pod EVPN fabric . With that fixed, every PE device should see every other PE device as a remote VTEP for ingress replication purposes. We got that to work on Site-A (AS 65001), but not on Site-B (AS 65002); let&rsquo;s see what else is broken. Note: This is the fifth blog post in the Multi-Pod EVPN series. If you stumbled upon it, start with the design overview and troubleshooting overview posts. More importantly, familiarize y"
+    },
+    {
+      "title": "netlab as the Universal Configuration Translator",
+      "link": "https://blog.ipspace.net/2025/12/netlab-configuration-translator/?utm_source=atom_feed",
+      "ts": 1764570600000,
+      "source": "ipSpace.net",
+      "description": "Dan Partelly , a heavy netlab user (and an active contributor ), sent me this interesting perspective on how one might want to use netlab without ever building a lab with it. All I added was a bit of AI-assisted editing; my comments are on a grey background. In all podcasts and interviews I listened to, netlab was referred to as a &ldquo;lab management solution&rdquo;. But this is misleading. It&rsquo;s also a translator, due to its ability to abstract devices, and can easily generate perfectly "
+    },
+    {
+      "title": "Fun Reading: From XML to LLMs",
+      "link": "https://blog.ipspace.net/2025/11/worth-reading-xml-to-llm/?utm_source=atom_feed",
+      "ts": 1764399180000,
+      "source": "ipSpace.net",
+      "description": "In his latest blog post ( Systems design 3: LLMs and the semantic revolution ), Avery Pennarun claims that LLMs might solve the problem we consistently failed to solve on a large scale for the last 60 (or so) years &ndash; the automated B2B data exchange. You might agree with him or not (for example, an accountant or two might get upset with hallucinated invoice items), but his articles are always a fun read."
+    },
+    {
+      "title": "Lab: IS-IS Route Redistribution",
+      "link": "https://blog.ipspace.net/2025/11/isis-route-redistribution/?utm_source=atom_feed",
+      "ts": 1764312300000,
+      "source": "ipSpace.net",
+      "description": "Route redistribution into IS-IS seems even easier than its OSPFv2/OSPFv3 counterparts. There are no additional LSAs/LSPs; the redistributed prefixes are included in the router LSP. Things get much more interesting once you start looking into the gory details and exploring how different implementations use (or do not) the various metric bits and TLVs. You&rsquo;ll find more details (and the opportunity to explore the LSP database contents in a safe environment) in the IS-IS Route Redistribution l"
+    },
+    {
+      "title": "Testing IP Multicast with netlab",
+      "link": "https://blog.ipspace.net/2025/11/worth-reading-netlab-multicast/?utm_source=atom_feed",
+      "ts": 1764140160000,
+      "source": "ipSpace.net",
+      "description": "Aleksandr Albin built a large (almost 20-router) lab topology (based on an example from Jeff Doyle&rsquo;s Routing TCP/IP Volume 2) that he uses to practice inter-AS IP multicast. He also published the topology file (and additional configuration templates) on GitHub and documented his experience in a LinkedIn post. Lab topology, copied with permission by Aleksandr Albin It&rsquo;s so nice to see engineers using your tool in real-life scenarios. Thanks a million, Aleksandr, for sharing it."
+    },
+    {
+      "title": "Multi-Pod EVPN Troubleshooting: Route Targets",
+      "link": "https://blog.ipspace.net/2025/11/evpn-multi-pod-tshoot-rt/?utm_source=atom_feed",
+      "ts": 1764049740000,
+      "source": "ipSpace.net",
+      "description": "Last week, we fixed the incorrect BGP next hops in our sample multi-pod EVPN fabric . With that fixed, every PE device should see every other PE device as a remote VTEP for ingress replication purposes. However, that&rsquo;s not the case; let&rsquo;s see why and fix it. Note: This is the fourth blog post in the Multi-Pod EVPN series. If you stumbled upon it, start with the design overview and troubleshooting overview posts. More importantly, familiarize yourself with the topology we&rsquo;ll be "
+    },
+    {
+      "title": "IOS/XR Route Redistribution Configuration Mess",
+      "link": "https://blog.ipspace.net/2025/11/iosxr-redistribute-config-mess/?utm_source=atom_feed",
+      "ts": 1763966580000,
+      "source": "ipSpace.net",
+      "description": "One would hope that the developers of a network operating system wouldn&rsquo;t feel the irresistible urge to reinvent what should have been a common configuration feature for every routing protocol. Alas, the IOS/XR developers failed to get that memo. I decided to implement route redistribution (known as route import in netlab ) for OSPFv2/OSPFv3, IS-IS, and BGP on IOS/XR (Cisco 8000v running IOS/XR release 24.4.1) and found that each routing protocol uses a different syntax for the source rout"
+    },
+    {
+      "title": "Building VXLAN/EVPN Data Center Lab with netlab",
+      "link": "https://blog.ipspace.net/2025/11/worth-reading-netlab-vxlan-evpn/?utm_source=atom_feed",
+      "ts": 1763621760000,
+      "source": "ipSpace.net",
+      "description": "Dmitry Klepcha published an excellent document describing how you can use netlab to build a series of data center fabric labs, starting from a simple IP network (without routing) and finishing with a complex EVPN/VXLAN network using symmetric IRB and MLAG toward hosts. But wait, there&rsquo;s more: all the lab topologies he used in his exercises are available on GitHub , which means that you could just clone the repo and start using them (I also &ldquo;borrowed&rdquo; some of his ideas as future"
+    },
+    {
+      "title": "netlab: Switch to Lab Directory After an SSH Session Loss",
+      "link": "https://blog.ipspace.net/2026/03/netlab-switch-lab-directory/?utm_source=atom_feed",
+      "ts": 1760339820000,
+      "source": "ipSpace.net",
+      "description": "I work on a laptop that loves to power down when not used (the right thing to do), which often breaks the SSH session to my netlab server (not so good). Reconnecting is trivial. Figuring out which lab I was working on and where it lives on the disk after a few hours? That’s the annoying part. We solved most of that ages ago with the netlab status --all command . It shows all running labs 1 and their directories, so you can quickly jump back to where you were. However, even that gets tedious the "
+    },
+    {
+      "title": "netlab Graphs with Multi-Access Links",
+      "link": "https://blog.ipspace.net/2026/03/netlab-graphs-multiaccess/?utm_source=atom_feed",
+      "ts": 1760339820000,
+      "source": "ipSpace.net",
+      "description": "A netlab user wanted to create a nice-looking topology graph from a simple topology connecting a few devices to a broadcast (multi-access) link. I don&rsquo;t have his exact topology, so we&rsquo;ll use this one (skipping the details like setting device types) nodes: [ r1, r2, h1, h2 ] links: - r1-r2 - interfaces: [ r1, r2, h1, h2 ] This is what GraphViz generates based on netlab&rsquo;s description of the lab topology: Read more &hellip;"
     }
   ]
 }
