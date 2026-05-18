@@ -202,20 +202,41 @@
     const mount = document.querySelector("[data-news-feed]");
     if (!mount) return;
     const section = mount.closest("section");
-    fetch("./news-data.json")
+
+    function paintCards(items) {
+      if (!items.length) { if (section) section.hidden = true; return; }
+      mount.innerHTML = items.map((h) => `
+          <a class="news-card" href="${h.link}" target="_blank" rel="noopener noreferrer">
+            <span class="news-source">${h.source}</span>
+            <h3>${h.title}</h3>
+            <span class="news-time">${timeAgo(h.ts)}</span>
+          </a>`).join("");
+      setupSpotlights();
+    }
+
+    function fallbackHN() {
+      const since = Math.floor((Date.now() - 30 * 24 * 3600000) / 1000);
+      const url = `https://hn.algolia.com/api/v1/search?query=cybersecurity+zero+trust+network+infrastructure&tags=story&hitsPerPage=9&numericFilters=created_at_i%3E${since}`;
+      fetch(url)
+        .then((r) => r.json())
+        .then((data) => paintCards(
+          (data.hits || []).filter((h) => h.url && h.title).slice(0, 9).map((h) => ({
+            link: h.url,
+            title: h.title,
+            source: (() => { try { return new URL(h.url).hostname.replace("www.", ""); } catch (_) { return "HN"; } })(),
+            ts: h.created_at_i * 1000,
+          }))
+        ))
+        .catch(() => { if (section) section.hidden = true; });
+    }
+
+    fetch("/news-data.json")
       .then((r) => { if (!r.ok) throw new Error("no feed"); return r.json(); })
       .then((data) => {
         const items = (data.items || []).filter((h) => h.link && h.title).slice(0, 9);
-        if (!items.length) { if (section) section.hidden = true; return; }
-        mount.innerHTML = items.map((h) => `
-            <a class="news-card" href="${h.link}" target="_blank" rel="noopener noreferrer">
-              <span class="news-source">${h.source}</span>
-              <h3>${h.title}</h3>
-              <span class="news-time">${timeAgo(h.ts)}</span>
-            </a>`).join("");
-        setupSpotlights();
+        if (items.length) { paintCards(items); } else { fallbackHN(); }
       })
-      .catch(() => { if (section) section.hidden = true; });
+      .catch(fallbackHN);
   }
 
   setupThemeToggle();

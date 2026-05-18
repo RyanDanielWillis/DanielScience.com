@@ -14,7 +14,7 @@ body {
   color: var(--ds-ink);
   font-family: var(--ds-font-body);
   font-size: var(--ds-text-base);
-  line-height: 1.7;
+  line-height: 1.65;
   background: var(--ds-body-bg);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -396,9 +396,9 @@ button {
   color: var(--ds-ink);
   font-family: var(--ds-font-display);
   font-size: var(--ds-text-2xl);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
   text-wrap: balance;
 }
 
@@ -515,8 +515,8 @@ button {
   margin: 0;
   color: var(--ds-ink);
   font-family: var(--ds-font-display);
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   text-wrap: balance;
 }
 
@@ -524,7 +524,7 @@ button {
   max-width: 15.5ch;
   margin-top: 2rem;
   font-size: var(--ds-text-2xl);
-  line-height: 0.94;
+  line-height: 0.96;
   text-wrap: balance;
 }
 
@@ -532,7 +532,8 @@ button {
 .cta-title {
   margin-top: clamp(3rem, 4vw, 4rem);
   font-size: var(--ds-text-xl);
-  line-height: 1.06;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 
 .lede {
