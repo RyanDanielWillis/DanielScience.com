@@ -240,22 +240,23 @@
     }
 
     function fallbackHN() {
-      const since = Math.floor((Date.now() - 30 * 24 * 3600000) / 1000);
-      const url = `https://hn.algolia.com/api/v1/search?query=cybersecurity+zero+trust+network+infrastructure&tags=story&hitsPerPage=9&numericFilters=created_at_i%3E${since}`;
+      const since = Math.floor((Date.now() - 14 * 24 * 3600000) / 1000);
+      const url = `https://hn.algolia.com/api/v1/search?query=security+networking+infrastructure&tags=story&hitsPerPage=9&numericFilters=created_at_i%3E${since}`;
       fetch(url)
         .then((r) => r.json())
-        .then((data) => paintCards(
-          (data.hits || []).filter((h) => h.url && h.title).slice(0, 9).map((h) => ({
+        .then((data) => {
+          const items = (data.hits || []).filter((h) => h.url && h.title).slice(0, 9).map((h) => ({
             link: h.url,
             title: h.title,
             source: (() => { try { return new URL(h.url).hostname.replace("www.", ""); } catch (_) { return "HN"; } })(),
             ts: h.created_at_i * 1000,
-          }))
-        ))
+          }));
+          if (items.length) { paintCards(items); } else { if (section) section.hidden = true; }
+        })
         .catch(() => { if (section) section.hidden = true; });
     }
 
-    fetch("/news-data.json")
+    fetch("./news-data.json")
       .then((r) => { if (!r.ok) throw new Error("no feed"); return r.json(); })
       .then((data) => {
         const items = (data.items || []).filter((h) => h.link && h.title).slice(0, 9);
@@ -307,7 +308,7 @@
       setupSpotlights();
     }
 
-    fetch("/news-data.json")
+    fetch("./news-data.json")
       .then((r) => { if (!r.ok) throw new Error("no feed"); return r.json(); })
       .then((data) => {
         if (sourcesMount && data.sources) {
