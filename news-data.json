@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-18T03:40:14.197Z",
+  "updated": "2026-05-18T14:32:18.237Z",
   "sources": {
     "Full Disclosure": "Public vulnerability disclosures, exploit details, and security advisories from researchers and vendors worldwide.",
     "OSS Security": "Coordinated CVE disclosures, patches, and security fixes for open source software projects.",
@@ -8,6 +8,27 @@
     "ipSpace.net": "Deep technical networking by Ivan Pepelnjak: BGP, EVPN, data center fabrics, SD-WAN, and cloud architecture."
   },
   "items": [
+    {
+      "title": "Re: CVE request experience",
+      "link": "https://seclists.org/oss-sec/2026/q2/571",
+      "ts": 1779091465000,
+      "source": "OSS Security",
+      "description": "Fabian Keil wrote on 2021-01-31 at 13:13:29: Privoxy 4.2.0, which is supposed to be released around 2026-05-30, will contain fixes for two security issues that are currently tracked as OVE-20260515-0001 and OVE-20260515-0002. I tried to get two CVEs from Redhat yesterday by sending an encrypted mail to the address above, which is still listed at [0], but so far only received what looks like an automated..."
+    },
+    {
+      "title": "CVE-2026-8788: Net::Statsd::Lite versions through 0.10.0 for Perl allowed metric injections",
+      "link": "https://seclists.org/oss-sec/2026/q2/570",
+      "ts": 1779086648000,
+      "source": "OSS Security",
+      "description": "======================================================================== CVE-2026-8788 CPAN Security Group ======================================================================== CVE ID: CVE-2026-8788 Distribution: Net-Statsd-Lite Versions: through 0.10.0 MetaCPAN: https://metacpan.org/dist/Net-Statsd-Lite VCS Repo: ..."
+    },
+    {
+      "title": "Goodbye, Ubuntu 20.04 (netlab 26.05)",
+      "link": "https://blog.ipspace.net/2026/05/netlab-goodbye-20.02/?utm_source=atom_feed",
+      "ts": 1779082980000,
+      "source": "ipSpace.net",
+      "description": "netlab release 26.05 is out. I&rsquo;ll write about its highlights tomorrow; today, I want to focus on one of its breaking changes: netlab no longer works with Python 3.8 (which reached end-of-life in October 2024), so you can no longer install it on a vanilla Ubuntu 20.04 (which reached end of standard support a year ago). We wanted to get rid of old Python versions for ages, but never did because Ubuntu 20.04 shipped with Python 3.8, and many netlab early adopters installed it on Ubuntu 20.04 "
+    },
     {
       "title": "APPLE-SA-05-13-2026-1 Safari 26.5",
       "link": "https://seclists.org/fulldisclosure/2026/May/16",
@@ -224,20 +245,6 @@
       "ts": 1778936853000,
       "source": "OSS Security",
       "description": "Hi, Multiple of the recent kernel exploits have affected the \"esp\" Linux Kernel module. ESP is, as far as I understand, part of IPSEC, and I think it&apos;s fair to say that IPSEC is not widely used these days. I think this raises some questions about attack surface. I want to note that I use IPSEC as an example here, but it likely applies in very similar ways to many features that are part of the Linux Kernel and are not used in most..."
-    },
-    {
-      "title": "Re: Coordinated Disclosure in the LLM Age",
-      "link": "https://seclists.org/oss-sec/2026/q2/556",
-      "ts": 1778918256000,
-      "source": "OSS Security",
-      "description": "Yes, but to be pedantic, September 2026 is when _manufacturers_ need to start reporting the bugs they are notified of or find on their own. I predict that&apos;s just going to be a slow trickle, and that&apos;s what the EU is planning for. But, come December 2027, that&apos;s when all open source projects that end up under the \"steward\" category, requirements kick in. That&apos;s when they are responsible for reporting all..."
-    },
-    {
-      "title": "Sv: Coordinated Disclosure in the LLM Age",
-      "link": "https://seclists.org/oss-sec/2026/q2/555",
-      "ts": 1778890844000,
-      "source": "OSS Security",
-      "description": "Not sure I understand this feedback. Openstack has a lot of low hanging vulnerabilities due to legacy code. This is the central issue, not me or LLMs. A lot of people are clamoring for sovereign cloud right now: https://news.ycombinator.com/item?id=48120629 An example: https://bugs.launchpad.net/swift/+bug/2152384/comments/14 ROI AI"
     },
     {
       "title": "Weekly Global IPv4 Routing Table Report",
@@ -1001,13 +1008,6 @@
       "ts": 1763966580000,
       "source": "ipSpace.net",
       "description": "One would hope that the developers of a network operating system wouldn&rsquo;t feel the irresistible urge to reinvent what should have been a common configuration feature for every routing protocol. Alas, the IOS/XR developers failed to get that memo. I decided to implement route redistribution (known as route import in netlab ) for OSPFv2/OSPFv3, IS-IS, and BGP on IOS/XR (Cisco 8000v running IOS/XR release 24.4.1) and found that each routing protocol uses a different syntax for the source rout"
-    },
-    {
-      "title": "Building VXLAN/EVPN Data Center Lab with netlab",
-      "link": "https://blog.ipspace.net/2025/11/worth-reading-netlab-vxlan-evpn/?utm_source=atom_feed",
-      "ts": 1763621760000,
-      "source": "ipSpace.net",
-      "description": "Dmitry Klepcha published an excellent document describing how you can use netlab to build a series of data center fabric labs, starting from a simple IP network (without routing) and finishing with a complex EVPN/VXLAN network using symmetric IRB and MLAG toward hosts. But wait, there&rsquo;s more: all the lab topologies he used in his exercises are available on GitHub , which means that you could just clone the repo and start using them (I also &ldquo;borrowed&rdquo; some of his ideas as future"
     },
     {
       "title": "netlab: Switch to Lab Directory After an SSH Session Loss",
