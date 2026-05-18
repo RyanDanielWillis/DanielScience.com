@@ -20,8 +20,8 @@ const SOURCE_META = {
   "ipSpace.net": "Deep technical networking by Ivan Pepelnjak: BGP, EVPN, data center fabrics, SD-WAN, and cloud architecture.",
 };
 
-const MAX_ITEMS = 30;
-const MAX_PER_SOURCE = 6;
+const MAX_ITEMS = 500;
+const MAX_PER_SOURCE = 100;
 const SUMMARY_CONCURRENCY = 5;
 
 // Load Anthropic SDK if available
@@ -129,6 +129,16 @@ Summary:`,
 }
 
 async function main() {
+  // Load previous data as summary cache so we never re-summarise already-processed items
+  const summaryCache = {};
+  try {
+    const prev = JSON.parse(require("fs").readFileSync(OUT_PATH, "utf8"));
+    for (const item of (prev.items || [])) {
+      if (item.link && item.description) summaryCache[item.link] = item.description;
+    }
+    console.log(`Loaded ${Object.keys(summaryCache).length} cached summaries.`);
+  } catch (_) {}
+
   console.log("Fetching news feeds...");
   const results = await Promise.all(SOURCES.map(fetchFeed));
   const items = results
@@ -137,20 +147,34 @@ async function main() {
     .sort((a, b) => b.ts - a.ts)
     .slice(0, MAX_ITEMS);
 
+  // Apply cache hits immediately; collect only uncached items for API calls
+  const needSummary = [];
+  for (const item of items) {
+    if (summaryCache[item.link]) {
+      item.description = summaryCache[item.link];
+    } else {
+      needSummary.push(item);
+    }
+  }
+
   const client = Anthropic && process.env.ANTHROPIC_API_KEY
     ? new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
     : null;
 
-  if (client) {
-    console.log(`Generating summaries for ${items.length} items...`);
-    for (let i = 0; i < items.length; i += SUMMARY_CONCURRENCY) {
-      await Promise.all(items.slice(i, i + SUMMARY_CONCURRENCY).map((item) => summarise(client, item)));
-      process.stdout.write(`  ${Math.min(i + SUMMARY_CONCURRENCY, items.length)}/${items.length}\r`);
+  if (needSummary.length) {
+    if (client) {
+      console.log(`Generating summaries for ${needSummary.length} new items...`);
+      for (let i = 0; i < needSummary.length; i += SUMMARY_CONCURRENCY) {
+        await Promise.all(needSummary.slice(i, i + SUMMARY_CONCURRENCY).map((item) => summarise(client, item)));
+        process.stdout.write(`  ${Math.min(i + SUMMARY_CONCURRENCY, needSummary.length)}/${needSummary.length}\r`);
+      }
+      console.log("\nSummaries done.");
+    } else {
+      console.log("No ANTHROPIC_API_KEY — using raw descriptions for new items.");
+      needSummary.forEach((item) => { item.description = item.raw; });
     }
-    console.log("\nSummaries done.");
   } else {
-    console.log("No ANTHROPIC_API_KEY — using raw descriptions.");
-    items.forEach((item) => { item.description = item.raw; });
+    console.log("All items already summarised (cache hit).");
   }
 
   // Remove raw field from output

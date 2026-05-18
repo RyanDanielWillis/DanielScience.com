@@ -1431,6 +1431,51 @@ a.blog-card:hover {
   -webkit-line-clamp: 4;
 }
 
+.news-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  padding: 0.55rem 1.25rem;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-surface);
+  color: var(--ds-ink);
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color var(--ds-motion-fast), background var(--ds-motion-fast), color var(--ds-motion-fast);
+}
+
+.pagination-btn:hover:not(:disabled) {
+  border-color: var(--ds-blue);
+  color: var(--ds-blue);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.pagination-info {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .pagination-btn {
+  background: var(--ds-surface);
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
 .news-time {
   color: var(--ds-faint);
   font-size: var(--ds-text-xs);

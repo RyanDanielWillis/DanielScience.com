@@ -244,6 +244,45 @@
     const mount = document.querySelector("[data-full-news-feed]");
     if (!mount) return;
     const sourcesMount = document.querySelector("[data-news-sources]");
+    const paginationMount = document.querySelector("[data-news-pagination]");
+    const PAGE_SIZE = 25;
+    let currentPage = 0;
+    let allItems = [];
+
+    function renderPage() {
+      const totalPages = Math.ceil(allItems.length / PAGE_SIZE);
+      const start = currentPage * PAGE_SIZE;
+      const pageItems = allItems.slice(start, start + PAGE_SIZE);
+
+      mount.innerHTML = pageItems.map((h) => `
+        <a class="news-card" href="${h.link}" target="_blank" rel="noopener noreferrer">
+          <span class="news-source">${h.source}</span>
+          <h3>${h.title}</h3>
+          ${h.description ? `<p class="news-desc full">${h.description}</p>` : ""}
+          <span class="news-time">${timeAgo(h.ts)}</span>
+        </a>`).join("");
+
+      if (paginationMount) {
+        if (totalPages > 1) {
+          paginationMount.innerHTML = `
+            <button class="pagination-btn" data-dir="-1" ${currentPage === 0 ? "disabled" : ""}>← Previous</button>
+            <span class="pagination-info">Page ${currentPage + 1} of ${totalPages} · ${allItems.length} items</span>
+            <button class="pagination-btn" data-dir="1" ${currentPage >= totalPages - 1 ? "disabled" : ""}>Next →</button>`;
+          paginationMount.querySelectorAll("[data-dir]").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              currentPage += parseInt(btn.dataset.dir, 10);
+              renderPage();
+              mount.closest("section").scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+          });
+        } else {
+          paginationMount.innerHTML = "";
+        }
+      }
+
+      setupSpotlights();
+    }
+
     fetch("/news-data.json")
       .then((r) => { if (!r.ok) throw new Error("no feed"); return r.json(); })
       .then((data) => {
@@ -253,18 +292,12 @@
               <h3>${name}</h3>
               <p>${desc}</p>
             </article>`).join("");
+          setupSpotlights();
+          setupScrollReveals();
         }
-        const items = (data.items || []).filter((h) => h.link && h.title);
-        if (!items.length) { mount.innerHTML = "<p>No items available. Check back soon.</p>"; return; }
-        mount.innerHTML = items.map((h) => `
-          <a class="news-card" href="${h.link}" target="_blank" rel="noopener noreferrer">
-            <span class="news-source">${h.source}</span>
-            <h3>${h.title}</h3>
-            ${h.description ? `<p class="news-desc full">${h.description}</p>` : ""}
-            <span class="news-time">${timeAgo(h.ts)}</span>
-          </a>`).join("");
-        setupSpotlights();
-        setupScrollReveals();
+        allItems = (data.items || []).filter((h) => h.link && h.title);
+        if (!allItems.length) { mount.innerHTML = "<p>No items available. Check back soon.</p>"; return; }
+        renderPage();
       })
       .catch(() => { mount.innerHTML = "<p>Feed temporarily unavailable. Try again soon.</p>"; });
   }
