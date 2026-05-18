@@ -327,6 +327,31 @@
       .catch(() => { mount.innerHTML = "<p>Feed temporarily unavailable. Try again soon.</p>"; });
   }
 
+  function renderFooter() {
+    const mount = document.querySelector("[data-footer]");
+    if (!mount) return;
+    const year = new Date().getFullYear();
+    mount.innerHTML = `
+      <div class="page-container footer-inner">
+        <div class="footer-brand">
+          <span>&copy; ${year} Ryan Willis</span>
+          <a href="mailto:ryan@danielscience.com">ryan@danielscience.com</a>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="/index.html">Home</a>
+          <a href="/services.html">Services</a>
+          <a href="/project-case-studies.html">Projects</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/pricing.html">Approach &amp; Rates</a>
+          <a href="/resume.html">Experience</a>
+          <a href="/contact.html">Contact</a>
+          <a href="https://www.linkedin.com/in/ryanmovesdata/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+          <a href="https://github.com/RyanDanielWillis" rel="noopener noreferrer" target="_blank">GitHub</a>
+        </nav>
+      </div>`;
+  }
+
+  renderFooter();
   setupThemeToggle();
   setupMenu();
   setupBackToTop();
